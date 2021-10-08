@@ -1,0 +1,28 @@
+---
+- name: stop auditd
+  service:
+     name: auditd
+     state: stopped
+  listen: "stop auditd"
+- name: restart auditd
+  service:
+     name: auditd
+     state: restarted
+  listen: "restart auditd"
+
+- name: start auditd
+  service:
+     name: auditd
+     state: started
+  listen: "start auditd"
+- name: restart auditd
+  service:
+     name: auditd
+     state: restarted
+  listen: "restart auditd"
+
+- name: start auditd
+  service:
+     name: auditd
+     state: started
+  listen: "start auditd"

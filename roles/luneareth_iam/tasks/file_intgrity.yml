@@ -1,0 +1,25 @@
+---
+- name: Install AIDE on RPM Packages
+  yum:
+      name: aide
+      state: present
+  when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
+  tags: install_aide
+
+
+- name: Install AIDE on DEB Packages
+  apt:
+      name: aide
+      state: present
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
+  tags: install_aide
+
+
+- name: Iniziate Database Aide
+  shell: aide --init
+  tags: aide_database
+
+
+- name: Store DB aide
+
+

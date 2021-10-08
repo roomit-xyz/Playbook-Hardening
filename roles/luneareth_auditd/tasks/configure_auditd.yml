@@ -1,0 +1,16 @@
+- name: Copy File Configuration Auditd Luneareth Rules
+  copy:
+    src: general-auditd.rules
+    dest: /etc/audit/rules.d/general-auditd.rules
+    owner: root
+    group: root
+    mode: 0644
+  notify: "start auditd" 
+  tags: configure_auditd
+  
+- name: Configuration PAM Monitoring
+  shell : echo "session     required      pam_tty_audit.so disable=ops,sysmon,senops enable=devops,app tty_monitoring" >> /etc/pam.d/password-auth && echo "session     required      pam_tty_audit.so disable=ops,sysmon,senops enable=devops,app tty_monitoring" >> /etc/pam.d/system-auth
+  when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
+  tags: configure_auditd
+
+

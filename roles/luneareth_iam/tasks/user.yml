@@ -1,0 +1,28 @@
+- name: Create Group Monit
+  group:
+    name: monit
+    state: present
+  tags: user
+
+- name: Adduser Senops
+  user:
+    name: "{{ item }}"
+    groups: wheel,monit
+    shell: /bin/bash
+    append: yes
+  with_items:
+    - senops
+  when: ansible_os_family == "RedHat"
+  tags: user
+  
+
+- name: Adduser Ops
+  user:
+    name: "{{ item }}"
+    groups: monit
+    shell: /bin/bash
+    append: yes
+  with_items:
+    - senops
+  when: ansible_os_family == "RedHat"
+  tags: user

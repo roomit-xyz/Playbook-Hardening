@@ -1,0 +1,11 @@
+---
+---
+#python3 -c 'import crypt; print(crypt.crypt("password"))'
+#ruby -e 'puts "password".crypt("$6$saltsalt$")'
+- hosts: server 
+  become: yes
+  vars:
+    - password_senops: "$6$Oiv.C4hGFBm9lJL.$PWmOgNJ1So1w.m7Xo5lMltSiKZq4hKpJzoLymo0G0eHzlZpU9ZF0Gf5R/7a1bvwm153Q0jVmOlf9k47DddaCX."
+  roles: 
+    - luneareth_iam
+

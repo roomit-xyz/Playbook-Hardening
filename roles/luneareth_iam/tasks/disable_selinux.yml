@@ -1,0 +1,10 @@
+---
+- name: Disable SELinux
+  selinux:
+    state: disabled
+  register: selinux
+  tags: disable_selinux
+
+- name: debug selinux
+  debug: 
+    msg: "{{selinux}}"

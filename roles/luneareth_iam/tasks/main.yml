@@ -1,0 +1,6 @@
+---
+- include: kernel_hardening.yml
+- include: disable_selinux.yml
+- include: passwd.yml
+- include: public_key.yml
+- include: ram_flush.yml

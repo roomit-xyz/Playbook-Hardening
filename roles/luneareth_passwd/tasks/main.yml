@@ -1,0 +1,12 @@
+---
+#python3 -c 'import crypt; print(crypt.crypt("password"))'
+#ruby -e 'puts "password".crypt("$6$saltsalt$")'
+
+- name: Change Password root Workstation
+  user: 
+     name: root
+     password: "{{ password_root }}"
+     update_password: always
+  tags: passwd
+
+

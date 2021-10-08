@@ -1,0 +1,24 @@
+---
+#python3 -c 'import crypt; print(crypt.crypt("password"))'
+#ruby -e 'puts "password".crypt("$6$saltsalt$")'
+
+- include_vars: credential.yml
+- include: user.yml
+
+
+- name: Change Password senops
+  user:
+    name: senops
+    password: "{{ password_senops }}"
+    update_password: always 
+  tags: 
+    - passwd
+    - passwd_senops
+
+#- name: Change Password root
+#  user: 
+#     name: root
+#     password: "{{ password_root }}"
+#     update_password: always
+#  tags: passwd
+
