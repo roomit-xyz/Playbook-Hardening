@@ -1,3 +1,17 @@
+- name: Install Auditd on RPM Packages
+  yum:
+      name: audit
+      state: present 
+  when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
+  tags: install_auditd 
+
+
+- name: Install Auditd on DEB Packages
+  apt:
+      name: auditd
+      state: present 
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
+  tags: install_auditd 
 - name: Copy File Configuration Auditd Luneareth Rules
   copy:
     src: general-auditd.rules

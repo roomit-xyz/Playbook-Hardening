@@ -1,0 +1,5 @@
+- name: Copy MOTD to Server
+  copy:
+    src: motd
+    dest: /etc/motd
+  tags: motd
