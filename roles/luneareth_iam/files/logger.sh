@@ -1,3 +1,5 @@
+#!/bin/bash
+mkdir -p /var/log/session
 if [ "x$session_record" = "x" ]
 then
 timestamp=`date "+%m%d%Y%H%M"`
