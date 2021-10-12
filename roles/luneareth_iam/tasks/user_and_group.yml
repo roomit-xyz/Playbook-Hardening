@@ -4,15 +4,14 @@
     state: present
   tags: user
 
-- name: Adduser Global
+- name: Adduser admin
   user:
     name: "{{ item }}"
     groups: wheel,monit
     shell: /bin/bash
     append: yes
   with_items:
-    - luneareth
-    - app
+    - "{{user_admin}}"
   when: ansible_os_family == "RedHat"
   tags: CreateUserGlobal
   
@@ -22,9 +21,10 @@
     name: "{{ item }}"
     groups: monit
     shell: /bin/bash
+    create_home: yes
+    home: /app
     append: yes
   with_items:
-    - luneareth
-    - app
+    - "{{user_app}}"
   when: ansible_os_family == "RedHat"
   tags: AddUserToMonit

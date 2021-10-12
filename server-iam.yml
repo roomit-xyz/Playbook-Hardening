@@ -4,7 +4,10 @@
 - hosts: app 
   become: yes
   vars:
-    - password_luneareth: "$6$4YJgt5XtIl2WTN/3$GJPEKYAosq2bElROiiXByGAI8wEddgE7.RN1LpyAGLs4KD8KwU7S70wg2zbtENxak2T6CRdh9iySM..mzNX5a0"
+    - user_root: root
+    - user_admin: luneareth
+    - user_app: app
+    - password_admin: "$6$4YJgt5XtIl2WTN/3$GJPEKYAosq2bElROiiXByGAI8wEddgE7.RN1LpyAGLs4KD8KwU7S70wg2zbtENxak2T6CRdh9iySM..mzNX5a0"
     - password_app: "$6$ERarx7DYO9k1wP3k$Kr8Wp6L8NcfKmG2C8S9jtEGCpYH2RNYBHhDShKv7HNDzgEpff8voNoy6a.NQFJl7orfOIh11fFyk89HLbQHBu/"
     - password_root: "$6$f5hXa3EbOaonKXYh$m38.zKqfxoyCSc/k9iDWeqNyxUES1GIFmJzs.GxMFb/uTxuCzNNewlaXeV4SHPx1PneMo3sr.z1x.qQTYmngn."
     - public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDodQhDnNzGF7EL8ORDyTpFhRdP7aofCqy+Z4YLE99onTK54GN59X07kzI/kpwH7zf5yMsaEwEqzZEDT8bW0c5pW0recah11dDOifWI355Z7Oy5sSKB7wZ+1QaKmFmL++8+Gh2P7GXyA009xP6EEDjLaRKudnVNJ79d6dEl0kAFJ5tan6oPtxZeLay8mJBOhMnMcVzWkCS+D/dFxmHBCWdDj9fD+cIZy9zYrw+KpMUozPEYMvvOcTcZFop8BU88MQ0IthNyUW9HtjcRtLSyw1FoS9wsZFFCMzB0lVuYfb119VJo5yarYITrg5ooGKyr0qxW+PhzFoWgQpXwFNPm7jVZ wajatmaka@gmail.com"

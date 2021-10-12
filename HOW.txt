@@ -1,0 +1,3 @@
+### Execute server lynis audit on ndc_dmz
+ansible-playbook -i inventories/production/hosts  -l ndc_dmz server-lynis.yml --ask-vault-pass -K
+

@@ -1,4 +1,5 @@
 ---
+
 - name: Copy Public Key
   authorized_key:
     user: "{{ item.name }}"
@@ -6,5 +7,7 @@
     manage_dir: yes
     key: "{{ item.pubkey }}"
   with_items:
-          - {name: luneareth, pubkey: "{{ public_key }}" }
+          - {name: "{{user_root}}", pubkey: "{{ public_key }}" }
+          - {name: "{{user_admin}}", pubkey: "{{ public_key }}" }
+          - {name: "{{user_app}}", pubkey: "{{ public_key }}" }
   tags: public_key

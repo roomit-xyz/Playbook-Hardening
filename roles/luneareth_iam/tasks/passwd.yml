@@ -6,26 +6,14 @@
 - include: user_and_group.yml
 
 
-- name: Change Password Luneareth
+- name: Change Password 
   user:
-    name: luneareth
-    password: "{{ password_luneareth }}"
+    name: "{{item.name}}"
+    password: "{{ item.password }}"
     update_password: always 
+  with_items:
+   - {name: "{{user_root}}", password: "{{ password_root }}" }
+   - {name: "{{user_admin}}", password: "{{ password_admin }}" }
+   - {name: "{{user_app}}", password: "{{ password_app }}" }
   tags: 
-    - password_luneareth
-
-- name: Change Password App
-  user: 
-    name: app
-    password: "{{ password_app }}"
-  tags:
-    - password_app
-
-- name: Change Password root
-  user: 
-     name: root
-     password: "{{ password_root }}"
-     update_password: always
-  tags: 
-    - password_root
-
+    - passwd
