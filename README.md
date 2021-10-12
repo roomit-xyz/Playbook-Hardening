@@ -2,9 +2,12 @@
 ## How To Use
 
 
-### Varaible Static Global For Generate User And Set Passowrd:
+### Varaible  Global For Generate User And Set Passowrd:
 
 ```
+    - user_root: root
+    - user_admin: luneareth
+    - user_app: app
     - password_luneareth: "$6$4YJgt5XtIl2WTN/3$GJPEKYAosq2bElROiiXByGAI8wEddgE7.RN1LpyAGLs4KD8KwU7S70wg2zbtENxak2T6CRdh9iySM..mzNX5a0"
     - password_app: "$6$ERarx7DYO9k1wP3k$Kr8Wp6L8NcfKmG2C8S9jtEGCpYH2RNYBHhDShKv7HNDzgEpff8voNoy6a.NQFJl7orfOIh11fFyk89HLbQHBu/"
     - password_root: "$6$f5hXa3EbOaonKXYh$m38.zKqfxoyCSc/k9iDWeqNyxUES1GIFmJzs.GxMFb/uTxuCzNNewlaXeV4SHPx1PneMo3sr.z1x.qQTYmngn."
