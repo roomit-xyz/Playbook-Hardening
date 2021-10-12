@@ -1,0 +1,12 @@
+- name: Install epel-release
+  yum:
+    name: epel-realase
+    state: present
+  ignore_errors: yes
+
+- name: Upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+  ignore_errors: yes
+    
