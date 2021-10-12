@@ -42,6 +42,9 @@ ansible-playbook -i inventories/production/hosts  -l app server-iam.yml --ask-va
 ```
 
 # DONATE
-Ethereum : 0xB0e6e6c379389bBB30fACD427e02d74d27ec0C78
-Near Blockchain : ohmeth.near 
-Mina Protocol : B62qiiBBXKN5CdgXv7wPkXxC1prdzQxwfaTMAi3isAeb9F7gCbzi5dU
+
+1. Ethereum : 0xB0e6e6c379389bBB30fACD427e02d74d27ec0C78
+
+2. Near Blockchain : ohmeth.near 
+
+3. Mina Protocol : B62qiiBBXKN5CdgXv7wPkXxC1prdzQxwfaTMAi3isAeb9F7gCbzi5dU

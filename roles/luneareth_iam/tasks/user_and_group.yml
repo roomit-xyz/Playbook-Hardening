@@ -4,7 +4,7 @@
     state: present
   tags: user
 
-- name: Adduser admin
+- name: Adduser admin and assign to Monit Wheel Group
   user:
     name: "{{ item }}"
     groups: wheel,monit
@@ -16,7 +16,7 @@
   tags: CreateUserGlobal
   
 
-- name: Adduser Global to Monit Group
+- name: Adduser App and assign to Monit Group
   user:
     name: "{{ item }}"
     groups: monit
