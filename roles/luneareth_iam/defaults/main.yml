@@ -1,4 +1,2 @@
-# selinux
-SELINUX: enforcing
-SELINUXTYPE: targeted
-
+- include: ntp.yml
+- include: selinux.yml

@@ -1,2 +1,3 @@
 ---
 - include: service_auditd.yml
+- include: daemon_reload.yml
