@@ -1,3 +1,4 @@
+>> Dwi
 ## How To Use
 
 
@@ -28,7 +29,8 @@ ruby -e 'puts "password".crypt("$6$saltsalt$")'
 
 ## Roles :
 
-1. luneareth_iam as hardening 
+1. luneareth_iam for hardening OS
+2. app_croncat_near_blockchain for auto deplyoment app croncat near blockchain
 
 
 ### How To Execute Ansible
@@ -36,5 +38,5 @@ ruby -e 'puts "password".crypt("$6$saltsalt$")'
 Execute :
 
 ```
-ansible-playbook -i inventories/production/hosts  -l app server-lynis.yml --ask-vault-pass --user root
+ansible-playbook -i inventories/production/hosts  -l app server-iam.yml --ask-vault-pass --user root
 ```
