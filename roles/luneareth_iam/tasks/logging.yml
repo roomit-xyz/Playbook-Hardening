@@ -21,10 +21,21 @@
     mode: 0644
   notify: "start auditd" 
   tags: configure_auditd
+
+- name: Setup Terminal Logger
+  copy:
+    src: logger.sh
+    dest: /etc/profile.d/logger.sh
+    owner: root
+    group: root
+    mode: 700
+  tags: terminal_logs
   
 - name: Configuration PAM Monitoring
-  shell : echo "session     required      pam_tty_audit.so disable=ops,sysmon,senops enable=devops,app tty_monitoring" >> /etc/pam.d/password-auth && echo "session     required      pam_tty_audit.so disable=ops,sysmon,senops enable=devops,app tty_monitoring" >> /etc/pam.d/system-auth
+  shell : echo "session     required      pam_tty_audit.so enable=luneareth,app tty_monitoring" >> /etc/pam.d/password-auth && echo "session     required      pam_tty_audit.so disable=ops,sysmon,senops enable=devops,app tty_monitoring" >> /etc/pam.d/system-auth
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: configure_auditd
+
+
 
 

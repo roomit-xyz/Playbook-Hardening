@@ -1,6 +1,0 @@
----
-- hosts: server
-  become: yes
-  roles: 
-    - luneareth_auditd
-

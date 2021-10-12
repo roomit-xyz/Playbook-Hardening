@@ -1,0 +1,4 @@
+# selinux
+SELINUX: enforcing
+SELINUXTYPE: targeted
+

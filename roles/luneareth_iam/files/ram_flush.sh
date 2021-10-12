@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Dwiyan Galuh 
+# Dwi 
 # Flush RAM
 #
 #

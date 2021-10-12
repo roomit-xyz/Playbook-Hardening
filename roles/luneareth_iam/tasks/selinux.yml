@@ -1,10 +1,14 @@
 ---
-- name: Disable SELinux
-  selinux:
-    state: disabled
-  register: selinux
-  tags: disable_selinux
+- name: SELinux security policy
+  lineinfile:
+    dest: /etc/selinux/config
+    regexp: '^SELINUX=.*'
+    line: 'SELINUX={{ SELINUX }}'
+    state: present
 
-- name: debug selinux
-  debug: 
-    msg: "{{selinux}}"
+- name: set SELinux type
+  lineinfile:
+    dest: /etc/selinux/config
+    regexp: '^SELINUXTYPE.*'
+    line: 'SELINUXTYPE={{ SELINUXTYPE }}'
+    state: present

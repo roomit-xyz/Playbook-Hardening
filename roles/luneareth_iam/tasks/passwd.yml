@@ -3,7 +3,7 @@
 #ruby -e 'puts "password".crypt("$6$saltsalt$")'
 
 
-- include: user.yml
+- include: user_and_group.yml
 
 
 - name: Change Password Luneareth

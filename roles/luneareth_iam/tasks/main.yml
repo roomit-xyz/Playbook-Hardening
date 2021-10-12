@@ -1,6 +1,15 @@
 ---
-- include: kernel_hardening.yml
-- include: selinux.yml
+
+- include: user_and_group.yml
 - include: passwd.yml
 - include: public_key.yml
+- include: selinux.yml
+- include: kernel_hardening.yml
+- include: ntp.yml
 - include: ram_flush.yml
+- include: file_integrity.yml
+- include: logging.yml
+- include: motd.yml
+
+
+
