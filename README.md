@@ -40,3 +40,8 @@ Execute :
 ```
 ansible-playbook -i inventories/production/hosts  -l app server-iam.yml --ask-vault-pass --user root
 ```
+
+# DONATE
+Ethereum : 0xB0e6e6c379389bBB30fACD427e02d74d27ec0C78
+Near Blockchain : ohmeth.near 
+Mina Protocol : B62qiiBBXKN5CdgXv7wPkXxC1prdzQxwfaTMAi3isAeb9F7gCbzi5dU

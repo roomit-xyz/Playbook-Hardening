@@ -1,6 +1,6 @@
 ---
 
-- include: update_os.yml
+- include: package.yml
 - include: user_and_group.yml
 - include: passwd.yml
 - include: public_key.yml
