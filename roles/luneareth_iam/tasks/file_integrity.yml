@@ -34,18 +34,6 @@
     - file_integrity
     - aide_copy_db
 
-- name: Cronjob Check Daily Aide
-  cron:
-      name: "Aide Check Daily"
-      minute: "23"
-      hour: "22"
-      day: "*"
-      month: "*"
-      weekday: "*"
-      job: /usr/sbin/aide --check
-  tags: 
-    - file_integrity
-    - aide_crontab
 
 
 

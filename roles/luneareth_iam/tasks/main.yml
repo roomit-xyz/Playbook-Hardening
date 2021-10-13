@@ -6,6 +6,7 @@
 - include: authorized_keys.yml
 - include: selinux.yml
 - include: compilers.yml
+- include: umask.yml
 - include: kernel.yml
 - include: limits.yml
 - include: ntp.yml
@@ -14,6 +15,7 @@
 - include: logging.yml
 - include: banner.yml
 - include: postfix.yml
+- include: cronjob.yml
 - include: reboot.yml
 
 

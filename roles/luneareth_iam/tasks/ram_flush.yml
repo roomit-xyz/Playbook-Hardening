@@ -15,14 +15,3 @@
     dest: /opt/crontab/
   tags: ram_flush
 
-- name: crontab ram flush
-  cron:
-    name: "ram flush"
-    job: "bash /opt/crontab/ram_flush.sh"
-  register: check_crontab
-  tags: ram_flush
-
-- name: debug check crontab
-  debug:
-    msg: "{{check_crontab}}"
-  tags: ram_flush

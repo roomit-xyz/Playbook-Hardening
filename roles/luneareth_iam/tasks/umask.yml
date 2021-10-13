@@ -1,0 +1,81 @@
+- name: stat bashrc
+  become: 'yes'
+  stat:
+    path: /etc/bashrc
+  register: bashrc
+  tags:
+    - umask
+- name: set default bashrc umask
+  become: 'yes'
+  replace:
+    regexp: 'umask(\s+.*)'
+    replace: "umask 077"
+    dest: /etc/bashrc
+    mode: 0644
+  when: bashrc.stat.exists
+  tags:
+    - umask
+
+- name: stat csh.cshrc
+  become: 'yes'
+  stat:
+    path: /etc/csh.cshrc
+  register: cshrc
+  tags:
+    - umask
+
+- name: set default csh.cshrc umask
+  become: 'yes'
+  replace:
+    regexp: 'umask(\s+.*)'
+    replace: "umask 077"
+    dest: /etc/csh.cshrc
+    mode: 0644
+  when: cshrc.stat.exists
+  tags:
+    - umask
+- name: set default profile umask
+  become: 'yes'
+  replace:
+    regexp: 'umask(\s+.*)'
+    replace: "umask 077"
+    dest: /etc/profile
+    mode: 0644
+  tags:
+     - umask
+
+- name: readonly TMOUT
+  become: 'yes'
+  lineinfile:
+    line: "readonly TMOUT"
+    dest: /etc/profile
+    mode: 0644
+    state: present
+    create: 'no'
+    insertbefore: "^export"
+  tags:
+    - umask
+
+- name: set TMOUT
+  become: 'yes'
+  lineinfile:
+    line: "TMOUT=600"
+    dest: /etc/profile
+    mode: 0644
+    state: present
+    create: 'no'
+    insertbefore: "^readonly TMOUT"
+  tags:
+    - umask
+
+- name: export TMOUT
+  become: 'yes'
+  lineinfile:
+    line: "export TMOUT"
+    dest: /etc/profile
+    mode: 0644
+    state: present
+    create: 'no'
+    insertafter: "^readonly TMOUT"
+  tags:
+   - umask

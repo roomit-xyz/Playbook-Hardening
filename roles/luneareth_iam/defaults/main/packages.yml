@@ -6,3 +6,4 @@ packages_rpm:
   - wget
   - curl
   - unzip
+  - rkhunter

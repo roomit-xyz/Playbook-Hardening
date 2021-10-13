@@ -2373,3 +2373,33 @@ only.
 2021-10-13 22:11:47,636 p=256169 u=neareth n=ansible | TASK [luneareth_iam : restrict compiler access] ***********************************************************************************************************************************************************
 2021-10-13 22:11:47,721 p=256169 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
 2021-10-13 22:11:47,721 p=256169 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-10-13 22:20:36,641 p=259584 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:24:24,666 p=260795 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:24:27,746 p=260829 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:27:42,895 p=261903 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:27:48,134 p=261945 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:27:52,886 p=261992 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:27:59,582 p=262048 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:28:04,912 p=262096 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:28:11,577 p=262147 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:28:15,704 p=262186 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:28:27,503 p=262265 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:28:28,355 p=262266 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:28:28,805 p=262269 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:29:16,522 p=262560 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:29:25,152 p=262630 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:29:25,655 p=262633 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:29:42,664 p=262770 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:29:45,404 p=262802 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:29:52,288 p=262850 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:29:52,714 p=262851 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:31:01,299 p=263274 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:31:06,113 p=263325 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:31:16,372 p=263399 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:31:22,607 p=263454 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:31:28,502 p=263496 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:31:28,834 p=263498 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:34:40,604 p=264549 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:34:54,171 p=264637 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:34:54,603 p=264639 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:34:54,854 p=264641 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
