@@ -2692,3 +2692,48 @@ Could be written as:
 }
 2021-10-13 23:00:15,266 p=277718 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
 2021-10-13 23:00:15,267 p=277718 u=neareth n=ansible | 157.230.251.82             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-13 23:10:49,828 p=281979 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:10:57,892 p=282032 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:10:58,969 p=282033 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:10:59,025 p=282036 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:11:41,568 p=282311 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:11:46,074 p=282352 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:11:46,364 p=282353 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:12:15,984 p=282539 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:13:30,938 p=282994 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:13:31,133 p=282997 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:13:31,542 p=283000 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:13:45,390 p=283120 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:13:45,895 p=283122 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:13:54,876 p=283208 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:14:03,292 p=283258 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 23:14:03,369 p=283258 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 23:14:19,582 p=283258 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 23:14:19,594 p=283258 u=neareth n=ansible | TASK [luneareth_iam : Add repository] *********************************************************************************************************************************************************************
+2021-10-13 23:14:26,310 p=283258 u=neareth n=ansible | failed: [157.230.251.82] (item=epel) => {"ansible_loop_var": "item", "changed": false, "item": "epel", "msg": "Parameter 'baseurl', 'metalink' or 'mirrorlist' is required."}
+2021-10-13 23:14:33,185 p=283258 u=neareth n=ansible | failed: [157.230.251.82] (item=powertools) => {"ansible_loop_var": "item", "changed": false, "item": "powertools", "msg": "Parameter 'baseurl', 'metalink' or 'mirrorlist' is required."}
+2021-10-13 23:14:33,190 p=283258 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 23:14:33,190 p=283258 u=neareth n=ansible | 157.230.251.82             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-13 23:15:25,416 p=283933 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:15:28,766 p=283956 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 23:15:28,831 p=283956 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 23:15:45,066 p=283956 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 23:15:45,082 p=283956 u=neareth n=ansible | TASK [luneareth_iam : Add repository] *********************************************************************************************************************************************************************
+2021-10-13 23:15:55,608 p=283956 u=neareth n=ansible | failed: [157.230.251.82] (item=epel) => {"ansible_loop_var": "item", "changed": false, "item": "epel", "msg": "Parameter 'baseurl', 'metalink' or 'mirrorlist' is required."}
+2021-10-13 23:16:02,580 p=283956 u=neareth n=ansible | failed: [157.230.251.82] (item=powertools) => {"ansible_loop_var": "item", "changed": false, "item": "powertools", "msg": "Parameter 'baseurl', 'metalink' or 'mirrorlist' is required."}
+2021-10-13 23:16:02,583 p=283956 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 23:16:02,583 p=283956 u=neareth n=ansible | 157.230.251.82             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-13 23:18:27,624 p=285087 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:18:28,399 p=285090 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:18:29,376 p=285107 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:18:31,434 p=285128 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 23:18:31,501 p=285128 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 23:18:47,760 p=285128 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 23:18:47,772 p=285128 u=neareth n=ansible | TASK [luneareth_iam : Add repository] *********************************************************************************************************************************************************************
+2021-10-13 23:18:55,545 p=285128 u=neareth n=ansible | failed: [157.230.251.82] (item=epel) => {"ansible_loop_var": "item", "changed": false, "item": "epel", "msg": "Parameter 'baseurl', 'metalink' or 'mirrorlist' is required."}
+2021-10-13 23:19:03,118 p=285128 u=neareth n=ansible | failed: [157.230.251.82] (item=powertools) => {"ansible_loop_var": "item", "changed": false, "item": "powertools", "msg": "Parameter 'baseurl', 'metalink' or 'mirrorlist' is required."}
+2021-10-13 23:19:03,123 p=285128 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 23:19:03,124 p=285128 u=neareth n=ansible | 157.230.251.82             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-13 23:20:37,560 p=286099 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:40,225 p=286108 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:41,025 p=286113 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
