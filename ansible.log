@@ -293,3 +293,2083 @@
 2021-10-13 14:20:50,613 p=99618 u=neareth n=ansible | skipping: [157.230.251.82]
 2021-10-13 14:20:50,630 p=99618 u=neareth n=ansible | PLAY RECAP **********************************************************************************************************
 2021-10-13 14:20:50,630 p=99618 u=neareth n=ansible | 157.230.251.82             : ok=45   changed=6    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+2021-10-13 14:22:34,730 p=102930 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:28:36,077 p=237676 u=neareth n=ansible | [WARNING]: Error in vault password prompt (default): Invalid vault password was provided
+
+2021-10-13 21:28:36,078 p=237676 u=neareth n=ansible | ERROR! Invalid vault password was provided
+2021-10-13 21:28:39,019 p=237711 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-13 21:28:40,346 p=237711 u=neareth n=ansible | localhost | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.43.123"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::d8c2:39a9:e646:d3cc"
+        ],
+        "ansible_apparmor": {
+            "status": "disabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "10/31/2019",
+        "ansible_bios_vendor": "LENOVO",
+        "ansible_bios_version": "J5ET64WW (1.35 )",
+        "ansible_board_asset_tag": "Not Available",
+        "ansible_board_name": "20DCA00RIA",
+        "ansible_board_serial": "NA",
+        "ansible_board_vendor": "LENOVO",
+        "ansible_board_version": "Not Defined",
+        "ansible_chassis_asset_tag": "No Asset Information",
+        "ansible_chassis_serial": "NA",
+        "ansible_chassis_vendor": "LENOVO",
+        "ansible_chassis_version": "None",
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-linux",
+            "loglevel": "3",
+            "quiet": true,
+            "root": "UUID=f0bdc898-b589-4822-b41d-5574d0b0a539",
+            "rw": true
+        },
+        "ansible_date_time": {
+            "date": "2021-10-13",
+            "day": "13",
+            "epoch": "1634135319",
+            "hour": "21",
+            "iso8601": "2021-10-13T14:28:39Z",
+            "iso8601_basic": "20211013T212839748210",
+            "iso8601_basic_short": "20211013T212839",
+            "iso8601_micro": "2021-10-13T14:28:39.748210Z",
+            "minute": "28",
+            "month": "10",
+            "second": "39",
+            "time": "21:28:39",
+            "tz": "WIB",
+            "tz_dst": "WIB",
+            "tz_offset": "+0700",
+            "weekday": "Rabu",
+            "weekday_number": "3",
+            "weeknumber": "41",
+            "year": "2021"
+        },
+        "ansible_default_ipv4": {
+            "address": "192.168.43.123",
+            "alias": "wlan0",
+            "broadcast": "192.168.43.255",
+            "gateway": "192.168.43.133",
+            "interface": "wlan0",
+            "macaddress": "34:68:95:01:3e:0b",
+            "mtu": 1500,
+            "netmask": "255.255.255.0",
+            "network": "192.168.43.0",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {},
+        "ansible_device_links": {
+            "ids": {
+                "sda": [
+                    "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V",
+                    "wwn-0x5002538d4083a276"
+                ],
+                "sda1": [
+                    "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part1",
+                    "wwn-0x5002538d4083a276-part1"
+                ],
+                "sda3": [
+                    "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part3",
+                    "wwn-0x5002538d4083a276-part3"
+                ]
+            },
+            "labels": {
+                "sda3": [
+                    "DATA"
+                ]
+            },
+            "masters": {},
+            "uuids": {
+                "sda1": [
+                    "f0bdc898-b589-4822-b41d-5574d0b0a539"
+                ],
+                "sda3": [
+                    "2CD26F81D26F4DE0"
+                ]
+            }
+        },
+        "ansible_devices": {
+            "loop0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "133320",
+                "sectorsize": "512",
+                "size": "65.10 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "113544",
+                "sectorsize": "512",
+                "size": "55.44 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "113536",
+                "sectorsize": "512",
+                "size": "55.44 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop3": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "337424",
+                "sectorsize": "512",
+                "size": "164.76 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop4": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "66144",
+                "sectorsize": "512",
+                "size": "32.30 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop5": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "66152",
+                "sectorsize": "512",
+                "size": "32.30 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "sda": {
+                "holders": [],
+                "host": "SATA controller: Intel Corporation Wildcat Point-LP SATA Controller [AHCI Mode] (rev 03)",
+                "links": {
+                    "ids": [
+                        "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V",
+                        "wwn-0x5002538d4083a276"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "Samsung SSD 850",
+                "partitions": {
+                    "sda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part1",
+                                "wwn-0x5002538d4083a276-part1"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "f0bdc898-b589-4822-b41d-5574d0b0a539"
+                            ]
+                        },
+                        "sectors": "156248064",
+                        "sectorsize": 512,
+                        "size": "74.50 GB",
+                        "start": "2048",
+                        "uuid": "f0bdc898-b589-4822-b41d-5574d0b0a539"
+                    },
+                    "sda3": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part3",
+                                "wwn-0x5002538d4083a276-part3"
+                            ],
+                            "labels": [
+                                "DATA"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "2CD26F81D26F4DE0"
+                            ]
+                        },
+                        "sectors": "820518912",
+                        "sectorsize": 512,
+                        "size": "391.25 GB",
+                        "start": "156250112",
+                        "uuid": "2CD26F81D26F4DE0"
+                    }
+                },
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "976773168",
+                "sectorsize": "512",
+                "size": "465.76 GB",
+                "support_discard": "512",
+                "vendor": "ATA",
+                "virtual": 1,
+                "wwn": "0x5002538d4083a276"
+            }
+        },
+        "ansible_distribution": "Archlinux",
+        "ansible_distribution_file_path": "/etc/arch-release",
+        "ansible_distribution_file_variety": "Archlinux",
+        "ansible_distribution_major_version": "rolling",
+        "ansible_distribution_release": "n/a",
+        "ansible_distribution_version": "rolling",
+        "ansible_dns": {
+            "nameservers": [
+                "192.168.43.133"
+            ]
+        },
+        "ansible_domain": "",
+        "ansible_effective_group_id": 985,
+        "ansible_effective_user_id": 1000,
+        "ansible_enp0s25": {
+            "active": false,
+            "device": "enp0s25",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "on",
+                "rx_all": "off",
+                "rx_checksumming": "on",
+                "rx_fcs": "off",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "on",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "on",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "macaddress": "68:f7:28:ba:81:e5",
+            "module": "e1000e",
+            "mtu": 1500,
+            "pciid": "0000:00:19.0",
+            "phc_index": 0,
+            "promisc": false,
+            "speed": -1,
+            "timestamping": [],
+            "type": "ether"
+        },
+        "ansible_env": {
+            "COLORTERM": "truecolor",
+            "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+            "DESKTOP_SESSION": "gnome",
+            "DISPLAY": ":0",
+            "EDITOR": "mvim",
+            "GDMSESSION": "gnome",
+            "GDM_LANG": "en_US.UTF-8",
+            "GIO_LAUNCHED_DESKTOP_FILE": "/usr/share/applications/terminator.desktop",
+            "GIO_LAUNCHED_DESKTOP_FILE_PID": "19327",
+            "GJS_DEBUG_OUTPUT": "stderr",
+            "GJS_DEBUG_TOPICS": "JS ERROR;JS LOG",
+            "GNOME_SETUP_DISPLAY": ":1",
+            "HOME": "/home/neareth",
+            "INVOCATION_ID": "722891be57814d4f97cfc12cd970d022",
+            "JOURNAL_STREAM": "8:21081",
+            "LANG": "en_US.UTF-8",
+            "LC_COLLATE": "C",
+            "LC_TIME": "id_ID.UTF-8",
+            "LESS": "-R",
+            "LOGNAME": "neareth",
+            "LSCOLORS": "Gxfxcxdxbxegedabagacad",
+            "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+            "MAIL": "/var/spool/mail/neareth",
+            "MANAGERPID": "770",
+            "MOTD_SHOWN": "pam",
+            "MUTTER_ALLOW_HYBRID_GPUS": "1",
+            "OLDPWD": "/home/neareth",
+            "PAGER": "less",
+            "PATH": "/usr/local/bin:/usr/bin:/var/lib/snapd/snap/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/etc/openvpn/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/etc/openvpn/bin:/home/neareth/.local/bin:/home/neareth/System/go:/opt/icp/bin",
+            "PWD": "/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux",
+            "SESSION_MANAGER": "local/127block:@/tmp/.ICE-unix/812,unix/127block:/tmp/.ICE-unix/812",
+            "SHELL": "/bin/zsh",
+            "SHLVL": "2",
+            "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+            "SYSTEMD_EXEC_PID": "828",
+            "TERM": "xterm-256color",
+            "TERMINATOR_DBUS_NAME": "net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3",
+            "TERMINATOR_DBUS_PATH": "/net/tenshu/Terminator2",
+            "TERMINATOR_UUID": "urn:uuid:05523a2e-041e-4412-a02a-6a7658484298",
+            "USER": "neareth",
+            "USERNAME": "neareth",
+            "VTE_VERSION": "6600",
+            "WAYLAND_DISPLAY": "wayland-0",
+            "XAUTHORITY": "/run/user/1000/.mutter-Xwaylandauth.9H9EB1",
+            "XDG_CURRENT_DESKTOP": "GNOME",
+            "XDG_DATA_DIRS": "/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+            "XDG_MENU_PREFIX": "gnome-",
+            "XDG_RUNTIME_DIR": "/run/user/1000",
+            "XDG_SESSION_CLASS": "user",
+            "XDG_SESSION_DESKTOP": "gnome",
+            "XDG_SESSION_TYPE": "wayland",
+            "ZSH": "/home/neareth/.oh-my-zsh",
+            "_": "/usr/bin/python"
+        },
+        "ansible_fibre_channel_wwn": [],
+        "ansible_fips": false,
+        "ansible_form_factor": "Notebook",
+        "ansible_fqdn": "127block",
+        "ansible_hostname": "127block",
+        "ansible_hostnqn": "",
+        "ansible_interfaces": [
+            "lo",
+            "enp0s25",
+            "wlan0"
+        ],
+        "ansible_is_chroot": false,
+        "ansible_iscsi_iqn": "",
+        "ansible_kernel": "5.14.11-arch1-1",
+        "ansible_kernel_version": "#1 SMP PREEMPT Sun, 10 Oct 2021 00:48:26 +0000",
+        "ansible_lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "on",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [],
+            "type": "loopback"
+        },
+        "ansible_local": {},
+        "ansible_lsb": {
+            "codename": "n/a",
+            "description": "Arch Linux",
+            "id": "Arch",
+            "major_release": "rolling",
+            "release": "rolling"
+        },
+        "ansible_machine": "x86_64",
+        "ansible_machine_id": "f13530e877bd4e789c664812c81062f8",
+        "ansible_memfree_mb": 5521,
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 11638,
+                "used": 4101
+            },
+            "real": {
+                "free": 5521,
+                "total": 15739,
+                "used": 10218
+            },
+            "swap": {
+                "cached": 0,
+                "free": 0,
+                "total": 0,
+                "used": 0
+            }
+        },
+        "ansible_memtotal_mb": 15739,
+        "ansible_mounts": [
+            {
+                "block_available": 2261583,
+                "block_size": 4096,
+                "block_total": 19092935,
+                "block_used": 16831352,
+                "device": "/dev/sda1",
+                "fstype": "ext4",
+                "inode_available": 3505850,
+                "inode_total": 4890624,
+                "inode_used": 1384774,
+                "mount": "/",
+                "options": "rw,relatime",
+                "size_available": 9263443968,
+                "size_total": 78204661760,
+                "uuid": "f0bdc898-b589-4822-b41d-5574d0b0a539"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 521,
+                "block_used": 521,
+                "device": "/dev/loop0",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 64986,
+                "inode_used": 64986,
+                "mount": "/var/lib/snapd/snap/gtk-common-themes/1515",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 68288512,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 259,
+                "block_used": 259,
+                "device": "/dev/loop4",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 474,
+                "inode_used": 474,
+                "mount": "/var/lib/snapd/snap/snapd/12704",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 33947648,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 444,
+                "block_used": 444,
+                "device": "/dev/loop1",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 10803,
+                "inode_used": 10803,
+                "mount": "/var/lib/snapd/snap/core18/2074",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 58195968,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 444,
+                "block_used": 444,
+                "device": "/dev/loop2",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 10803,
+                "inode_used": 10803,
+                "mount": "/var/lib/snapd/snap/core18/2128",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 58195968,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 259,
+                "block_used": 259,
+                "device": "/dev/loop5",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 474,
+                "inode_used": 474,
+                "mount": "/var/lib/snapd/snap/snapd/12883",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 33947648,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 1319,
+                "block_used": 1319,
+                "device": "/dev/loop3",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 27806,
+                "inode_used": 27806,
+                "mount": "/var/lib/snapd/snap/gnome-3-28-1804/161",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 172883968,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 45686525,
+                "block_size": 4096,
+                "block_total": 102564863,
+                "block_used": 56878338,
+                "device": "/dev/sda3",
+                "fstype": "fuseblk",
+                "inode_available": 184452427,
+                "inode_total": 184548340,
+                "inode_used": 95913,
+                "mount": "/mnt/sda3",
+                "options": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,allow_other,blksize=4096",
+                "size_available": 187132006400,
+                "size_total": 420105678848,
+                "uuid": "2CD26F81D26F4DE0"
+            }
+        ],
+        "ansible_nodename": "127block",
+        "ansible_os_family": "Archlinux",
+        "ansible_pkg_mgr": "pacman",
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-linux",
+            "loglevel": "3",
+            "quiet": true,
+            "root": "UUID=f0bdc898-b589-4822-b41d-5574d0b0a539",
+            "rw": true
+        },
+        "ansible_processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+            "1",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+            "2",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+            "3",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz"
+        ],
+        "ansible_processor_cores": 2,
+        "ansible_processor_count": 1,
+        "ansible_processor_nproc": 4,
+        "ansible_processor_threads_per_core": 2,
+        "ansible_processor_vcpus": 4,
+        "ansible_product_name": "20DCA00RIA",
+        "ansible_product_serial": "NA",
+        "ansible_product_uuid": "NA",
+        "ansible_product_version": "ThinkPad E450",
+        "ansible_python": {
+            "executable": "/usr/bin/python",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 7,
+                "minor": 9,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                9,
+                7,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "3.9.7",
+        "ansible_real_group_id": 985,
+        "ansible_real_user_id": 1000,
+        "ansible_selinux": {
+            "status": "Missing selinux Python library"
+        },
+        "ansible_selinux_python_present": false,
+        "ansible_service_mgr": "systemd",
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAJZ4IOfpcRPWwB7CFm/Dt9UF4hfU9S9LX0nkf0VgzFx5JluATs+XXrKr7M7g236/fYIzd/YOZy/NihGptOvyZBULjklSmpS5BDbmXygQOOf4pwA4T8zTlzJ3bvImA1RnbcT0gYdAEMZcsEPxSnCmODCPna3AVD0gzxZbag8v5UxhAAAAFQDmdDf7zHGoPvCmniPOS3HIq/U0JwAAAIEAk1iRV+R0o3RqlkUh7rxxTlS2aWKNKkt4GuwBe8TrcCQBB3LyOqqj+sv3UjGkMP1ZfRS9PhotL449P06zf+MxeWT8uAKojyfT7ZFVvPPi6kMRKjA+oPWJa0aPH8AisNkPwnHEwtVUcTd15R4XhFa+EsHA2eFmb4WksySKop95K3AAAACBAI0KA7++VSI+vzAMXra7G+Vrc9CqdIQHl01Qp7bEXt4mCC6qtxFjd2+YIsxpPCgD3nRxqaVKCNzy8se7Wm+V+v9wE2872E8tiaWKl5zc1Nfz6uu8HQW3Yidp/rU/TNKb5Ep0YTNzvPuYjt/1D4fKnwEQqJLUPrl+UsKlEez2uzdn",
+        "ansible_ssh_host_key_dsa_public_keytype": "ssh-dss",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPs0Ud9k3oNZDzNJwG5j7gyLdM0z0/ewZ2enaFCx2bAvqOysgBIu352iPr9zq++8XDly1TnaE0L//9OAAaFXlJ4=",
+        "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIPcLtCOcOllitNEboXFFq0byJbfEntzmYY5tePjyAi1N",
+        "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDJy5xDwDJrOzdRcO1BMOxBZZeonkzWHBkKtTO1E1UkwBrMadCMgFhJz++Xojxbjk1IUPV2FnXO/zwtlgtfS1PiPDFVuhkAqFIzMNQ0pNZqts4vbNUR7Z/dbgRJc95braZyq7xY195IHZZgutlOm1PYnFRAypJheeVLyLrJHssEsKuQ8SC6JFG1DLoBHUT3q3IPRpvI2aezTdrW1rzToJGfvb0jFMju25eHSt/Z76ZPSHUE+YgOMjhGejIp960Oj8ehkC4jpHKl6SzukpaWz2BKuJ7dN8GOnEkb/OFyTXqKpXY4KmNa0zrB3YUp/Gvf155rF9k6wPnUH+nC1dtD7UTUdqQI00aSHLmZ89yI9dLcFCcrLY1ObRFBu+X8Jzh8Ev1ug4PYfgO/JjjAVm4wg9aQBikQjIdrskIIi4GuaPcxTrfEv9zZPq/v5uPnzIfbxqRUkQd5XNS53oh41n4k0gQclIvp/0DEfTsGgZWmlqE8CR80AYBLtyVicqt9SB9os/M=",
+        "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "ansible_swapfree_mb": 0,
+        "ansible_swaptotal_mb": 0,
+        "ansible_system": "Linux",
+        "ansible_system_capabilities": [
+            ""
+        ],
+        "ansible_system_capabilities_enforced": "True",
+        "ansible_system_vendor": "LENOVO",
+        "ansible_uptime_seconds": 43138,
+        "ansible_user_dir": "/home/neareth",
+        "ansible_user_gecos": "Dwiyan Galuh",
+        "ansible_user_gid": 985,
+        "ansible_user_id": "neareth",
+        "ansible_user_shell": "/bin/zsh",
+        "ansible_user_uid": 1000,
+        "ansible_userspace_architecture": "x86_64",
+        "ansible_userspace_bits": "64",
+        "ansible_virtualization_role": "host",
+        "ansible_virtualization_tech_guest": [],
+        "ansible_virtualization_tech_host": [
+            "kvm",
+            "virtualbox"
+        ],
+        "ansible_virtualization_type": "kvm",
+        "ansible_wlan0": {
+            "active": true,
+            "device": "wlan0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "off [requested on]",
+                "highdma": "off [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "off [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "off",
+                "tcp_segmentation_offload": "off",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "off",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "off [fixed]",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [fixed]",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off [fixed]",
+                "tx_tcp_segmentation": "off [fixed]",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "192.168.43.123",
+                "broadcast": "192.168.43.255",
+                "netmask": "255.255.255.0",
+                "network": "192.168.43.0"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::d8c2:39a9:e646:d3cc",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "34:68:95:01:3e:0b",
+            "module": "rtl8723be",
+            "mtu": 1500,
+            "pciid": "0000:04:00.0",
+            "promisc": false,
+            "timestamping": [],
+            "type": "ether"
+        },
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2021-10-13 21:29:13,936 p=238000 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-13 21:29:15,168 p=238000 u=neareth n=ansible | localhost | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "192.168.43.123"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::d8c2:39a9:e646:d3cc"
+        ],
+        "ansible_apparmor": {
+            "status": "disabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "10/31/2019",
+        "ansible_bios_vendor": "LENOVO",
+        "ansible_bios_version": "J5ET64WW (1.35 )",
+        "ansible_board_asset_tag": "Not Available",
+        "ansible_board_name": "20DCA00RIA",
+        "ansible_board_serial": "NA",
+        "ansible_board_vendor": "LENOVO",
+        "ansible_board_version": "Not Defined",
+        "ansible_chassis_asset_tag": "No Asset Information",
+        "ansible_chassis_serial": "NA",
+        "ansible_chassis_vendor": "LENOVO",
+        "ansible_chassis_version": "None",
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-linux",
+            "loglevel": "3",
+            "quiet": true,
+            "root": "UUID=f0bdc898-b589-4822-b41d-5574d0b0a539",
+            "rw": true
+        },
+        "ansible_date_time": {
+            "date": "2021-10-13",
+            "day": "13",
+            "epoch": "1634135354",
+            "hour": "21",
+            "iso8601": "2021-10-13T14:29:14Z",
+            "iso8601_basic": "20211013T212914593320",
+            "iso8601_basic_short": "20211013T212914",
+            "iso8601_micro": "2021-10-13T14:29:14.593320Z",
+            "minute": "29",
+            "month": "10",
+            "second": "14",
+            "time": "21:29:14",
+            "tz": "WIB",
+            "tz_dst": "WIB",
+            "tz_offset": "+0700",
+            "weekday": "Rabu",
+            "weekday_number": "3",
+            "weeknumber": "41",
+            "year": "2021"
+        },
+        "ansible_default_ipv4": {
+            "address": "192.168.43.123",
+            "alias": "wlan0",
+            "broadcast": "192.168.43.255",
+            "gateway": "192.168.43.133",
+            "interface": "wlan0",
+            "macaddress": "34:68:95:01:3e:0b",
+            "mtu": 1500,
+            "netmask": "255.255.255.0",
+            "network": "192.168.43.0",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {},
+        "ansible_device_links": {
+            "ids": {
+                "sda": [
+                    "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V",
+                    "wwn-0x5002538d4083a276"
+                ],
+                "sda1": [
+                    "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part1",
+                    "wwn-0x5002538d4083a276-part1"
+                ],
+                "sda3": [
+                    "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part3",
+                    "wwn-0x5002538d4083a276-part3"
+                ]
+            },
+            "labels": {
+                "sda3": [
+                    "DATA"
+                ]
+            },
+            "masters": {},
+            "uuids": {
+                "sda1": [
+                    "f0bdc898-b589-4822-b41d-5574d0b0a539"
+                ],
+                "sda3": [
+                    "2CD26F81D26F4DE0"
+                ]
+            }
+        },
+        "ansible_devices": {
+            "loop0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "133320",
+                "sectorsize": "512",
+                "size": "65.10 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "113544",
+                "sectorsize": "512",
+                "size": "55.44 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "113536",
+                "sectorsize": "512",
+                "size": "55.44 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop3": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "337424",
+                "sectorsize": "512",
+                "size": "164.76 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop4": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "66144",
+                "sectorsize": "512",
+                "size": "32.30 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop5": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "66152",
+                "sectorsize": "512",
+                "size": "32.30 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "sda": {
+                "holders": [],
+                "host": "SATA controller: Intel Corporation Wildcat Point-LP SATA Controller [AHCI Mode] (rev 03)",
+                "links": {
+                    "ids": [
+                        "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V",
+                        "wwn-0x5002538d4083a276"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "Samsung SSD 850",
+                "partitions": {
+                    "sda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part1",
+                                "wwn-0x5002538d4083a276-part1"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "f0bdc898-b589-4822-b41d-5574d0b0a539"
+                            ]
+                        },
+                        "sectors": "156248064",
+                        "sectorsize": 512,
+                        "size": "74.50 GB",
+                        "start": "2048",
+                        "uuid": "f0bdc898-b589-4822-b41d-5574d0b0a539"
+                    },
+                    "sda3": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-Samsung_SSD_850_EVO_500GB_S21GNXAGC05166V-part3",
+                                "wwn-0x5002538d4083a276-part3"
+                            ],
+                            "labels": [
+                                "DATA"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "2CD26F81D26F4DE0"
+                            ]
+                        },
+                        "sectors": "820518912",
+                        "sectorsize": 512,
+                        "size": "391.25 GB",
+                        "start": "156250112",
+                        "uuid": "2CD26F81D26F4DE0"
+                    }
+                },
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "976773168",
+                "sectorsize": "512",
+                "size": "465.76 GB",
+                "support_discard": "512",
+                "vendor": "ATA",
+                "virtual": 1,
+                "wwn": "0x5002538d4083a276"
+            }
+        },
+        "ansible_distribution": "Archlinux",
+        "ansible_distribution_file_path": "/etc/arch-release",
+        "ansible_distribution_file_variety": "Archlinux",
+        "ansible_distribution_major_version": "rolling",
+        "ansible_distribution_release": "n/a",
+        "ansible_distribution_version": "rolling",
+        "ansible_dns": {
+            "nameservers": [
+                "192.168.43.133"
+            ]
+        },
+        "ansible_domain": "",
+        "ansible_effective_group_id": 985,
+        "ansible_effective_user_id": 1000,
+        "ansible_enp0s25": {
+            "active": false,
+            "device": "enp0s25",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "on",
+                "rx_all": "off",
+                "rx_checksumming": "on",
+                "rx_fcs": "off",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "on",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "on",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "macaddress": "68:f7:28:ba:81:e5",
+            "module": "e1000e",
+            "mtu": 1500,
+            "pciid": "0000:00:19.0",
+            "phc_index": 0,
+            "promisc": false,
+            "speed": -1,
+            "timestamping": [],
+            "type": "ether"
+        },
+        "ansible_env": {
+            "COLORTERM": "truecolor",
+            "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+            "DESKTOP_SESSION": "gnome",
+            "DISPLAY": ":0",
+            "EDITOR": "mvim",
+            "GDMSESSION": "gnome",
+            "GDM_LANG": "en_US.UTF-8",
+            "GIO_LAUNCHED_DESKTOP_FILE": "/usr/share/applications/terminator.desktop",
+            "GIO_LAUNCHED_DESKTOP_FILE_PID": "19327",
+            "GJS_DEBUG_OUTPUT": "stderr",
+            "GJS_DEBUG_TOPICS": "JS ERROR;JS LOG",
+            "GNOME_SETUP_DISPLAY": ":1",
+            "HOME": "/home/neareth",
+            "INVOCATION_ID": "722891be57814d4f97cfc12cd970d022",
+            "JOURNAL_STREAM": "8:21081",
+            "LANG": "en_US.UTF-8",
+            "LC_COLLATE": "C",
+            "LC_TIME": "id_ID.UTF-8",
+            "LESS": "-R",
+            "LOGNAME": "neareth",
+            "LSCOLORS": "Gxfxcxdxbxegedabagacad",
+            "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+            "MAIL": "/var/spool/mail/neareth",
+            "MANAGERPID": "770",
+            "MOTD_SHOWN": "pam",
+            "MUTTER_ALLOW_HYBRID_GPUS": "1",
+            "OLDPWD": "/home/neareth",
+            "PAGER": "less",
+            "PATH": "/usr/local/bin:/usr/bin:/var/lib/snapd/snap/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/etc/openvpn/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/etc/openvpn/bin:/home/neareth/.local/bin:/home/neareth/System/go:/opt/icp/bin",
+            "PWD": "/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux",
+            "SESSION_MANAGER": "local/127block:@/tmp/.ICE-unix/812,unix/127block:/tmp/.ICE-unix/812",
+            "SHELL": "/bin/zsh",
+            "SHLVL": "2",
+            "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+            "SYSTEMD_EXEC_PID": "828",
+            "TERM": "xterm-256color",
+            "TERMINATOR_DBUS_NAME": "net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3",
+            "TERMINATOR_DBUS_PATH": "/net/tenshu/Terminator2",
+            "TERMINATOR_UUID": "urn:uuid:05523a2e-041e-4412-a02a-6a7658484298",
+            "USER": "neareth",
+            "USERNAME": "neareth",
+            "VTE_VERSION": "6600",
+            "WAYLAND_DISPLAY": "wayland-0",
+            "XAUTHORITY": "/run/user/1000/.mutter-Xwaylandauth.9H9EB1",
+            "XDG_CURRENT_DESKTOP": "GNOME",
+            "XDG_DATA_DIRS": "/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+            "XDG_MENU_PREFIX": "gnome-",
+            "XDG_RUNTIME_DIR": "/run/user/1000",
+            "XDG_SESSION_CLASS": "user",
+            "XDG_SESSION_DESKTOP": "gnome",
+            "XDG_SESSION_TYPE": "wayland",
+            "ZSH": "/home/neareth/.oh-my-zsh",
+            "_": "/usr/bin/python"
+        },
+        "ansible_fibre_channel_wwn": [],
+        "ansible_fips": false,
+        "ansible_form_factor": "Notebook",
+        "ansible_fqdn": "127block",
+        "ansible_hostname": "127block",
+        "ansible_hostnqn": "",
+        "ansible_interfaces": [
+            "lo",
+            "wlan0",
+            "enp0s25"
+        ],
+        "ansible_is_chroot": false,
+        "ansible_iscsi_iqn": "",
+        "ansible_kernel": "5.14.11-arch1-1",
+        "ansible_kernel_version": "#1 SMP PREEMPT Sun, 10 Oct 2021 00:48:26 +0000",
+        "ansible_lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "on",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [],
+            "type": "loopback"
+        },
+        "ansible_local": {},
+        "ansible_lsb": {
+            "codename": "n/a",
+            "description": "Arch Linux",
+            "id": "Arch",
+            "major_release": "rolling",
+            "release": "rolling"
+        },
+        "ansible_machine": "x86_64",
+        "ansible_machine_id": "f13530e877bd4e789c664812c81062f8",
+        "ansible_memfree_mb": 5524,
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 11642,
+                "used": 4097
+            },
+            "real": {
+                "free": 5524,
+                "total": 15739,
+                "used": 10215
+            },
+            "swap": {
+                "cached": 0,
+                "free": 0,
+                "total": 0,
+                "used": 0
+            }
+        },
+        "ansible_memtotal_mb": 15739,
+        "ansible_mounts": [
+            {
+                "block_available": 2261360,
+                "block_size": 4096,
+                "block_total": 19092935,
+                "block_used": 16831575,
+                "device": "/dev/sda1",
+                "fstype": "ext4",
+                "inode_available": 3505850,
+                "inode_total": 4890624,
+                "inode_used": 1384774,
+                "mount": "/",
+                "options": "rw,relatime",
+                "size_available": 9262530560,
+                "size_total": 78204661760,
+                "uuid": "f0bdc898-b589-4822-b41d-5574d0b0a539"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 521,
+                "block_used": 521,
+                "device": "/dev/loop0",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 64986,
+                "inode_used": 64986,
+                "mount": "/var/lib/snapd/snap/gtk-common-themes/1515",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 68288512,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 259,
+                "block_used": 259,
+                "device": "/dev/loop4",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 474,
+                "inode_used": 474,
+                "mount": "/var/lib/snapd/snap/snapd/12704",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 33947648,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 444,
+                "block_used": 444,
+                "device": "/dev/loop1",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 10803,
+                "inode_used": 10803,
+                "mount": "/var/lib/snapd/snap/core18/2074",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 58195968,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 444,
+                "block_used": 444,
+                "device": "/dev/loop2",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 10803,
+                "inode_used": 10803,
+                "mount": "/var/lib/snapd/snap/core18/2128",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 58195968,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 259,
+                "block_used": 259,
+                "device": "/dev/loop5",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 474,
+                "inode_used": 474,
+                "mount": "/var/lib/snapd/snap/snapd/12883",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 33947648,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 1319,
+                "block_used": 1319,
+                "device": "/dev/loop3",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 27806,
+                "inode_used": 27806,
+                "mount": "/var/lib/snapd/snap/gnome-3-28-1804/161",
+                "options": "ro,nodev,relatime,errors=continue",
+                "size_available": 0,
+                "size_total": 172883968,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 45686525,
+                "block_size": 4096,
+                "block_total": 102564863,
+                "block_used": 56878338,
+                "device": "/dev/sda3",
+                "fstype": "fuseblk",
+                "inode_available": 184452427,
+                "inode_total": 184548340,
+                "inode_used": 95913,
+                "mount": "/mnt/sda3",
+                "options": "rw,nosuid,nodev,relatime,user_id=0,group_id=0,allow_other,blksize=4096",
+                "size_available": 187132006400,
+                "size_total": 420105678848,
+                "uuid": "2CD26F81D26F4DE0"
+            }
+        ],
+        "ansible_nodename": "127block",
+        "ansible_os_family": "Archlinux",
+        "ansible_pkg_mgr": "pacman",
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-linux",
+            "loglevel": "3",
+            "quiet": true,
+            "root": "UUID=f0bdc898-b589-4822-b41d-5574d0b0a539",
+            "rw": true
+        },
+        "ansible_processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+            "1",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+            "2",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
+            "3",
+            "GenuineIntel",
+            "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz"
+        ],
+        "ansible_processor_cores": 2,
+        "ansible_processor_count": 1,
+        "ansible_processor_nproc": 4,
+        "ansible_processor_threads_per_core": 2,
+        "ansible_processor_vcpus": 4,
+        "ansible_product_name": "20DCA00RIA",
+        "ansible_product_serial": "NA",
+        "ansible_product_uuid": "NA",
+        "ansible_product_version": "ThinkPad E450",
+        "ansible_python": {
+            "executable": "/usr/bin/python",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 7,
+                "minor": 9,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                9,
+                7,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "3.9.7",
+        "ansible_real_group_id": 985,
+        "ansible_real_user_id": 1000,
+        "ansible_selinux": {
+            "status": "Missing selinux Python library"
+        },
+        "ansible_selinux_python_present": false,
+        "ansible_service_mgr": "systemd",
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAJZ4IOfpcRPWwB7CFm/Dt9UF4hfU9S9LX0nkf0VgzFx5JluATs+XXrKr7M7g236/fYIzd/YOZy/NihGptOvyZBULjklSmpS5BDbmXygQOOf4pwA4T8zTlzJ3bvImA1RnbcT0gYdAEMZcsEPxSnCmODCPna3AVD0gzxZbag8v5UxhAAAAFQDmdDf7zHGoPvCmniPOS3HIq/U0JwAAAIEAk1iRV+R0o3RqlkUh7rxxTlS2aWKNKkt4GuwBe8TrcCQBB3LyOqqj+sv3UjGkMP1ZfRS9PhotL449P06zf+MxeWT8uAKojyfT7ZFVvPPi6kMRKjA+oPWJa0aPH8AisNkPwnHEwtVUcTd15R4XhFa+EsHA2eFmb4WksySKop95K3AAAACBAI0KA7++VSI+vzAMXra7G+Vrc9CqdIQHl01Qp7bEXt4mCC6qtxFjd2+YIsxpPCgD3nRxqaVKCNzy8se7Wm+V+v9wE2872E8tiaWKl5zc1Nfz6uu8HQW3Yidp/rU/TNKb5Ep0YTNzvPuYjt/1D4fKnwEQqJLUPrl+UsKlEez2uzdn",
+        "ansible_ssh_host_key_dsa_public_keytype": "ssh-dss",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPs0Ud9k3oNZDzNJwG5j7gyLdM0z0/ewZ2enaFCx2bAvqOysgBIu352iPr9zq++8XDly1TnaE0L//9OAAaFXlJ4=",
+        "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIPcLtCOcOllitNEboXFFq0byJbfEntzmYY5tePjyAi1N",
+        "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDJy5xDwDJrOzdRcO1BMOxBZZeonkzWHBkKtTO1E1UkwBrMadCMgFhJz++Xojxbjk1IUPV2FnXO/zwtlgtfS1PiPDFVuhkAqFIzMNQ0pNZqts4vbNUR7Z/dbgRJc95braZyq7xY195IHZZgutlOm1PYnFRAypJheeVLyLrJHssEsKuQ8SC6JFG1DLoBHUT3q3IPRpvI2aezTdrW1rzToJGfvb0jFMju25eHSt/Z76ZPSHUE+YgOMjhGejIp960Oj8ehkC4jpHKl6SzukpaWz2BKuJ7dN8GOnEkb/OFyTXqKpXY4KmNa0zrB3YUp/Gvf155rF9k6wPnUH+nC1dtD7UTUdqQI00aSHLmZ89yI9dLcFCcrLY1ObRFBu+X8Jzh8Ev1ug4PYfgO/JjjAVm4wg9aQBikQjIdrskIIi4GuaPcxTrfEv9zZPq/v5uPnzIfbxqRUkQd5XNS53oh41n4k0gQclIvp/0DEfTsGgZWmlqE8CR80AYBLtyVicqt9SB9os/M=",
+        "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "ansible_swapfree_mb": 0,
+        "ansible_swaptotal_mb": 0,
+        "ansible_system": "Linux",
+        "ansible_system_capabilities": [
+            ""
+        ],
+        "ansible_system_capabilities_enforced": "True",
+        "ansible_system_vendor": "LENOVO",
+        "ansible_uptime_seconds": 43173,
+        "ansible_user_dir": "/home/neareth",
+        "ansible_user_gecos": "Dwiyan Galuh",
+        "ansible_user_gid": 985,
+        "ansible_user_id": "neareth",
+        "ansible_user_shell": "/bin/zsh",
+        "ansible_user_uid": 1000,
+        "ansible_userspace_architecture": "x86_64",
+        "ansible_userspace_bits": "64",
+        "ansible_virtualization_role": "host",
+        "ansible_virtualization_tech_guest": [],
+        "ansible_virtualization_tech_host": [
+            "virtualbox",
+            "kvm"
+        ],
+        "ansible_virtualization_type": "kvm",
+        "ansible_wlan0": {
+            "active": true,
+            "device": "wlan0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "off [requested on]",
+                "highdma": "off [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "off [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "off",
+                "tcp_segmentation_offload": "off",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "off",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "off [fixed]",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [fixed]",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off [fixed]",
+                "tx_tcp_segmentation": "off [fixed]",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "192.168.43.123",
+                "broadcast": "192.168.43.255",
+                "netmask": "255.255.255.0",
+                "network": "192.168.43.0"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::d8c2:39a9:e646:d3cc",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "34:68:95:01:3e:0b",
+            "module": "rtl8723be",
+            "mtu": 1500,
+            "pciid": "0000:04:00.0",
+            "promisc": false,
+            "timestamping": [],
+            "type": "ether"
+        },
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2021-10-13 21:29:43,372 p=238276 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:29:58,908 p=238371 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:29:59,397 p=238373 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:30:03,072 p=238423 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-13 21:30:30,908 p=238626 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:30:36,026 p=238667 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:30:45,702 p=238763 u=neareth n=ansible | ERROR! couldn't resolve module/action 'ansible_pkg_mgr'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_iam/tasks/package.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Install epel-release
+  ^ here
+
+2021-10-13 21:31:17,964 p=239001 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:31:21,512 p=239046 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:31:28,651 p=239101 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:31:29,343 p=239118 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:31:44,350 p=239234 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:31:44,794 p=239237 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:31:49,314 p=239332 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:31:49,789 p=239366 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-13 21:32:00,944 p=239462 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:32:01,675 p=239464 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:32:04,569 p=239490 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 21:32:04,660 p=239490 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 21:32:30,991 p=239490 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:32:31,028 p=239490 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-13 21:32:47,235 p=239873 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:32:48,377 p=239490 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:32:48,386 p=239490 u=neareth n=ansible | TASK [luneareth_iam : Upgrade all packages] ***************************************************************************************************************************************************************
+2021-10-13 21:32:55,068 p=239969 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:32:57,292 p=239981 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:32:58,335 p=239997 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:33:09,503 p=239490 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:33:09,539 p=239490 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 21:33:09,540 p=239490 u=neareth n=ansible | 157.230.251.82             : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-13 21:33:25,596 p=240345 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:33:51,999 p=240507 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:34:04,416 p=240588 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:34:16,168 p=240669 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:34:31,041 p=240757 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:34:31,070 p=240758 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:34:31,400 p=240759 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:35:18,710 p=241089 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:35:23,485 p=241135 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:35:25,061 p=241141 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:35:28,836 p=241184 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:35:29,035 p=241185 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:39:50,288 p=242584 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:40:00,180 p=242657 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:40:08,096 p=242722 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:40:15,636 p=242780 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:40:40,388 p=242925 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:40:40,625 p=242926 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:40:59,640 p=243061 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:41:03,178 p=243101 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:41:05,717 p=243124 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:41:34,585 p=243298 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:41:55,648 p=243443 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-13 21:41:55,652 p=243443 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-13 21:41:55,652 p=243443 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 157.230.251.82
+
+2021-10-13 21:42:00,727 p=243489 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-13 21:42:00,731 p=243489 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-10-13 21:42:00,731 p=243489 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 157.230.251.82
+
+2021-10-13 21:42:05,826 p=243533 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-13 21:42:05,829 p=243533 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-10-13 21:42:05,830 p=243533 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 157.230.251.82
+
+2021-10-13 21:42:36,097 p=243720 u=neareth n=ansible | [WARNING]: Unable to parse /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/hosts as an inventory source
+
+2021-10-13 21:42:36,097 p=243720 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-13 21:42:36,101 p=243720 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-10-13 21:42:36,102 p=243720 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 157.230.251.82
+
+2021-10-13 21:42:45,587 p=243789 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:08,478 p=244551 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:13,207 p=244589 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:14,712 p=244592 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:14,873 p=244603 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:15,013 p=244606 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:41,180 p=244801 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:55,909 p=244884 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:56,396 p=244885 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:45:56,490 p=244896 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:46:08,870 p=245006 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 21:46:08,928 p=245006 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 21:46:30,725 p=245006 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:46:30,742 p=245006 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-13 21:46:51,304 p=245006 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:46:51,315 p=245006 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-13 21:47:17,211 p=245006 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 21:47:17,220 p=245006 u=neareth n=ansible | TASK [luneareth_iam : Upgrade all packages] ***************************************************************************************************************************************************************
+2021-10-13 21:47:34,718 p=245006 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:47:34,744 p=245006 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 21:47:34,745 p=245006 u=neareth n=ansible | 157.230.251.82             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-13 21:48:14,673 p=245952 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:48:17,288 p=245990 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:48:23,263 p=246042 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:48:41,113 p=246146 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:49:11,523 p=246378 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:49:18,639 p=246433 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:49:18,671 p=246433 u=neareth n=ansible | [WARNING]: While constructing a mapping from /home/neareth/GITHUB/GITHUB-
+NEW/ansible-hardening-os-linux/roles/luneareth_iam/tasks/packages.yml, line 17,
+column 7, found a duplicate dict key (packages_rpm). Using last defined value
+only.
+
+2021-10-13 21:49:18,675 p=246433 u=neareth n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 17, column
+7, found a duplicate dict key (packages_rpm). Using last defined value only.
+
+2021-10-13 21:49:24,532 p=246482 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:49:24,564 p=246482 u=neareth n=ansible | [WARNING]: While constructing a mapping from /home/neareth/GITHUB/GITHUB-
+NEW/ansible-hardening-os-linux/roles/luneareth_iam/tasks/packages.yml, line 17,
+column 7, found a duplicate dict key (packages_rpm). Using last defined value
+only.
+
+2021-10-13 21:49:24,569 p=246482 u=neareth n=ansible | [WARNING]: While constructing a mapping from <unicode string>, line 17, column
+7, found a duplicate dict key (packages_rpm). Using last defined value only.
+
+2021-10-13 21:49:44,085 p=246599 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:50:24,189 p=246852 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:53:30,881 p=247905 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:53:54,635 p=248050 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:53:57,062 p=248081 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:17,852 p=248244 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:20,206 p=248256 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:20,551 p=248259 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:21,076 p=248266 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:21,187 p=248262 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:21,715 p=248284 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:23,925 p=248271 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:54:24,402 p=248332 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:55:41,647 p=248810 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 21:55:41,703 p=248810 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) on /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/inventories/production/group_vars/app
+2021-10-13 21:55:50,564 p=248902 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 21:55:50,628 p=248902 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 21:56:13,503 p=248902 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:56:13,515 p=248902 u=neareth n=ansible | TASK [luneareth_iam : stat postfic main.cf] ***************************************************************************************************************************************************************
+2021-10-13 21:56:26,914 p=248902 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 21:56:26,921 p=248902 u=neareth n=ansible | TASK [luneareth_iam : configure postfix disable_vrfy_command] *********************************************************************************************************************************************
+2021-10-13 21:56:26,935 p=248902 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 21:56:26,948 p=248902 u=neareth n=ansible | TASK [luneareth_iam : configure postfix inet_interfaces] **************************************************************************************************************************************************
+2021-10-13 21:56:26,971 p=248902 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 21:56:26,985 p=248902 u=neareth n=ansible | TASK [luneareth_iam : configure postfix smtpd_banner] *****************************************************************************************************************************************************
+2021-10-13 21:56:27,003 p=248902 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 21:56:27,013 p=248902 u=neareth n=ansible | TASK [luneareth_iam : configure postfix smtpd_client_restrictions] ****************************************************************************************************************************************
+2021-10-13 21:56:27,032 p=248902 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 21:56:27,066 p=248902 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 21:56:27,066 p=248902 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2021-10-13 21:57:28,094 p=249585 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:57:33,190 p=249633 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:57:43,588 p=249708 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 21:59:26,693 p=250512 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:00:17,384 p=250779 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:03:03,547 p=251620 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:03:13,258 p=251697 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:03:18,008 p=251735 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:03:29,383 p=251812 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:03:46,860 p=251924 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:04:05,359 p=252038 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:04:20,727 p=252140 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:04:42,544 p=252275 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:05:03,178 p=252451 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:05:04,364 p=252472 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:05:21,290 p=252577 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:05:21,603 p=252578 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:05:57,266 p=252773 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 22:05:57,326 p=252773 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 22:06:26,593 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:06:26,619 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:06:37,025 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:06:37,033 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:06:46,662 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:06:46,669 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:06:53,617 p=253332 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:06:55,357 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:06:55,368 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:06:55,889 p=253358 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:06:56,547 p=253370 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:07:04,369 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:07:04,377 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:07:06,446 p=253517 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:07:15,355 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:07:15,363 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:07:29,606 p=253754 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:07:33,964 p=253793 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:07:34,521 p=253794 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:07:36,724 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:07:36,732 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:07:57,121 p=254016 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:07:57,931 p=254018 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:07:58,558 p=254020 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:08:01,312 p=252773 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:08:01,320 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:08:02,437 p=254097 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:08:19,769 p=252773 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:08:19,778 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:08:36,663 p=252773 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:08:36,672 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:08:44,724 p=252773 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:08:44,731 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:08:53,015 p=252773 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:08:53,027 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:09:02,754 p=252773 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:09:02,761 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:09:11,960 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:09:11,967 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:09:20,268 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:09:20,275 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:09:29,687 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:09:29,702 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:09:31,924 p=255009 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:09:32,215 p=255012 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:09:32,491 p=255024 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:09:39,739 p=255164 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:09:41,663 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:09:41,676 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:09:54,568 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:09:54,577 p=252773 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:10:03,169 p=252773 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:10:03,191 p=252773 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 22:10:03,191 p=252773 u=neareth n=ansible | 157.230.251.82             : ok=19   changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-13 22:10:13,767 p=255667 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 22:10:13,838 p=255667 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 22:10:35,329 p=255667 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:10:35,344 p=255667 u=neareth n=ansible | TASK [luneareth_iam : register compilers] *****************************************************************************************************************************************************************
+2021-10-13 22:10:48,225 p=255667 u=neareth n=ansible | [WARNING]: Skipped '/snap/bin' path due to this access issue: '/snap/bin' is not a directory
+
+2021-10-13 22:10:48,225 p=255667 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:10:48,232 p=255667 u=neareth n=ansible | TASK [luneareth_iam : restrict compiler access] ***********************************************************************************************************************************************************
+2021-10-13 22:10:48,310 p=255667 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 22:10:48,311 p=255667 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2021-10-13 22:11:01,445 p=256115 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:11:01,846 p=256116 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:11:07,414 p=256169 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 22:11:07,480 p=256169 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 22:11:33,199 p=256169 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:11:33,232 p=256169 u=neareth n=ansible | TASK [luneareth_iam : register compilers] *****************************************************************************************************************************************************************
+2021-10-13 22:11:47,624 p=256169 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:11:47,636 p=256169 u=neareth n=ansible | TASK [luneareth_iam : restrict compiler access] ***********************************************************************************************************************************************************
+2021-10-13 22:11:47,721 p=256169 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 22:11:47,721 p=256169 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

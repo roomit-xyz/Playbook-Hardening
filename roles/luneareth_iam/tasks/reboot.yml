@@ -1,18 +1,18 @@
 
-- name: check to see if we need a reboot
+- name: Check OS RPM Base Needs Restart
   command: needs-restarting -r
   register: is_reboot
   ignore_errors: yes
   tags:
     - reboot
 
-- name: display is_reboot
+- name: Display is_reboot Check OS RPM Base Needs Restart
   debug:
     var: is_reboot.rc
   tags:
     - reboot
 
-- name: Reboot Server if Necessary
+- name: Reboot Server OS RPM Based
   command: shutdown -r now "Ansible Updates Triggered"
   become: true
   async: 30
@@ -21,14 +21,14 @@
   tags:
     - reboot
 
-- name: Check if reboot required
+- name: Check OS DEB Base Needs Restart
   stat:
     path: /var/run/reboot-required
   register: reboot_required_file
   tags:
     - reboot
 
-- name: Reboot if required
+- name: Reboot Server OS DEB Based
   reboot:
   when: reboot_required_file.stat.exists == true and ansible_os_family == "Debian"
   tags:

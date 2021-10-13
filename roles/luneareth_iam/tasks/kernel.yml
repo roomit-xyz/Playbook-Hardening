@@ -42,6 +42,48 @@
     - kernel
 
 - sysctl:
+    name: fs.protected_fifos
+    value: '2'
+    state: present
+  tags: 
+    - kernel
+
+- sysctl:
+    name: fs.protected_regular
+    value: '2'
+    state: present
+  tags: 
+    - kernel
+
+- sysctl:
+    name: kernel.modules_disabled
+    value: '1'
+    state: present
+  tags: 
+    - kernel
+
+- sysctl:
+    name: kernel.perf_event_paranoid
+    value: '3'
+    state: present
+  tags: 
+    - kernel
+
+- sysctl:
+    name: net.core.bpf_jit_harden
+    value: '2'
+    state: present
+  tags: 
+    - kernel
+
+- sysctl:
+    name: net.ipv4.conf.default.accept_source_route
+    value: '0'
+    state: present
+  tags: 
+    - kernel
+
+- sysctl:
     name: net.ipv4.conf.all.log_martians
     value: '1'
     state: present

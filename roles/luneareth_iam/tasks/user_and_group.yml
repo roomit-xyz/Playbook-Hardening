@@ -2,7 +2,7 @@
   group:
     name: monit
     state: present
-  tags: user
+  tags: user_and_group
 
 - name: Adduser admin and assign to Monit Wheel Group
   user:
@@ -12,8 +12,7 @@
     append: yes
   with_items:
     - "{{user_admin}}"
-  when: ansible_os_family == "RedHat"
-  tags: CreateUserGlobal
+  tags: user_and_group
   
 
 - name: Adduser App and assign to Monit Group
@@ -26,5 +25,4 @@
     append: yes
   with_items:
     - "{{user_app}}"
-  when: ansible_os_family == "RedHat"
-  tags: AddUserToMonit
+  tags: user_and_group

@@ -10,4 +10,4 @@
           - {name: "{{user_root}}", pubkey: "{{ public_key }}" }
           - {name: "{{user_admin}}", pubkey: "{{ public_key }}" }
           - {name: "{{user_app}}", pubkey: "{{ public_key }}" }
-  tags: public_key
+  tags: authorized_keys

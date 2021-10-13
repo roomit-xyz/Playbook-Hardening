@@ -1,0 +1,8 @@
+packages_rpm:
+  - rng-tools
+  - telnet
+  - tcpdump
+  - net-tools
+  - wget
+  - curl
+  - unzip

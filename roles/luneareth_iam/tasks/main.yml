@@ -1,10 +1,11 @@
 ---
 
-- include: package.yml
+- include: packages.yml
 - include: user_and_group.yml
 - include: passwd.yml
 - include: authorized_keys.yml
 - include: selinux.yml
+- include: compilers.yml
 - include: kernel.yml
 - include: limits.yml
 - include: ntp.yml
@@ -12,6 +13,7 @@
 - include: file_integrity.yml
 - include: logging.yml
 - include: banner.yml
+- include: postfix.yml
 - include: reboot.yml
 
 

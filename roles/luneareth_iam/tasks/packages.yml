@@ -1,0 +1,34 @@
+# For Packages RPM Based
+- name: Install epel-release
+  package:
+    name: epel-release
+    state: present
+  when: ansible_os_family == "RedHat" 
+  ignore_errors: yes
+  tags:
+    - packages
+
+- name: RPM Package Installation
+  become: 'yes'
+  package:
+    name: "{{ packages_rpm }}"
+    state: present
+  when:  ansible_os_family == "RedHat" 
+  tags:
+    - packages
+
+- name: Upgrade all packages
+  package:
+    name: '*'
+    state: latest
+  when:  ansible_os_family == "RedHat" 
+  ignore_errors: yes
+  tags:
+    - packages
+
+
+
+# For Packages DEB Based
+
+
+    
