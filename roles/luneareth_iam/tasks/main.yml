@@ -3,7 +3,7 @@
 - include: package.yml
 - include: user_and_group.yml
 - include: passwd.yml
-- include: public_key.yml
+- include: authorized_keys.yml
 - include: selinux.yml
 - include: kernel.yml
 - include: limits.yml
