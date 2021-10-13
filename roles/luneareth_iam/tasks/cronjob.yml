@@ -1,3 +1,11 @@
+- name: Create Directory For Pool Report
+  file:
+    path: /opt/report_security/
+    state: directory
+    owner: root
+    group: root
+    mode: 700
+
 - name: Cronjob Check Daily Aide
   cron:
       name: "Aide Check Daily"
@@ -6,7 +14,21 @@
       day: "*"
       month: "*"
       weekday: "*"
-      job: /usr/sbin/aide --check
+      job: "/usr/sbin/aide --check >> /opt/report_security/aide.`date +'%m-%d-%y_%H-%M'`.log"
+  tags: 
+    - file_integrity
+    - cronjob
+    - aide_crontab
+
+- name: Cronjob Check Malware
+  cron:
+      name: "rkhunter checker"
+      minute: "23"
+      hour: "22"
+      day: "*"
+      month: "*"
+      weekday: "*"
+      job: "rkhunter -c --skip-keypress >> /opt/report_security/rkhunter.`date +'%m-%d-%y_%H-%M'`.log"
   tags: 
     - file_integrity
     - cronjob
@@ -15,7 +37,7 @@
 - name: crontab ram flush
   cron:
     name: "ram flush"
-    job: "bash /opt/crontab/ram_flush.sh"
+    job: "bash /opt/crontab/ram_flush.sh >> /opt/report_security/ram_flush.`date +'%m-%d-%y_%H-%M'`.log"
   register: check_crontab
   tags: 
     - ram_flush

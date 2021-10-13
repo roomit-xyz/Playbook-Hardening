@@ -2403,3 +2403,292 @@ only.
 2021-10-13 22:34:54,171 p=264637 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-13 22:34:54,603 p=264639 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-13 22:34:54,854 p=264641 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:35:36,203 p=265021 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:36:12,084 p=265220 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:36:16,047 p=265259 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:36:16,752 p=265272 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:06,558 p=266208 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:08,641 p=266209 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:08,958 p=266224 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:09,357 p=266220 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:10,026 p=266226 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:10,134 p=266222 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:10,442 p=266228 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:10,718 p=266231 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:39:11,773 p=266295 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:41:59,661 p=267263 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:12,770 p=267354 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:13,044 p=267357 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:27,002 p=267519 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:27,355 p=267520 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:32,867 p=267581 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:33,142 p=267582 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:36,765 p=267617 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:37,228 p=267625 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:38,212 p=267630 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:38,319 p=267631 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:42:53,935 p=267779 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  found character that cannot start any token
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_iam/tasks/cronjob.yml': line 40, column 85, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    name: "ram flush"
+    job: "bash /opt/crontab/ram_flush.sh >> /opt/report_security/ram_flush.${date +"%m-%d-%y_%H-%M"}"
+                                                                                    ^ here
+We could be wrong, but this one looks like it might be an issue with
+unbalanced quotes. If starting a value with a quote, make sure the
+line ends with the same set of quotes. For instance this arbitrary
+example:
+
+    foo: "bad" "wolf"
+
+Could be written as:
+
+    foo: '"bad" "wolf"'
+
+2021-10-13 22:43:21,785 p=267978 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:43:24,143 p=268018 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:43:39,753 p=268106 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:43:40,004 p=268108 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:43:53,274 p=268215 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:43:53,624 p=268216 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:44:01,762 p=268295 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:44:02,290 p=268296 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:44:03,476 p=268313 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:44:03,645 p=268317 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:44:07,579 p=268376 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 22:44:07,652 p=268376 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 22:44:20,335 p=268376 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-13 22:44:27,197 p=268572 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 22:44:27,255 p=268572 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 22:44:45,854 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:44:45,871 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-13 22:44:57,954 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:44:57,963 p=268572 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-13 22:45:11,233 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:45:11,240 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Upgrade all packages] ***************************************************************************************************************************************************************
+2021-10-13 22:45:23,113 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:45:23,120 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Create Group Monit] *****************************************************************************************************************************************************************
+2021-10-13 22:45:32,017 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:45:32,025 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Adduser admin and assign to Monit Wheel Group] **************************************************************************************************************************************
+2021-10-13 22:45:41,032 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item=luneareth)
+2021-10-13 22:45:41,042 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Adduser App and assign to Monit Group] **********************************************************************************************************************************************
+2021-10-13 22:45:50,245 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item=app)
+2021-10-13 22:45:50,256 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Create Group Monit] *****************************************************************************************************************************************************************
+2021-10-13 22:45:59,049 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:45:59,056 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Adduser admin and assign to Monit Wheel Group] **************************************************************************************************************************************
+2021-10-13 22:46:07,454 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item=luneareth)
+2021-10-13 22:46:07,462 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Adduser App and assign to Monit Group] **********************************************************************************************************************************************
+2021-10-13 22:46:16,765 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item=app)
+2021-10-13 22:46:16,773 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Change Password] ********************************************************************************************************************************************************************
+2021-10-13 22:46:25,491 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'root', 'password': '$6$f5hXa3EbOaonKXYh$m38.zKqfxoyCSc/k9iDWeqNyxUES1GIFmJzs.GxMFb/uTxuCzNNewlaXeV4SHPx1PneMo3sr.z1x.qQTYmngn.'})
+2021-10-13 22:46:34,691 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'luneareth', 'password': '$6$4YJgt5XtIl2WTN/3$GJPEKYAosq2bElROiiXByGAI8wEddgE7.RN1LpyAGLs4KD8KwU7S70wg2zbtENxak2T6CRdh9iySM..mzNX5a0'})
+2021-10-13 22:46:42,771 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'app', 'password': '$6$ERarx7DYO9k1wP3k$Kr8Wp6L8NcfKmG2C8S9jtEGCpYH2RNYBHhDShKv7HNDzgEpff8voNoy6a.NQFJl7orfOIh11fFyk89HLbQHBu/'})
+2021-10-13 22:46:42,780 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Copy Public Key] ********************************************************************************************************************************************************************
+2021-10-13 22:46:51,700 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'root', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-13 22:47:01,617 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'luneareth', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-13 22:47:11,855 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'app', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-13 22:47:11,864 p=268572 u=neareth n=ansible | TASK [luneareth_iam : SELinux security policy] ************************************************************************************************************************************************************
+2021-10-13 22:47:21,167 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:47:21,174 p=268572 u=neareth n=ansible | TASK [luneareth_iam : set SELinux type] *******************************************************************************************************************************************************************
+2021-10-13 22:47:29,568 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:47:29,576 p=268572 u=neareth n=ansible | TASK [luneareth_iam : register compilers] *****************************************************************************************************************************************************************
+2021-10-13 22:47:41,976 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:47:41,987 p=268572 u=neareth n=ansible | TASK [luneareth_iam : restrict compiler access] ***********************************************************************************************************************************************************
+2021-10-13 22:47:52,004 p=268572 u=neareth n=ansible | changed: [157.230.251.82] => (item={'path': '/usr/bin/as', 'mode': '0755', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 911408, 'inode': 12727687, 'dev': 64513, 'nlink': 1, 'atime': 1621442143.0, 'mtime': 1621442143.0, 'ctime': 1634138393.120464, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': True, 'wgrp': False, 'rgrp': True, 'xgrp': True, 'woth': False, 'roth': True, 'xoth': True, 'isuid': False, 'isgid': False})
+2021-10-13 22:48:00,801 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item={'path': '/bin/as', 'mode': '0755', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 911408, 'inode': 12727687, 'dev': 64513, 'nlink': 1, 'atime': 1621442143.0, 'mtime': 1621442143.0, 'ctime': 1634138393.120464, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': True, 'wgrp': False, 'rgrp': True, 'xgrp': True, 'woth': False, 'roth': True, 'xoth': True, 'isuid': False, 'isgid': False})
+2021-10-13 22:48:00,809 p=268572 u=neareth n=ansible | TASK [luneareth_iam : stat bashrc] ************************************************************************************************************************************************************************
+2021-10-13 22:48:10,111 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:48:10,117 p=268572 u=neareth n=ansible | TASK [luneareth_iam : set default bashrc umask] ***********************************************************************************************************************************************************
+2021-10-13 22:48:17,585 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:48:17,592 p=268572 u=neareth n=ansible | TASK [luneareth_iam : stat csh.cshrc] *********************************************************************************************************************************************************************
+2021-10-13 22:48:26,703 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:48:26,710 p=268572 u=neareth n=ansible | TASK [luneareth_iam : set default csh.cshrc umask] ********************************************************************************************************************************************************
+2021-10-13 22:48:34,895 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:48:34,903 p=268572 u=neareth n=ansible | TASK [luneareth_iam : set default profile umask] **********************************************************************************************************************************************************
+2021-10-13 22:48:42,873 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:48:42,883 p=268572 u=neareth n=ansible | TASK [luneareth_iam : readonly TMOUT] *********************************************************************************************************************************************************************
+2021-10-13 22:48:50,666 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:48:50,672 p=268572 u=neareth n=ansible | TASK [luneareth_iam : set TMOUT] **************************************************************************************************************************************************************************
+2021-10-13 22:48:57,730 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:48:57,737 p=268572 u=neareth n=ansible | TASK [luneareth_iam : export TMOUT] ***********************************************************************************************************************************************************************
+2021-10-13 22:49:05,197 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:49:05,204 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:49:14,106 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:49:14,116 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:49:24,256 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:49:24,262 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:49:32,227 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:49:32,234 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:49:39,292 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:49:39,300 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:49:46,051 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:49:46,058 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:49:53,423 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:49:53,430 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:00,813 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:00,820 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:08,078 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:08,085 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:17,902 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:17,912 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:25,680 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:25,687 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:32,957 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:32,965 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:41,449 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:41,457 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:49,437 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:49,447 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:50:56,803 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:50:56,810 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:51:04,798 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:51:04,805 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:51:12,059 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:51:12,067 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:51:19,225 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:51:19,232 p=268572 u=neareth n=ansible | TASK [luneareth_iam : sysctl] *****************************************************************************************************************************************************************************
+2021-10-13 22:51:27,139 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:51:27,147 p=268572 u=neareth n=ansible | TASK [luneareth_iam : limits.conf] ************************************************************************************************************************************************************************
+2021-10-13 22:51:42,981 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:51:42,989 p=268572 u=neareth n=ansible | TASK [luneareth_iam : coredump.conf] **********************************************************************************************************************************************************************
+2021-10-13 22:52:02,229 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:52:02,236 p=268572 u=neareth n=ansible | TASK [luneareth_iam : timesyncd.conf] *********************************************************************************************************************************************************************
+2021-10-13 22:52:21,282 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:52:21,289 p=268572 u=neareth n=ansible | TASK [luneareth_iam : register timesyncd status] **********************************************************************************************************************************************************
+2021-10-13 22:52:31,925 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:52:31,932 p=268572 u=neareth n=ansible | TASK [luneareth_iam : register timedatectl show] **********************************************************************************************************************************************************
+2021-10-13 22:52:41,348 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:52:41,357 p=268572 u=neareth n=ansible | TASK [luneareth_iam : timedatectl set-ntp] ****************************************************************************************************************************************************************
+2021-10-13 22:52:41,372 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:52:41,387 p=268572 u=neareth n=ansible | TASK [luneareth_iam : make directory crontab] *************************************************************************************************************************************************************
+2021-10-13 22:52:50,358 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:52:50,365 p=268572 u=neareth n=ansible | TASK [luneareth_iam : copy script ram flush] **************************************************************************************************************************************************************
+2021-10-13 22:53:09,091 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:53:09,099 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Install AIDE on RPM Packages] *******************************************************************************************************************************************************
+2021-10-13 22:53:22,504 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:53:22,512 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Install AIDE on DEB Packages] *******************************************************************************************************************************************************
+2021-10-13 22:53:22,525 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:53:22,536 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Iniziate Database Aide] *************************************************************************************************************************************************************
+2021-10-13 22:53:57,013 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:53:57,020 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Copy Database to Lib] ***************************************************************************************************************************************************************
+2021-10-13 22:54:05,823 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:54:05,831 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Install Auditd on RPM Packages] *****************************************************************************************************************************************************
+2021-10-13 22:54:18,614 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:54:18,621 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Install Auditd on DEB Packages] *****************************************************************************************************************************************************
+2021-10-13 22:54:18,633 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:54:18,645 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Copy File Configuration Auditd Luneareth Rules] *************************************************************************************************************************************
+2021-10-13 22:54:31,822 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:54:31,831 p=268572 u=neareth n=ansible | TASK [luneareth_iam : add motd] ***************************************************************************************************************************************************************************
+2021-10-13 22:54:45,346 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:54:45,353 p=268572 u=neareth n=ansible | TASK [luneareth_iam : add issue and issue.net] ************************************************************************************************************************************************************
+2021-10-13 22:54:59,886 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item=/etc/issue)
+2021-10-13 22:55:17,598 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => (item=/etc/issue.net)
+2021-10-13 22:55:17,607 p=268572 u=neareth n=ansible | TASK [luneareth_iam : stat postfic main.cf] ***************************************************************************************************************************************************************
+2021-10-13 22:55:26,318 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:55:26,326 p=268572 u=neareth n=ansible | TASK [luneareth_iam : configure postfix disable_vrfy_command] *********************************************************************************************************************************************
+2021-10-13 22:55:26,346 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:55:26,356 p=268572 u=neareth n=ansible | TASK [luneareth_iam : configure postfix inet_interfaces] **************************************************************************************************************************************************
+2021-10-13 22:55:26,379 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:55:26,410 p=268572 u=neareth n=ansible | TASK [luneareth_iam : configure postfix smtpd_banner] *****************************************************************************************************************************************************
+2021-10-13 22:55:26,432 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:55:26,452 p=268572 u=neareth n=ansible | TASK [luneareth_iam : configure postfix smtpd_client_restrictions] ****************************************************************************************************************************************
+2021-10-13 22:55:26,477 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:55:26,490 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Create Directory For Pool Report] ***************************************************************************************************************************************************
+2021-10-13 22:55:36,124 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:55:36,131 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Daily Aide] ***********************************************************************************************************************************************************
+2021-10-13 22:55:43,393 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:55:43,404 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Malware] **************************************************************************************************************************************************************
+2021-10-13 22:55:53,228 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:55:53,236 p=268572 u=neareth n=ansible | TASK [luneareth_iam : crontab ram flush] ******************************************************************************************************************************************************************
+2021-10-13 22:56:00,715 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:56:00,723 p=268572 u=neareth n=ansible | TASK [luneareth_iam : debug check crontab] ****************************************************************************************************************************************************************
+2021-10-13 22:56:00,786 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "msg": {
+        "changed": true,
+        "envs": [],
+        "failed": false,
+        "jobs": [
+            "ram flush",
+            "Aide Check Daily",
+            "rkhunter checker"
+        ]
+    }
+}
+2021-10-13 22:56:00,795 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Check OS RPM Base Needs Restart] ****************************************************************************************************************************************************
+2021-10-13 22:56:09,921 p=268572 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:56:09,928 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Display is_reboot Check OS RPM Base Needs Restart] **********************************************************************************************************************************
+2021-10-13 22:56:09,956 p=268572 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "is_reboot.rc": "0"
+}
+2021-10-13 22:56:09,973 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Reboot Server OS RPM Based] *********************************************************************************************************************************************************
+2021-10-13 22:56:10,007 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:56:10,030 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Check OS DEB Base Needs Restart] ****************************************************************************************************************************************************
+2021-10-13 22:56:20,157 p=268572 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:56:20,164 p=268572 u=neareth n=ansible | TASK [luneareth_iam : Reboot Server OS DEB Based] *********************************************************************************************************************************************************
+2021-10-13 22:56:20,176 p=268572 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-13 22:56:20,207 p=268572 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 22:56:20,207 p=268572 u=neareth n=ansible | 157.230.251.82             : ok=65   changed=14   unreachable=0    failed=0    skipped=9    rescued=0    ignored=0   
+2021-10-13 22:57:19,535 p=276635 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:57:20,142 p=276636 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:57:20,406 p=276639 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:57:29,717 p=276729 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 22:57:29,784 p=276729 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 22:57:46,482 p=276729 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:57:46,494 p=276729 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Daily Aide] ***********************************************************************************************************************************************************
+2021-10-13 22:57:54,556 p=276729 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:57:54,564 p=276729 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Malware] **************************************************************************************************************************************************************
+2021-10-13 22:58:02,338 p=276729 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:58:02,350 p=276729 u=neareth n=ansible | TASK [luneareth_iam : crontab ram flush] ******************************************************************************************************************************************************************
+2021-10-13 22:58:11,263 p=276729 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:58:11,273 p=276729 u=neareth n=ansible | TASK [luneareth_iam : debug check crontab] ****************************************************************************************************************************************************************
+2021-10-13 22:58:11,325 p=276729 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "msg": {
+        "changed": true,
+        "envs": [],
+        "failed": false,
+        "jobs": [
+            "ram flush",
+            "Aide Check Daily",
+            "rkhunter checker"
+        ]
+    }
+}
+2021-10-13 22:58:11,351 p=276729 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 22:58:11,351 p=276729 u=neareth n=ansible | 157.230.251.82             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-13 22:59:06,156 p=277584 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:59:09,748 p=277623 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:59:10,854 p=277637 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:59:13,826 p=277676 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:59:14,030 p=277677 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 22:59:17,300 p=277718 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-13 22:59:17,370 p=277718 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-13 22:59:39,314 p=277718 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-13 22:59:39,326 p=277718 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Daily Aide] ***********************************************************************************************************************************************************
+2021-10-13 22:59:47,921 p=277718 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 22:59:47,928 p=277718 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Malware] **************************************************************************************************************************************************************
+2021-10-13 23:00:04,519 p=277718 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 23:00:04,529 p=277718 u=neareth n=ansible | TASK [luneareth_iam : crontab ram flush] ******************************************************************************************************************************************************************
+2021-10-13 23:00:15,182 p=277718 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-13 23:00:15,190 p=277718 u=neareth n=ansible | TASK [luneareth_iam : debug check crontab] ****************************************************************************************************************************************************************
+2021-10-13 23:00:15,230 p=277718 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "msg": {
+        "changed": true,
+        "envs": [],
+        "failed": false,
+        "jobs": [
+            "ram flush",
+            "Aide Check Daily",
+            "rkhunter checker"
+        ]
+    }
+}
+2021-10-13 23:00:15,266 p=277718 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-13 23:00:15,267 p=277718 u=neareth n=ansible | 157.230.251.82             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
