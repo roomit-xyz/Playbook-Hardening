@@ -1,8 +1,12 @@
 >> Dwi
 ## How To Use
 
+### WARNING
 
-### Varaible  Global For Generate User And Set Passowrd:
+Test only : Centos 7 and Rocky Linux 8.4
+Take your own risk!!!
+
+### Varaible Global For Generate User And Set Passowrd:
 
 ```
     - user_root: root

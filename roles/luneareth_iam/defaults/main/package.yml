@@ -1,0 +1,18 @@
+packages_rpm:
+  - audispd-plugins
+  - audit
+  - cracklib
+  - gnupg2
+  - haveged
+  - libpwquality
+  - openssh-server
+  - needrestart
+  - postfix
+  - psacct
+  - rkhunter
+  - rsyslog
+  - rsyslog-gnutls
+  - vlock
+  - words
+  - rng-tools
+  - telnet
