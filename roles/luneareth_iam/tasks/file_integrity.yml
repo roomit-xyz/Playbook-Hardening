@@ -4,7 +4,9 @@
       name: aide
       state: present
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
-  tags: install_aide
+  tags: 
+    - file_integrity
+    - install_aide_rpm
 
 
 - name: Install AIDE on DEB Packages
@@ -12,14 +14,38 @@
       name: aide
       state: present
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
-  tags: install_aide
+  tags: 
+    - file_integrity
+    - install_aide_deb
 
 
 - name: Iniziate Database Aide
   shell: aide --init
-  tags: aide_database
+  tags: 
+    - file_integrity
+    - aide_init_db
 
+- name: Copy Database to Lib
+  copy: 
+      src: /var/lib/aide/aide.db.new.gz
+      dest: /var/lib/aide/aide.db.gz
+      remote_src: true
+  tags: 
+    - file_integrity
+    - aide_copy_db
 
+- name: Cronjob Check Daily Aide
+  cron:
+      name: "Aide Check Daily"
+      minute: "23"
+      hour: "22"
+      day: "*"
+      month: "*"
+      weekday: "*"
+      job: /usr/sbin/aide --check
+  tags: 
+    - file_integrity
+    - aide_crontab
 
 
 

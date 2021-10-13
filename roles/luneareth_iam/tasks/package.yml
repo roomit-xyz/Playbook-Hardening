@@ -1,6 +1,6 @@
 - name: Install epel-release
   yum:
-    name: epel-realase
+    name: epel-release
     state: present
   ignore_errors: yes
 

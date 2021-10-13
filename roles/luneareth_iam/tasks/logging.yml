@@ -3,7 +3,8 @@
       name: audit
       state: present 
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
-  tags: install_auditd 
+  tags: 
+    - logging 
 
 
 - name: Install Auditd on DEB Packages
@@ -11,7 +12,9 @@
       name: auditd
       state: present 
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
-  tags: install_auditd 
+  tags: 
+    - logging 
+
 - name: Copy File Configuration Auditd Luneareth Rules
   copy:
     src: general-auditd.rules
@@ -20,16 +23,10 @@
     group: root
     mode: 0644
   notify: "start auditd" 
-  tags: configure_auditd
+  tags: 
+    - logging
 
-- name: Setup Terminal Logger
-  copy:
-    src: logger.sh
-    dest: /etc/profile.d/logger.sh
-    owner: root
-    group: root
-    mode: 700
-  tags: terminal_logs
+
   
 
 
