@@ -2737,3 +2737,123 @@ Could be written as:
 2021-10-13 23:20:37,560 p=286099 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-13 23:20:40,225 p=286108 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-13 23:20:41,025 p=286113 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:41,764 p=286111 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:42,576 p=286122 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:42,865 p=286127 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:42,954 p=286123 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:43,053 p=286120 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:43,439 p=286140 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-13 23:20:59,156 p=286421 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 10:53:15,146 p=500648 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 10:53:20,166 p=500687 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 10:53:20,235 p=500687 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 10:53:29,291 p=500687 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 10:53:29,305 p=500687 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-14 10:53:36,253 p=500687 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 10:53:36,260 p=500687 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-14 10:53:43,012 p=500687 u=neareth n=ansible | fatal: [157.230.251.82]: FAILED! => {"changed": false, "failures": ["No package sar available.", "No package iostat available.", "No package mpstat available.", "No package pidstat available.", "No package sadf available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2021-10-14 10:53:43,014 p=500687 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 10:53:43,014 p=500687 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-14 10:53:54,295 p=501077 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 10:53:59,499 p=501084 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-14 10:54:04,194 p=501170 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 10:54:32,606 p=501344 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 10:54:36,336 p=501368 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 10:54:36,414 p=501368 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 10:54:43,027 p=501368 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 10:54:43,042 p=501368 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-14 10:54:49,487 p=501368 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 10:54:49,496 p=501368 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-14 10:54:55,409 p=501368 u=neareth n=ansible | fatal: [157.230.251.82]: FAILED! => {"changed": false, "failures": ["No package sar available.", "No package mpstat available.", "No package pidstat available.", "No package sadf available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2021-10-14 10:54:55,411 p=501368 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 10:54:55,411 p=501368 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-14 11:28:57,976 p=512400 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:29:01,956 p=512422 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 11:29:02,025 p=512422 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 11:29:12,440 p=512422 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:29:12,453 p=512422 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-14 11:29:18,873 p=512422 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:29:18,881 p=512422 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-14 11:29:25,464 p=512422 u=neareth n=ansible | fatal: [157.230.251.82]: FAILED! => {"changed": false, "failures": ["No package sar available.", "No package mpstat available.", "No package sadf available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2021-10-14 11:29:25,466 p=512422 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 11:29:25,466 p=512422 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-14 11:29:50,387 p=512890 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:29:53,306 p=512913 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 11:29:53,378 p=512913 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 11:30:00,656 p=512913 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:30:00,669 p=512913 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-14 11:30:06,821 p=512913 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:30:06,828 p=512913 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-14 11:30:12,356 p=512913 u=neareth n=ansible | fatal: [157.230.251.82]: FAILED! => {"changed": false, "failures": ["No package sar available.", "No package sadf available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2021-10-14 11:30:12,358 p=512913 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 11:30:12,358 p=512913 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-14 11:30:29,531 p=513351 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:30:29,922 p=513352 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:30:32,808 p=513379 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 11:30:32,879 p=513379 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 11:30:39,366 p=513379 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:30:39,381 p=513379 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-14 11:30:45,815 p=513379 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:30:45,822 p=513379 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-14 11:30:52,082 p=513379 u=neareth n=ansible | fatal: [157.230.251.82]: FAILED! => {"changed": false, "failures": ["No package sar available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2021-10-14 11:30:52,084 p=513379 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 11:30:52,084 p=513379 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-14 11:31:11,793 p=513823 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:31:12,470 p=513827 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:31:12,564 p=513825 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:31:15,044 p=513857 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 11:31:15,113 p=513857 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 11:31:24,240 p=513857 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:31:24,253 p=513857 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-14 11:31:31,065 p=513857 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:31:31,073 p=513857 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-14 11:31:43,045 p=513857 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-14 11:31:43,052 p=513857 u=neareth n=ansible | TASK [luneareth_iam : Upgrade all packages] ***************************************************************************************************************************************************************
+2021-10-14 11:31:53,723 p=513857 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-14 11:31:53,771 p=513857 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 11:31:53,772 p=513857 u=neareth n=ansible | 157.230.251.82             : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-14 11:34:10,817 p=515138 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:34:16,094 p=515179 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:42:01,679 p=517691 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:42:06,551 p=517731 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:42:06,924 p=517742 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:51:45,731 p=520727 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:53:23,979 p=521287 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:53:24,243 p=521288 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:53:29,754 p=521349 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 11:53:29,821 p=521349 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 11:53:38,464 p=521349 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:53:38,481 p=521349 u=neareth n=ansible | TASK [luneareth_iam : Check OS RPM Base Needs Restart] ****************************************************************************************************************************************************
+2021-10-14 11:53:44,191 p=521349 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-14 11:53:44,199 p=521349 u=neareth n=ansible | TASK [luneareth_iam : Display is_reboot Check OS RPM Base Needs Restart] **********************************************************************************************************************************
+2021-10-14 11:53:44,214 p=521349 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "is_reboot.rc": "0"
+}
+2021-10-14 11:53:44,226 p=521349 u=neareth n=ansible | TASK [luneareth_iam : Reboot Server OS RPM Based] *********************************************************************************************************************************************************
+2021-10-14 11:53:44,247 p=521349 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-14 11:53:44,260 p=521349 u=neareth n=ansible | TASK [luneareth_iam : Check OS DEB Base Needs Restart] ****************************************************************************************************************************************************
+2021-10-14 11:53:48,289 p=521349 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:53:48,298 p=521349 u=neareth n=ansible | TASK [luneareth_iam : Reboot Server OS DEB Based] *********************************************************************************************************************************************************
+2021-10-14 11:53:48,313 p=521349 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-14 11:53:48,350 p=521349 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 11:53:48,350 p=521349 u=neareth n=ansible | 157.230.251.82             : ok=4    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2021-10-14 11:54:08,062 p=521760 u=neareth n=ansible | PLAY [app] ************************************************************************************************************************************************************************************************
+2021-10-14 11:54:08,129 p=521760 u=neareth n=ansible | TASK [Gathering Facts] ************************************************************************************************************************************************************************************
+2021-10-14 11:54:14,928 p=521760 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:54:14,940 p=521760 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] ***************************************************************************************************************************************************************
+2021-10-14 11:54:21,264 p=521760 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:54:21,280 p=521760 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] ***********************************************************************************************************************************************************
+2021-10-14 11:54:21,861 p=521937 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:54:23,043 p=521938 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:54:23,682 p=521946 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:54:23,808 p=521941 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:54:23,927 p=521940 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:54:24,539 p=521947 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 11:54:26,604 p=521760 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:54:26,614 p=521760 u=neareth n=ansible | TASK [luneareth_iam : Upgrade all packages] ***************************************************************************************************************************************************************
+2021-10-14 11:54:33,443 p=521760 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-14 11:54:33,466 p=521760 u=neareth n=ansible | PLAY RECAP ************************************************************************************************************************************************************************************************
+2021-10-14 11:54:33,466 p=521760 u=neareth n=ansible | 157.230.251.82             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-14 13:05:15,744 p=522270 u=neareth n=ansible |  [ERROR]: User interrupted execution
+

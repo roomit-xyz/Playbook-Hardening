@@ -7,3 +7,7 @@ packages_rpm:
   - curl
   - unzip
   - rkhunter
+  - sysstat
+  - needrestart
+  - jq
+  
