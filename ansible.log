@@ -2857,3 +2857,8 @@ Could be written as:
 2021-10-14 11:54:33,466 p=521760 u=neareth n=ansible | 157.230.251.82             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2021-10-14 13:05:15,744 p=522270 u=neareth n=ansible |  [ERROR]: User interrupted execution
 
+2021-10-14 14:06:25,404 p=565913 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 14:06:25,564 p=565914 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 14:06:26,026 p=565917 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 19:25:55,754 p=656660 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-14 19:26:03,429 p=656728 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
