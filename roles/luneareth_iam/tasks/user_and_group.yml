@@ -1,7 +1,10 @@
-- name: Create Group Monit
+- name: Create Group Monit and App
   group:
-    name: monit
+    name: "{{ item }}"
     state: present
+  with_items:
+    - monit
+    - app
   tags: user_and_group
 
 - name: Adduser admin and assign to Monit Wheel Group

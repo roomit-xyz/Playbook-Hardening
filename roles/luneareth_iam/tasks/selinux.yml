@@ -5,6 +5,7 @@
     regexp: '^SELINUX=.*'
     line: 'SELINUX={{ SELINUX }}'
     state: present
+  tags: selinux
 
 - name: set SELinux type
   lineinfile:
@@ -12,3 +13,4 @@
     regexp: '^SELINUXTYPE.*'
     line: 'SELINUXTYPE={{ SELINUXTYPE }}'
     state: present
+  tags: selinux
