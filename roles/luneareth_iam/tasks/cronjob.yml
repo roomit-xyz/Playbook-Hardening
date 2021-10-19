@@ -1,12 +1,12 @@
 - name: Create Directory For Pool Report
   file:
-    path: /opt/security_report/
+    path: /opt/report_security/
     state: directory
     owner: root
     group: root
     mode: 700
 
-- name: Cronjob Check Daily Aide RPM Based
+- name: Cronjob Check Daily Aide
   cron:
       name: "Aide Check Daily"
       minute: "23"
@@ -14,23 +14,7 @@
       day: "*"
       month: "*"
       weekday: "*"
-      job: "/usr/sbin/aide --check >> /opt/security_report/aide.`date +%m-%d-%y_%H-%M'`.log"
-  when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
-  tags: 
-    - file_integrity
-    - cronjob
-    - aide_crontab
-
-- name: Cronjob Check Daily Aide Deb Based
-  cron:
-      name: "Aide Check Daily"
-      minute: "23"
-      hour: "22"
-      day: "*"
-      month: "*"
-      weekday: "*"
-      job: "aide -c /etc/aide/aide.conf -C >> /opt/security_report/aide.$(date +\%m-\%d-\%y_\%H-\%M).log"
-  when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
+      job: "/usr/sbin/aide --check >> /opt/report_security/aide.`date +'%m-%d-%y_%H-%M'`.log"
   tags: 
     - file_integrity
     - cronjob
@@ -44,7 +28,7 @@
       day: "*"
       month: "*"
       weekday: "*"
-      job: "rkhunter -c --skip-keypress >> /opt/security_report/rkhunter.`date +'%m-%d-%y_%H-%M'`.log"
+      job: "rkhunter -c --skip-keypress >> /opt/report_security/rkhunter.`date +'%m-%d-%y_%H-%M'`.log"
   tags: 
     - file_integrity
     - cronjob
@@ -53,7 +37,7 @@
 - name: crontab ram flush
   cron:
     name: "ram flush"
-    job: "bash /opt/crontab/ram_flush.sh >> /opt/security_report/ram_flush.`date +'%m-%d-%y_%H-%M'`.log"
+    job: "bash /opt/crontab/ram_flush.sh >> /opt/report_security/ram_flush.`date +'%m-%d-%y_%H-%M'`.log"
   register: check_crontab
   tags: 
     - ram_flush
