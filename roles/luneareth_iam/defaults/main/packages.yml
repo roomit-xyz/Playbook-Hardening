@@ -11,3 +11,7 @@ packages_rpm:
   - needrestart
   - jq
   
+packages_deb:
+  - sysstat
+  - curl
+  - wget
