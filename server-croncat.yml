@@ -1,6 +1,4 @@
 ---
-#python3 -c 'import crypt; print(crypt.crypt("password"))'
-#ruby -e 'puts "password".crypt("$6$saltsalt$")'
 - hosts: app 
   become: yes
   roles: 

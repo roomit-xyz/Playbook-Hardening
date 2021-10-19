@@ -10,22 +10,26 @@
   notify:
     - reload systemd
   tags:
-    - ntp
+    - iam-ntp
 
 - name: register timesyncd status
   command: systemctl status systemd-timesyncd  
   register: timesyncd_status
   changed_when: false
   failed_when: false
+  tags:
+    - iam-ntp
 
 - name: register timedatectl show
   command: timedatectl show
   register: timedatectl_show
   changed_when: timedatectl_show.stdout.find('NTPSynchronized=yes') == -1 and timesyncd_status.rc == 0
+  tags:
+    - iam-ntp
 
 - name: timedatectl set-ntp
   become: 'yes'
   command: timedatectl set-ntp true
   when: timedatectl_show.stdout.find('NTPSynchronized=yes') == -1 and timesyncd_status.rc == 0
   tags:
-    - ntp
+    - iam-ntp

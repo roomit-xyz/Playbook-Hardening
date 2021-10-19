@@ -7,11 +7,11 @@
     group: root
     mode: 0755
     recurse: yes
-  tags: ram_flush
+  tags: iam-ram_flush
 
 - name: copy script ram flush
   copy:
     src: ram_flush.sh
     dest: /opt/crontab/
-  tags: ram_flush
+  tags: iam-ram_flush
 

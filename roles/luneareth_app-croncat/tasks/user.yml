@@ -9,3 +9,14 @@
   with_items:
     - "{{user_app_croncat}}"
   tags: croncat_user
+
+  - name: Create Directory App
+  file:
+    path: /app/{{item}}
+    state: directory
+    owner: "{{item}}"
+    group: app
+    mode: 0775
+  with_items:
+    - "{{user_app_croncat}}"
+  tags: croncat_user

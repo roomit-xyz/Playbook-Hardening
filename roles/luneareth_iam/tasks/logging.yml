@@ -4,7 +4,7 @@
       state: present 
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: 
-    - logging 
+    - iam-logging 
 
 
 - name: Install Auditd on DEB Packages
@@ -13,7 +13,7 @@
       state: present 
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags: 
-    - logging 
+    - iam-logging 
 
 - name: Copy File Configuration Auditd Luneareth Rules
   copy:
@@ -24,7 +24,7 @@
     mode: 0644
   notify: "start auditd" 
   tags: 
-    - logging
+    - iam-logging
 
 
   

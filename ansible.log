@@ -5119,3 +5119,649 @@ the implicit localhost does not match 'all'
 
 2021-10-19 17:44:24,568 p=176913 u=neareth n=ansible | playbook: server-iam.yml
 2021-10-19 17:44:24,662 p=176869 u=neareth n=ansiblelint.logger | Executing syntax check on server-iam.yml (0.97s)
+2021-10-19 17:45:30,654 p=177357 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 17:45:30,721 p=177357 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 17:45:31,415 p=177357 u=neareth n=ansible | fatal: [157.230.251.82]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: app@157.230.251.82: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2021-10-19 17:45:31,417 p=177357 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 17:45:31,417 p=177357 u=neareth n=ansible | 157.230.251.82             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 17:45:52,575 p=177485 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 17:45:52,640 p=177485 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 17:45:53,483 p=177485 u=neareth n=ansible | fatal: [157.230.251.82]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: app@157.230.251.82: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2021-10-19 17:45:53,484 p=177485 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 17:45:53,485 p=177485 u=neareth n=ansible | 157.230.251.82             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 17:46:21,001 p=177801 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-19 17:46:22,583 p=177836 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-19 17:46:53,732 p=178028 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 17:46:53,796 p=178028 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 17:47:41,003 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:47:41,019 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Install epel-release] *********************************************************************************************************************************************
+2021-10-19 17:47:45,949 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:47:45,957 p=178028 u=neareth n=ansible | TASK [luneareth_iam : RPM Package Installation] *****************************************************************************************************************************************
+2021-10-19 17:47:56,610 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:47:56,620 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Upgrade all packages] *********************************************************************************************************************************************
+2021-10-19 17:48:00,843 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:48:00,854 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Create Directory App] *********************************************************************************************************************************************
+2021-10-19 17:48:04,620 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:48:04,632 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Create Group Monit and App] ***************************************************************************************************************************************
+2021-10-19 17:48:09,284 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=monit)
+2021-10-19 17:48:13,479 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=app)
+2021-10-19 17:48:13,488 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Adduser admin and assign to Monit Wheel Group] ********************************************************************************************************************
+2021-10-19 17:48:17,313 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=luneareth)
+2021-10-19 17:48:17,322 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Adduser App and assign to Monit Group] ****************************************************************************************************************************
+2021-10-19 17:48:20,140 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=app)
+2021-10-19 17:48:20,152 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Create Directory App] *********************************************************************************************************************************************
+2021-10-19 17:48:24,092 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:48:24,101 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Create Group Monit and App] ***************************************************************************************************************************************
+2021-10-19 17:48:27,572 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=monit)
+2021-10-19 17:48:30,130 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=app)
+2021-10-19 17:48:30,139 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Adduser admin and assign to Monit Wheel Group] ********************************************************************************************************************
+2021-10-19 17:48:32,607 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=luneareth)
+2021-10-19 17:48:32,617 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Adduser App and assign to Monit Group] ****************************************************************************************************************************
+2021-10-19 17:48:35,004 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=app)
+2021-10-19 17:48:35,012 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Change Password] **************************************************************************************************************************************************
+2021-10-19 17:48:37,379 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'root', 'password': '$6$f5hXa3EbOaonKXYh$m38.zKqfxoyCSc/k9iDWeqNyxUES1GIFmJzs.GxMFb/uTxuCzNNewlaXeV4SHPx1PneMo3sr.z1x.qQTYmngn.'})
+2021-10-19 17:48:39,795 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'luneareth', 'password': '$6$4YJgt5XtIl2WTN/3$GJPEKYAosq2bElROiiXByGAI8wEddgE7.RN1LpyAGLs4KD8KwU7S70wg2zbtENxak2T6CRdh9iySM..mzNX5a0'})
+2021-10-19 17:48:42,638 p=178028 u=neareth n=ansible | changed: [157.230.251.82] => (item={'name': 'app', 'password': '$6$UPYGPE2GRn9/9SZy$.CStGC8ccwXcXyPoQgojUHkUkZrGDp7xOK29kNoyyb2EHVXZPmM3aZ.J.QQmqWbPDvyjyHrJqFFroP1mz6CvR.'})
+2021-10-19 17:48:42,650 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Copy Public Key] **************************************************************************************************************************************************
+2021-10-19 17:48:45,585 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'root', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-19 17:48:48,425 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'luneareth', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-19 17:48:51,059 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'app', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-19 17:48:51,070 p=178028 u=neareth n=ansible | TASK [luneareth_iam : SELinux security policy] ******************************************************************************************************************************************
+2021-10-19 17:48:53,734 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:48:53,741 p=178028 u=neareth n=ansible | TASK [luneareth_iam : set SELinux type] *************************************************************************************************************************************************
+2021-10-19 17:48:56,887 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:48:56,896 p=178028 u=neareth n=ansible | TASK [luneareth_iam : register compilers] ***********************************************************************************************************************************************
+2021-10-19 17:48:59,596 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:48:59,604 p=178028 u=neareth n=ansible | TASK [luneareth_iam : restrict compiler access] *****************************************************************************************************************************************
+2021-10-19 17:49:02,027 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item={'path': '/usr/bin/as', 'mode': '0750', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 911408, 'inode': 12727687, 'dev': 64513, 'nlink': 1, 'atime': 1634629288.1896172, 'mtime': 1621442143.0, 'ctime': 1634140071.8071628, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': True, 'wgrp': False, 'rgrp': True, 'xgrp': True, 'woth': False, 'roth': False, 'xoth': False, 'isuid': False, 'isgid': False})
+2021-10-19 17:49:04,253 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item={'path': '/bin/as', 'mode': '0750', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 911408, 'inode': 12727687, 'dev': 64513, 'nlink': 1, 'atime': 1634629288.1896172, 'mtime': 1621442143.0, 'ctime': 1634140071.8071628, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': True, 'wgrp': False, 'rgrp': True, 'xgrp': True, 'woth': False, 'roth': False, 'xoth': False, 'isuid': False, 'isgid': False})
+2021-10-19 17:49:04,267 p=178028 u=neareth n=ansible | TASK [luneareth_iam : stat bashrc] ******************************************************************************************************************************************************
+2021-10-19 17:49:06,694 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:06,704 p=178028 u=neareth n=ansible | TASK [luneareth_iam : set default bashrc umask] *****************************************************************************************************************************************
+2021-10-19 17:49:09,578 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:09,589 p=178028 u=neareth n=ansible | TASK [luneareth_iam : stat csh.cshrc] ***************************************************************************************************************************************************
+2021-10-19 17:49:12,415 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:12,425 p=178028 u=neareth n=ansible | TASK [luneareth_iam : set default csh.cshrc umask] **************************************************************************************************************************************
+2021-10-19 17:49:14,761 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:14,770 p=178028 u=neareth n=ansible | TASK [luneareth_iam : set default profile umask] ****************************************************************************************************************************************
+2021-10-19 17:49:17,449 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:17,458 p=178028 u=neareth n=ansible | TASK [luneareth_iam : readonly TMOUT] ***************************************************************************************************************************************************
+2021-10-19 17:49:19,828 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:19,838 p=178028 u=neareth n=ansible | TASK [luneareth_iam : set TMOUT] ********************************************************************************************************************************************************
+2021-10-19 17:49:22,130 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:22,138 p=178028 u=neareth n=ansible | TASK [luneareth_iam : export TMOUT] *****************************************************************************************************************************************************
+2021-10-19 17:49:25,847 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:25,854 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:28,620 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:28,629 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:31,346 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:31,356 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:34,405 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:34,411 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:37,420 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:37,429 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:41,175 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:41,183 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:44,015 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:44,025 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:46,649 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:46,659 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:49,022 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:49,029 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:51,501 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:51,516 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:54,301 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:54,310 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:56,864 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:56,874 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:49:59,530 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:49:59,538 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:50:02,445 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:02,454 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:50:05,352 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:05,360 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:50:08,978 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:08,988 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:50:11,364 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:11,373 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:50:13,939 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:13,947 p=178028 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ***********************************************************************************************************************************************************
+2021-10-19 17:50:16,938 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:16,947 p=178028 u=neareth n=ansible | TASK [luneareth_iam : limits.conf] ******************************************************************************************************************************************************
+2021-10-19 17:50:21,849 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:21,858 p=178028 u=neareth n=ansible | TASK [luneareth_iam : coredump.conf] ****************************************************************************************************************************************************
+2021-10-19 17:50:28,607 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:28,617 p=178028 u=neareth n=ansible | TASK [luneareth_iam : timesyncd.conf] ***************************************************************************************************************************************************
+2021-10-19 17:50:35,628 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:35,639 p=178028 u=neareth n=ansible | TASK [luneareth_iam : register timesyncd status] ****************************************************************************************************************************************
+2021-10-19 17:50:38,684 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:38,691 p=178028 u=neareth n=ansible | TASK [luneareth_iam : register timedatectl show] ****************************************************************************************************************************************
+2021-10-19 17:50:42,654 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:42,665 p=178028 u=neareth n=ansible | TASK [luneareth_iam : timedatectl set-ntp] **********************************************************************************************************************************************
+2021-10-19 17:50:42,682 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:50:42,694 p=178028 u=neareth n=ansible | TASK [luneareth_iam : make directory crontab] *******************************************************************************************************************************************
+2021-10-19 17:50:45,999 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:46,020 p=178028 u=neareth n=ansible | TASK [luneareth_iam : copy script ram flush] ********************************************************************************************************************************************
+2021-10-19 17:50:50,407 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:50,416 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Install AIDE on RPM Packages] *************************************************************************************************************************************
+2021-10-19 17:50:55,431 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:50:55,444 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Install AIDE on DEB Packages] *************************************************************************************************************************************
+2021-10-19 17:50:55,469 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:50:55,481 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Iniziate Database Aide RPM Based] *********************************************************************************************************************************
+2021-10-19 17:51:26,392 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:51:26,399 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Iniziate Database Aide DEB Based] *********************************************************************************************************************************
+2021-10-19 17:51:26,414 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:26,429 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Copy Database to Lib] *********************************************************************************************************************************************
+2021-10-19 17:51:29,098 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:51:29,107 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Init Configuration Debian] ****************************************************************************************************************************************
+2021-10-19 17:51:29,125 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:29,136 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Copy Configuration Init Debian] ***********************************************************************************************************************************
+2021-10-19 17:51:29,153 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:29,161 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Install Auditd on RPM Packages] ***********************************************************************************************************************************
+2021-10-19 17:51:33,525 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:51:33,537 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Install Auditd on DEB Packages] ***********************************************************************************************************************************
+2021-10-19 17:51:33,554 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:33,563 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Copy File Configuration Auditd Luneareth Rules] *******************************************************************************************************************
+2021-10-19 17:51:37,512 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:51:37,519 p=178028 u=neareth n=ansible | TASK [luneareth_iam : add motd] *********************************************************************************************************************************************************
+2021-10-19 17:51:41,591 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:51:41,601 p=178028 u=neareth n=ansible | TASK [luneareth_iam : add issue and issue.net] ******************************************************************************************************************************************
+2021-10-19 17:51:46,664 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=/etc/issue)
+2021-10-19 17:51:50,515 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=/etc/issue.net)
+2021-10-19 17:51:50,526 p=178028 u=neareth n=ansible | TASK [luneareth_iam : stat postfic main.cf] *********************************************************************************************************************************************
+2021-10-19 17:51:53,111 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:51:53,119 p=178028 u=neareth n=ansible | TASK [luneareth_iam : configure postfix disable_vrfy_command] ***************************************************************************************************************************
+2021-10-19 17:51:53,134 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:53,144 p=178028 u=neareth n=ansible | TASK [luneareth_iam : configure postfix inet_interfaces] ********************************************************************************************************************************
+2021-10-19 17:51:53,157 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:53,167 p=178028 u=neareth n=ansible | TASK [luneareth_iam : configure postfix smtpd_banner] ***********************************************************************************************************************************
+2021-10-19 17:51:53,185 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:53,195 p=178028 u=neareth n=ansible | TASK [luneareth_iam : configure postfix smtpd_client_restrictions] **********************************************************************************************************************
+2021-10-19 17:51:53,211 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:53,222 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Create Directory For Pool Report] *********************************************************************************************************************************
+2021-10-19 17:51:55,912 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:51:55,922 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Daily Aide RPM Based] *******************************************************************************************************************************
+2021-10-19 17:51:58,238 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:51:58,246 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Daily Aide Deb Based] *******************************************************************************************************************************
+2021-10-19 17:51:58,262 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:51:58,272 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Cronjob Check Malware] ********************************************************************************************************************************************
+2021-10-19 17:52:00,766 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:52:00,776 p=178028 u=neareth n=ansible | TASK [luneareth_iam : crontab ram flush] ************************************************************************************************************************************************
+2021-10-19 17:52:03,043 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:52:03,052 p=178028 u=neareth n=ansible | TASK [luneareth_iam : debug check crontab] **********************************************************************************************************************************************
+2021-10-19 17:52:03,086 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "msg": {
+        "changed": false,
+        "envs": [],
+        "failed": false,
+        "jobs": [
+            "ram flush",
+            "Aide Check Daily",
+            "rkhunter checker"
+        ]
+    }
+}
+2021-10-19 17:52:03,093 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Check OS RPM Base Needs Restart] **********************************************************************************************************************************
+2021-10-19 17:52:06,039 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:52:06,046 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Display is_reboot Check OS RPM Base Needs Restart] ****************************************************************************************************************
+2021-10-19 17:52:06,064 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "is_reboot.rc": "0"
+}
+2021-10-19 17:52:06,073 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Reboot Server OS RPM Based] ***************************************************************************************************************************************
+2021-10-19 17:52:06,088 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:52:06,099 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Check OS DEB Base Needs Restart] **********************************************************************************************************************************
+2021-10-19 17:52:08,312 p=178028 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 17:52:08,324 p=178028 u=neareth n=ansible | TASK [luneareth_iam : Reboot Server OS DEB Based] ***************************************************************************************************************************************
+2021-10-19 17:52:08,341 p=178028 u=neareth n=ansible | skipping: [157.230.251.82]
+2021-10-19 17:52:08,361 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : create user croncat and assign to group app] **************************************************************************************************************
+2021-10-19 17:52:10,754 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=croncat)
+2021-10-19 17:52:10,762 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Tools] ********************************************************************************************************************************************
+2021-10-19 17:52:14,825 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=curl)
+2021-10-19 17:52:18,752 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=wget)
+2021-10-19 17:52:22,506 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=screen)
+2021-10-19 17:52:22,515 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Repo NodeJS] **************************************************************************************************************************************
+2021-10-19 17:52:28,557 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:52:28,564 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Install NodeJS] *******************************************************************************************************************************************
+2021-10-19 17:52:32,334 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => (item=nodejs)
+2021-10-19 17:52:32,343 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Check NodeJS Version] *************************************************************************************************************************************
+2021-10-19 17:52:34,551 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:52:34,560 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Display NodeJS Version] ***********************************************************************************************************************************
+2021-10-19 17:52:34,584 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "is_nodejs_version.stdout": "v16.11.1"
+}
+2021-10-19 17:52:34,591 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Packages Application Croncat] *********************************************************************************************************************
+2021-10-19 17:53:05,621 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:53:05,628 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Show Debug Install Croncat] *******************************************************************************************************************************
+2021-10-19 17:53:05,642 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "is_install_croncat.stdout": "\nchanged 436 packages, and audited 437 packages in 28s\n\n28 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities"
+}
+2021-10-19 17:53:05,654 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Show Croncat Version] *************************************************************************************************************************************
+2021-10-19 17:53:09,838 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:53:09,846 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Show Croncat Version] *************************************************************************************************************************************
+2021-10-19 17:53:09,865 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "is_show_croncat_version.stdout": "1.5.1"
+}
+2021-10-19 17:53:09,873 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Near Login] ***********************************************************************************************************************************************
+2021-10-19 17:53:12,793 p=178028 u=neareth n=ansible | changed: [157.230.251.82]
+2021-10-19 17:53:12,802 p=178028 u=neareth n=ansible | TASK [luneareth_app-croncat : Show Near Login] ******************************************************************************************************************************************
+2021-10-19 17:53:12,825 p=178028 u=neareth n=ansible | ok: [157.230.251.82] => {
+    "is_exec_near_login.stdout": "Account has existing key pair with ed25519:GBtVCyzeMKi4Es4a8iQJbSsob83ZdJJyR7NYabCT2o1d public key"
+}
+2021-10-19 17:53:12,852 p=178028 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 17:53:12,853 p=178028 u=neareth n=ansible | 157.230.251.82             : ok=79   changed=11   unreachable=0    failed=0    skipped=13   rescued=0    ignored=0   
+2021-10-19 17:53:36,879 p=183248 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 17:53:36,926 p=183248 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 17:53:37,445 p=183277 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 17:53:37,451 p=183277 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 17:53:37,673 p=183277 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-19 17:53:37,674 p=183277 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-19 17:53:37,736 p=183248 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (0.80s)
+2021-10-19 17:55:46,173 p=183971 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 17:55:46,240 p=183971 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 17:55:46,779 p=183971 u=neareth n=ansible | fatal: [157.230.251.82]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: neareth@157.230.251.82: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2021-10-19 17:55:46,780 p=183971 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 17:55:46,781 p=183971 u=neareth n=ansible | 157.230.251.82             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 17:56:14,651 p=184262 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 17:56:14,720 p=184262 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 17:56:15,315 p=184262 u=neareth n=ansible | fatal: [157.230.251.82]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: app@157.230.251.82: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2021-10-19 17:56:15,317 p=184262 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 17:56:15,318 p=184262 u=neareth n=ansible | 157.230.251.82             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 17:56:40,668 p=184514 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:04,055 p=186024 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:06,711 p=186064 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:16,794 p=186139 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:17,130 p=186141 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:17,428 p=186143 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:28,748 p=186250 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:28,915 p=186251 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:37,485 p=186328 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:49,934 p=186412 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:49,966 p=186411 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:01:50,406 p=186413 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:02:03,131 p=186530 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:02:03,337 p=186531 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:05,339 p=186875 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:12,417 p=186938 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:37,627 p=187084 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:38,961 p=187105 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:51,506 p=187202 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:52,084 p=187203 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:52,396 p=187205 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:54,258 p=187243 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:03:54,355 p=187245 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:39,449 p=187607 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:39,775 p=187608 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:49,260 p=187681 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:49,455 p=187692 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:50,730 p=187694 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:51,324 p=187706 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:51,443 p=187698 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:51,531 p=187705 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:51,811 p=187701 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:53,093 p=187748 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:04:53,345 p=187751 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:05:34,597 p=188085 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:05:38,277 p=188124 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:05:44,765 p=188172 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:05:45,079 p=188173 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:06:35,002 p=188649 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:03,957 p=188907 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:12,744 p=188983 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:19,043 p=189036 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:19,652 p=189037 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:24,463 p=189089 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:33,898 p=189169 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:34,596 p=189170 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:07:36,267 p=189185 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:08:11,361 p=189416 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:08:15,549 p=189449 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:08:21,607 p=189518 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:08:56,429 p=189685 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:08:57,325 p=189686 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:00,234 p=189698 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:00,579 p=189697 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:02,413 p=189700 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:02,964 p=189702 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:04,172 p=189729 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:04,370 p=189719 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:04,458 p=189739 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:05,182 p=189727 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:47,471 p=190171 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:47,669 p=190172 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:47,818 p=190171 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:47,933 p=190185 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:48,001 p=190172 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:48,193 p=190185 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:49,159 p=190173 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:49,817 p=190173 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:50,764 p=190175 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:51,165 p=190175 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:51,350 p=190174 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:51,678 p=190174 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:51,870 p=190189 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:52,123 p=190189 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:52,324 p=190437 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:52,353 p=190437 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:52,409 p=190429 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:52,487 p=190429 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:53,792 p=190191 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:54,072 p=190421 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:54,126 p=190421 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:54,213 p=190188 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:09:54,231 p=190437 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:54,331 p=190191 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:54,446 p=190465 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:54,487 p=190465 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:54,749 p=190188 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:09:54,791 p=190185 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (6.48s)
+2021-10-19 18:09:54,898 p=190429 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:55,458 p=190172 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (7.32s)
+2021-10-19 18:09:55,801 p=190488 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:55,836 p=190488 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:56,008 p=190498 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:56,040 p=190498 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:56,478 p=190421 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:56,619 p=190507 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:56,663 p=190507 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:56,871 p=190465 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:56,905 p=190171 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (8.96s)
+2021-10-19 18:09:57,171 p=190498 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:57,370 p=190173 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (7.33s)
+2021-10-19 18:09:57,464 p=190488 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:57,591 p=190174 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (5.74s)
+2021-10-19 18:09:57,861 p=190537 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:57,881 p=190537 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:58,043 p=190175 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (6.72s)
+2021-10-19 18:09:58,270 p=190507 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:58,587 p=190189 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (6.38s)
+2021-10-19 18:09:58,772 p=190546 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:09:58,785 p=190546 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:09:58,853 p=190537 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:59,044 p=190191 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (4.55s)
+2021-10-19 18:09:59,428 p=190546 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:09:59,586 p=190188 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (4.68s)
+2021-10-19 18:11:15,324 p=191050 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:11:16,399 p=191051 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:11:16,695 p=191052 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:11:29,681 p=191179 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:11:46,144 p=191294 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:11:46,201 p=191293 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:12:14,592 p=191495 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:12:28,769 p=191592 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:12:38,037 p=191660 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:12:46,470 p=191723 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:12:49,212 p=191740 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:13:34,501 p=192018 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:13:48,050 p=192108 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:14:01,241 p=192203 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:14:07,677 p=192254 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:14:10,735 p=192276 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:14:15,934 p=192322 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:14:15,971 p=192332 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:14:30,799 p=192456 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:14:58,007 p=192641 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:15:18,063 p=192855 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:15:18,151 p=192855 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:15:19,007 p=192855 u=neareth n=ansible | fatal: [157.230.251.82]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: app@157.230.251.82: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2021-10-19 18:15:19,010 p=192855 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 18:15:19,011 p=192855 u=neareth n=ansible | 157.230.251.82             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 18:15:30,357 p=192972 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:15:30,481 p=192972 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:15:32,523 p=192972 u=neareth n=ansible | fatal: [157.230.251.82]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: app@157.230.251.82: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2021-10-19 18:15:32,531 p=192972 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 18:15:32,532 p=192972 u=neareth n=ansible | 157.230.251.82             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 18:15:42,319 p=193128 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/inventories/production/group_vars/app
+2021-10-19 18:16:16,416 p=193426 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:16:16,510 p=193426 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:16:23,841 p=193426 u=neareth n=ansible | ok: [157.230.251.82]
+2021-10-19 18:16:23,871 p=193426 u=neareth n=ansible | TASK [luneareth_iam : Copy Public Key] **************************************************************************************************************************************************
+2021-10-19 18:16:27,294 p=193426 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'root', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-19 18:16:32,388 p=193426 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'luneareth', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-19 18:16:37,809 p=193426 u=neareth n=ansible | ok: [157.230.251.82] => (item={'name': 'app', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2021-10-19 18:16:37,854 p=193426 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 18:16:37,854 p=193426 u=neareth n=ansible | 157.230.251.82             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 18:18:08,649 p=194416 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:18,223 p=194487 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:24,948 p=194539 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:29,096 p=194593 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:33,724 p=194636 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:37,981 p=194674 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:42,831 p=194724 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:46,050 p=194742 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:18:51,065 p=194789 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:19:22,872 p=194983 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:19:29,961 p=195019 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:19:30,166 p=195018 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:19:30,221 p=195020 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:19:32,802 p=195055 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:19:32,822 p=195042 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:20:09,030 p=195317 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:20:09,287 p=195318 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:20:16,323 p=195396 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:20:23,410 p=195457 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:20:23,628 p=195460 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:20:52,836 p=195655 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:20:58,841 p=195709 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:21:10,809 p=195794 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:21:19,956 p=195912 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:21:31,783 p=195999 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:21:38,324 p=196053 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:22:13,244 p=196257 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:22:16,711 p=196293 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:22:31,658 p=196394 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:22:40,995 p=196470 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:22:46,878 p=196519 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:19,074 p=196708 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:22,384 p=196731 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:25,827 p=196773 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:30,069 p=196818 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:35,074 p=196851 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:38,467 p=196882 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:47,005 p=196928 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:47,204 p=196940 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:47,427 p=196939 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:23:47,458 p=196929 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:09,640 p=197140 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:11,137 p=197142 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:11,194 p=197141 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:18,744 p=197247 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:19,285 p=197248 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:32,640 p=197365 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:34,429 p=197375 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:50,763 p=197508 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:24:56,167 p=197557 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:16,947 p=197652 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:18,767 p=197651 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:19,479 p=197653 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:20,361 p=197670 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:20,364 p=197665 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:20,552 p=197666 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:20,883 p=197668 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:39,824 p=197933 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:40,085 p=197922 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:53,708 p=198033 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:25:54,033 p=198034 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:12,342 p=198169 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:22,707 p=198249 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:36,883 p=198348 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:37,313 p=198349 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:42,610 p=198416 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:45,854 p=198440 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:46,174 p=198441 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:26:51,019 p=198524 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:01,391 p=198597 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:35,393 p=198810 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:35,601 p=198812 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles

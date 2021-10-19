@@ -4,8 +4,8 @@
     state: directory
     owner: app
     group: app
-    mode: 0775
-  tags: user_and_group
+    mode: 0755
+  tags: iam-user_and_group
     
 
 - name: Create Group Monit and App
@@ -15,9 +15,10 @@
   with_items:
     - monit
     - app
-  tags: user_and_group
+  tags: iam-user_and_group
 
-- name: Adduser admin and assign to Monit Wheel Group
+
+- name: Adduser admin and assign to Monit Wheel Group RPM Based
   user:
     name: "{{ item }}"
     groups: wheel,monit
@@ -25,18 +26,19 @@
     append: yes
   with_items:
     - "{{user_admin}}"
-  tags: user_and_group
+  when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
+  tags: iam-user_and_group
   
 
-- name: Adduser App and assign to Monit Group
+- name: Adduser App and assign to Monit Group RPM Base
   user:
     name: "{{ item }}"
-    groups: monit
+    groups: monit,wheel
     shell: /bin/bash
     create_home: yes
     home: /app
-
     append: yes
   with_items:
     - "{{user_app}}"
-  tags: user_and_group
+  when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
+  tags: iam-user_and_group

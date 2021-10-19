@@ -16,4 +16,4 @@
    - {name: "{{user_admin}}", password: "{{ password_admin }}" }
    - {name: "{{user_app}}", password: "{{ password_app }}" }
   tags: 
-    - passwd
+    - iam-passwd

@@ -5,6 +5,9 @@
     owner: root
     group: root
     mode: 700
+  tags:
+    - iam-cronjob
+
 
 - name: Cronjob Check Daily Aide RPM Based
   cron:
@@ -17,9 +20,8 @@
       job: "/usr/sbin/aide --check >> /opt/security_report/aide.`date +%m-%d-%y_%H-%M'`.log"
   when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: 
-    - file_integrity
-    - cronjob
-    - aide_crontab
+     - iam-cronjob
+   
 
 - name: Cronjob Check Daily Aide Deb Based
   cron:
@@ -32,9 +34,8 @@
       job: "aide -c /etc/aide/aide.conf -C >> /opt/security_report/aide.`date +'%m-%d-%y_%H-%M'`.log"
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags: 
-    - file_integrity
-    - cronjob
-    - aide_crontab
+    - iam-cronjob
+    
 
 - name: Cronjob Check Malware
   cron:
@@ -46,9 +47,8 @@
       weekday: "*"
       job: "rkhunter -c --skip-keypress >> /opt/security_report/rkhunter.`date +'%m-%d-%y_%H-%M'`.log"
   tags: 
-    - file_integrity
-    - cronjob
-    - aide_crontab
+    - iam-cronjob
+   
 
 - name: crontab ram flush
   cron:
@@ -56,12 +56,10 @@
     job: "bash /opt/crontab/ram_flush.sh >> /opt/security_report/ram_flush.`date +'%m-%d-%y_%H-%M'`.log"
   register: check_crontab
   tags: 
-    - ram_flush
-    - cronjob
+    - iam-cronjob
 
 - name: debug check crontab
   debug:
     msg: "{{check_crontab}}"
   tags: 
-   - ram_flush
-   - cronjob
+    - iam-cronjob

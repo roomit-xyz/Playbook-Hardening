@@ -4,98 +4,98 @@
     value: '5'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: kernel.dmesg_restrict
     value: '1'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: kernel.kptr_restrict
     value: '2'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: kernel.sysrq
     value: '0'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: kernel.yama.ptrace_scope
     value: '1'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.ipv4.conf.all.accept_redirects
     value: '0'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: fs.protected_fifos
     value: '2'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: fs.protected_regular
     value: '2'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: kernel.modules_disabled
     value: '1'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: kernel.perf_event_paranoid
     value: '3'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.core.bpf_jit_harden
     value: '2'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.ipv4.conf.default.accept_source_route
     value: '0'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.ipv4.conf.all.log_martians
     value: '1'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.ipv4.conf.all.send_redirects
     value: '0'
     state: present
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.ipv4.conf.default.accept_redirects # required. The dot-separated path (aka I(key)) specifying the sysctl variable.
@@ -106,7 +106,7 @@
     sysctl_file: /etc/sysctl.conf # not required. Specifies the absolute path to C(sysctl.conf), if not C(/etc/sysctl.conf).
     value: 0 # not required. Desired value of the sysctl key.
   tags: 
-    - kernel
+    - iam-kernel
       
 - sysctl:
     name: net.ipv4.conf.default.log_martians # required. The dot-separated path (aka I(key)) specifying the sysctl variable.
@@ -117,7 +117,7 @@
     sysctl_file: /etc/sysctl.conf # not required. Specifies the absolute path to C(sysctl.conf), if not C(/etc/sysctl.conf).
     value: 1 # not required. Desired value of the sysctl key.
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.ipv6.conf.all.accept_redirects # required. The dot-separated path (aka I(key)) specifying the sysctl variable.
@@ -128,7 +128,7 @@
     sysctl_file: /etc/sysctl.conf # not required. Specifies the absolute path to C(sysctl.conf), if not C(/etc/sysctl.conf).
     value: 0 # not required. Desired value of the sysctl key.
   tags: 
-    - kernel
+    - iam-kernel
 
 - sysctl:
     name: net.ipv6.conf.default.accept_redirects # required. The dot-separated path (aka I(key)) specifying the sysctl variable.
@@ -139,4 +139,4 @@
     sysctl_file: /etc/sysctl.conf # not required. Specifies the absolute path to C(sysctl.conf), if not C(/etc/sysctl.conf).
     value: 0 # not required. Desired value of the sysctl key.
   tags: 
-    - kernel
+    - iam-kernel

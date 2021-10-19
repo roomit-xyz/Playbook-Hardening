@@ -5,8 +5,8 @@
       state: present
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: 
-    - file_integrity
-    - install_aide_rpm
+    - iam-file_integrity
+    
 
 
 - name: Install AIDE on DEB Packages
@@ -15,23 +15,23 @@
       state: present
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags: 
-    - file_integrity
-    - install_aide_deb
+    - iam-file_integrity
+   
 
 
 - name: Iniziate Database Aide RPM Based
   shell: aide --init
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: 
-    - file_integrity
-    - aide_init_db
+    - iam-file_integrity
+   
 
 - name: Iniziate Database Aide DEB Based
   shell: aideinit
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags: 
-    - file_integrity
-    - aide_init_db
+    - iam-file_integrity
+    
 
 - name: Copy Database to Lib
   copy: 
@@ -39,15 +39,15 @@
       dest: /var/lib/aide/aide.db.gz
       remote_src: true
   tags: 
-    - file_integrity
-    - aide_copy_db
+    - iam-file_integrity
+   
 
 - name: Init Configuration Debian
   shell: /usr/sbin/update-aide.conf
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags:
-     - file_integrity
-     - aide_init_conf
+     - iam-file_integrity
+    
 
 - name: Copy Configuration Init Debian
   copy:
@@ -56,8 +56,8 @@
     remote_src: true
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags:
-    - file_integrity
-    - aide_copy_conf 
+    - iam-file_integrity
+   
   
 
 

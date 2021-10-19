@@ -4,7 +4,8 @@
     path: /etc/bashrc
   register: bashrc
   tags:
-    - umask
+    - iam-umask
+
 - name: set default bashrc umask
   become: 'yes'
   replace:
@@ -14,7 +15,7 @@
     mode: 0644
   when: bashrc.stat.exists
   tags:
-    - umask
+    - iam-umask
 
 - name: stat csh.cshrc
   become: 'yes'
@@ -22,7 +23,7 @@
     path: /etc/csh.cshrc
   register: cshrc
   tags:
-    - umask
+    - iam-umask
 
 - name: set default csh.cshrc umask
   become: 'yes'
@@ -33,7 +34,7 @@
     mode: 0644
   when: cshrc.stat.exists
   tags:
-    - umask
+    - iam-umask
 - name: set default profile umask
   become: 'yes'
   replace:
@@ -42,7 +43,7 @@
     dest: /etc/profile
     mode: 0644
   tags:
-     - umask
+     - iam-umask
 
 - name: readonly TMOUT
   become: 'yes'
@@ -54,7 +55,7 @@
     create: 'no'
     insertbefore: "^export"
   tags:
-    - umask
+    - iam-umask
 
 - name: set TMOUT
   become: 'yes'
@@ -66,7 +67,7 @@
     create: 'no'
     insertbefore: "^readonly TMOUT"
   tags:
-    - umask
+    - iam-umask
 
 - name: export TMOUT
   become: 'yes'
@@ -78,4 +79,4 @@
     create: 'no'
     insertafter: "^readonly TMOUT"
   tags:
-   - umask
+   - iam-umask

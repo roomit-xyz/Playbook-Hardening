@@ -9,7 +9,7 @@
     recurse: 'yes'
   register: compiler
   tags:
-    - compilers
+    - iam-compilers
 
 - name: restrict compiler access
   become: 'yes'
@@ -23,4 +23,4 @@
   with_items:
     - "{{ compiler.files }}"
   tags:
-    - compilers
+    - iam-compilers
