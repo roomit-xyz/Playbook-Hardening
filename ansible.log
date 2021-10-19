@@ -5075,3 +5075,47 @@ the implicit localhost does not match 'all'
 
 2021-10-19 17:43:26,241 p=176329 u=neareth n=ansible | playbook: server-iam.yml
 2021-10-19 17:43:26,317 p=176305 u=neareth n=ansiblelint.logger | Executing syntax check on server-iam.yml (0.85s)
+2021-10-19 17:44:13,622 p=176769 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 17:44:13,670 p=176769 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-iam.yml
+2021-10-19 17:44:14,021 p=176770 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 17:44:14,078 p=176770 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-iam.yml
+2021-10-19 17:44:14,369 p=176807 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 17:44:14,374 p=176807 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 17:44:14,612 p=176807 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-19 17:44:14,613 p=176807 u=neareth n=ansible | playbook: server-iam.yml
+2021-10-19 17:44:14,690 p=176827 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 17:44:14,696 p=176769 u=neareth n=ansiblelint.logger | Executing syntax check on server-iam.yml (1.02s)
+2021-10-19 17:44:14,697 p=176827 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 17:44:15,013 p=176827 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-19 17:44:15,014 p=176827 u=neareth n=ansible | playbook: server-iam.yml
+2021-10-19 17:44:15,089 p=176770 u=neareth n=ansiblelint.logger | Executing syntax check on server-iam.yml (1.00s)
+2021-10-19 17:44:23,483 p=176868 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 17:44:23,521 p=176868 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-iam.yml
+2021-10-19 17:44:23,648 p=176869 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 17:44:23,689 p=176869 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-iam.yml
+2021-10-19 17:44:24,055 p=176905 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 17:44:24,062 p=176905 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 17:44:24,235 p=176913 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 17:44:24,240 p=176913 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 17:44:24,313 p=176905 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-19 17:44:24,314 p=176905 u=neareth n=ansible | playbook: server-iam.yml
+2021-10-19 17:44:24,407 p=176868 u=neareth n=ansiblelint.logger | Executing syntax check on server-iam.yml (0.87s)
+2021-10-19 17:44:24,566 p=176913 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-19 17:44:24,568 p=176913 u=neareth n=ansible | playbook: server-iam.yml
+2021-10-19 17:44:24,662 p=176869 u=neareth n=ansiblelint.logger | Executing syntax check on server-iam.yml (0.97s)
