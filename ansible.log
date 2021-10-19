@@ -5765,3 +5765,208 @@ The offending line appears to be:
 2021-10-19 18:27:01,391 p=198597 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-19 18:27:35,393 p=198810 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-19 18:27:35,601 p=198812 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:36,929 p=198811 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:36,985 p=198838 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:37,336 p=198813 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:37,788 p=198815 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:27:38,966 p=198839 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:29:31,749 p=199729 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:29:31,781 p=199731 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:29:31,841 p=199730 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:29:31,896 p=199728 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:30:56,081 p=200263 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:30:56,104 p=200264 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:30:56,242 p=200264 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:30:56,444 p=200263 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:30:58,463 p=200265 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:30:58,745 p=200265 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:30:59,055 p=200356 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:30:59,093 p=200356 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:30:59,766 p=200356 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:30:59,929 p=200367 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:30:59,967 p=200367 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:31:00,129 p=200264 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (3.81s)
+2021-10-19 18:31:00,218 p=200367 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:31:00,432 p=200280 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:31:00,662 p=200263 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (4.05s)
+2021-10-19 18:31:00,840 p=200283 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:31:00,871 p=200280 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:31:01,095 p=200283 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:31:01,169 p=200269 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:31:01,280 p=200269 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:31:01,595 p=200271 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:31:01,828 p=200271 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-19 18:31:01,894 p=200397 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:31:01,903 p=200397 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:31:02,179 p=200397 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:31:02,201 p=200410 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/inventories/production/group_vars/app
+2021-10-19 18:31:02,552 p=200265 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (3.68s)
+2021-10-19 18:31:03,465 p=200449 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:31:03,475 p=200449 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:31:03,685 p=200433 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:31:03,702 p=200433 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:31:03,902 p=200449 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:31:04,114 p=200283 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (2.95s)
+2021-10-19 18:31:04,259 p=200475 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:31:04,266 p=200433 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:31:04,279 p=200475 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:31:04,286 p=200461 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-19 18:31:04,319 p=200461 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-19 18:31:04,556 p=200475 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:31:04,593 p=200280 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (3.58s)
+2021-10-19 18:31:04,761 p=200461 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/roles/luneareth_app-croncat/tasks/user.yml': line 13, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Create Directory App
+  ^ here
+
+2021-10-19 18:31:04,796 p=200271 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (2.90s)
+2021-10-19 18:31:05,007 p=200269 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (3.63s)
+2021-10-19 18:31:05,292 p=200347 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:32:24,674 p=201066 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:32:28,660 p=201106 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:32:31,901 p=201145 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:32:45,257 p=201233 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:32:45,703 p=201234 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:46:48,491 p=207016 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:46:48,719 p=207017 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 18:48:06,409 p=207583 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:48:06,471 p=207583 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:48:16,508 p=207583 u=neareth n=ansible | fatal: [157.230.251.82]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange\r\nConnection to 157.230.251.82 port 22 timed out", "unreachable": true}
+2021-10-19 18:48:16,509 p=207583 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-19 18:48:16,510 p=207583 u=neareth n=ansible | 157.230.251.82             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-10-19 18:48:35,169 p=207918 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:48:35,231 p=207918 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:49:35,879 p=207918 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-19 18:49:42,932 p=208474 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:49:42,991 p=208474 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:50:55,086 p=208474 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-19 18:51:02,012 p=209042 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:51:02,077 p=209042 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:51:10,310 p=209042 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-19 18:51:27,465 p=209271 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:51:27,526 p=209271 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:53:24,759 p=209271 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-19 18:53:45,929 p=210256 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-19 18:53:45,996 p=210256 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-19 18:55:08,468 p=210256 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2021-10-19 18:55:08,926 p=210760 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
