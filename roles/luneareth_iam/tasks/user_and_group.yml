@@ -1,10 +1,9 @@
-- name: Create Group Monit and App
+- name: Create Group Monit 
   group:
     name: "{{ item }}"
     state: present
   with_items:
     - monit
-    - app
   tags: iam-user_and_group
 
 
@@ -23,24 +22,14 @@
 - name: Adduser App and assign to Monit Group RPM Base
   user:
     name: "{{ item }}"
-    groups: monit,wheel
+    groups: wheel,monit
     shell: /bin/bash
     create_home: yes
     home: /app
+    state: present
     append: yes
   with_items:
     - "{{user_app}}"
   when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: iam-user_and_group
 
-
-- name: Create Directory App
-  file:
-    path: /app
-    state: directory
-    owner: app
-    group: app
-    mode: 0755
-    recurse: yes
-  tags: iam-user_and_group
-    

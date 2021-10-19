@@ -11,3 +11,4 @@
           - {name: "{{user_admin}}", pubkey: "{{ public_key }}" }
           - {name: "{{user_app}}", pubkey: "{{ public_key }}" }
   tags: iam-authorized_keys
+
