@@ -16,6 +16,7 @@
   ### Or Define using file external
   #vars_files:
   #  - ./global_variables.yml
+  ### Or Define Variable as Host Or Group in 
   roles: 
     - luneareth_iam
 
