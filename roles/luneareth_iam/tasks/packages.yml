@@ -8,15 +8,7 @@
   tags:
     - iam-packages
 
-- name: RPM Package Installation
-  become: 'yes'
-  package:
-    name: "{{ packages_rpm }}"
-    state: present
-  when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
-  tags:
-    - iam-packages
-
+    
 - name: Upgrade all packages
   package:
     name: '*'
@@ -25,6 +17,18 @@
   ignore_errors: yes
   tags:
     - iam-packages
+
+
+- name: RPM Package Installation
+  become: 'yes'
+  package:
+    name: "{{ packages_rpm }}"
+    state: present
+  when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
+  ignore_errors: yes
+  tags:
+    - iam-packages
+
 
 
 

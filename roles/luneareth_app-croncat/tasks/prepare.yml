@@ -1,3 +1,15 @@
+- name: Create Directory App
+  file:
+    path: /app/{{item}}
+    state: directory
+    owner: "{{item}}"
+    group: app
+    mode: 0775
+  with_items:
+    - "{{name_of_app}}"
+  tags: croncat_user
+
+
 - name: Install Tools 
   yum:
     name: "{{item}}"

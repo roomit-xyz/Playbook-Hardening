@@ -1,6 +1,5 @@
 ---
 # tasks file for app_near_blockchain_croncat
-- include: user.yml
-- include: packages.yml
+- include: prepare.yml
 - include: app.yml
 

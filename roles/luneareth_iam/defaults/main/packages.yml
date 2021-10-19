@@ -8,11 +8,10 @@ packages_rpm:
   - unzip
   - rkhunter
   - sysstat
-  - needrestart
   - jq
   - screen
   - tmux
-  
+
 packages_deb:
   - sysstat
   - curl

@@ -1,5 +1,9 @@
 ---
 - hosts: app 
   become: yes
+  become_user: app
   roles: 
     - luneareth_app-croncat
+  vars:
+    - account_near: "luneareth.tesnet"
+  

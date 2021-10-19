@@ -4,6 +4,7 @@
 
 - hosts: app 
   become: yes
+  become_user: root
   ### You can define varibale Likethis
   vars:
     - user_root: root

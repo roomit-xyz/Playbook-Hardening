@@ -23,15 +23,32 @@
   tags: 
    - croncat_app
 
-- name: Near Login
+- name: Near Login Generate
   shell: near generate-key luneareth.testnet
   register: is_exec_near_login
   tags:
    - croncat_app
+   - croncat_app_near_login
+
+- name: Set Array Output Near Login
+  set_fact: 
+     nearLogin: "{{ is_exec_near_login.stdout.split(' ')[6] }}"
+  tags:
+   - croncat_app
+   - croncat_app_near_login
 
 - name: Show Near Login
   debug:
-   var: is_exec_near_login.stdout
+   msg: "{{nearLogin}}"
   tags:
    - croncat_app
+   - croncat_app_near_login
+
+- name: Push Key to Wallet Tesnet
+  shell: near add-key {{ account_near }} {{nearLogin}}
+  register: is_exec_near_push_public
+  tags:
+   - croncat_app
+   - croncat_app_near_login
+  
 
