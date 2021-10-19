@@ -1,0 +1,11 @@
+#### Role IAM ####
+ user_root: root
+ user_admin: luneareth
+ user_app: app
+ password_admin: "$6$4YJgt5XtIl2WTN/3$GJPEKYAosq2bElROiiXByGAI8wEddgE7.RN1LpyAGLs4KD8KwU7S70wg2zbtENxak2T6CRdh9iySM..mzNX5a0"
+ password_app: "$6$ERarx7DYO9k1wP3k$Kr8Wp6L8NcfKmG2C8S9jtEGCpYH2RNYBHhDShKv7HNDzgEpff8voNoy6a.NQFJl7orfOIh11fFyk89HLbQHBu/"
+ password_root: "$6$f5hXa3EbOaonKXYh$m38.zKqfxoyCSc/k9iDWeqNyxUES1GIFmJzs.GxMFb/uTxuCzNNewlaXeV4SHPx1PneMo3sr.z1x.qQTYmngn."
+ public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block"
+ 
+#### Role Croncat ###
+ user_app_croncat: croncat

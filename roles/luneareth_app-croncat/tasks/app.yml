@@ -1,0 +1,37 @@
+- name: Install Packages Application Croncat
+  shell: npm i -g croncat near-cli
+  register: is_install_croncat
+  tags: 
+    - croncat_app_install_app_croncat
+    - croncat_app
+
+- name: Show Debug Install Croncat
+  debug:
+    var: is_install_croncat.stdout
+  tags: 
+    - croncat_app
+
+- name: Show Croncat Version
+  shell: croncat --version
+  register: is_show_croncat_version
+  tags:
+   - croncat_app
+
+- name: Show Croncat Version
+  debug:
+   var: is_show_croncat_version.stdout
+  tags: 
+   - croncat_app
+
+- name: Near Login
+  shell: near generate-key luneareth.testnet
+  register: is_exec_near_login
+  tags:
+   - croncat_app
+
+- name: Show Near Login
+  debug:
+   var: is_exec_near_login.stdout
+  tags:
+   - croncat_app
+

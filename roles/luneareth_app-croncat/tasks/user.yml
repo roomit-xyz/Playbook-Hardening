@@ -1,0 +1,11 @@
+- name: create user croncat and assign to group app
+  user:
+    name: "{{ item }}"
+    groups: monit, app
+    shell: /bin/bash
+    create_home: yes
+    home: /app/{{item}}
+    append: yes
+  with_items:
+    - "{{user_app_croncat}}"
+  tags: croncat_user

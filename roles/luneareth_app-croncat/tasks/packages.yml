@@ -1,0 +1,45 @@
+- name: Install Tools 
+  yum:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - curl
+    - wget
+    - screen
+  tags:
+    - croncat_packages
+    - croncat_packages_install_tools
+
+- name: Install Repo NodeJS
+  shell: curl -fsSL https://rpm.nodesource.com/setup_16.x | bash -
+  tags:
+    - croncat_packages
+    - croncat_packages_install_repo_nodejs
+
+- name: Install NodeJS
+  yum:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - nodejs
+  tags:
+    - croncat_packages
+    - croncat_packages_install_nodejs
+
+- name: Check NodeJS Version
+  shell: node --version
+  register: is_nodejs_version
+  tags:
+    - croncat_packages
+
+- name: Display NodeJS Version
+  debug:
+    var: is_nodejs_version.stdout
+  tags:
+    - croncat_packages
+    - croncat_packages_show_nodejs_version
+
+
+
+
+  

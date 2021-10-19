@@ -10,6 +10,8 @@ packages_rpm:
   - sysstat
   - needrestart
   - jq
+  - screen
+  - tmux
   
 packages_deb:
   - sysstat

@@ -1,3 +1,13 @@
+- name: Create Directory App
+  file:
+    path: /app
+    state: directory
+    owner: app
+    group: app
+    mode: 0775
+  tags: user_and_group
+    
+
 - name: Create Group Monit and App
   group:
     name: "{{ item }}"
@@ -25,6 +35,7 @@
     shell: /bin/bash
     create_home: yes
     home: /app
+
     append: yes
   with_items:
     - "{{user_app}}"
