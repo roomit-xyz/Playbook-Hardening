@@ -2902,3 +2902,5 @@ Could be written as:
 2021-10-19 10:36:09,516 p=23144 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-19 10:36:09,765 p=23145 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
 2021-10-19 10:36:10,020 p=23146 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 10:36:40,338 p=23559 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-19 10:36:40,467 p=23561 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
