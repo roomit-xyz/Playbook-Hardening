@@ -8607,3 +8607,210 @@ the implicit localhost does not match 'all'
 2021-10-20 04:05:33,750 p=418382 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
 2021-10-20 04:05:33,751 p=418382 u=neareth n=ansible | 157.245.144.76             : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2021-10-20 04:06:13,621 p=419421 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:41:28,867 p=425185 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:41:46,593 p=425371 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:41:46,631 p=425371 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:41:47,185 p=425407 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:41:47,190 p=425407 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:41:47,322 p=425407 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:41:47,323 p=425407 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:41:47,386 p=425371 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (0.75s)
+2021-10-20 13:42:13,678 p=425558 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:42:13,720 p=425558 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:42:21,156 p=425558 u=neareth n=ansible | ok: [157.245.144.76]
+2021-10-20 13:42:21,172 p=425558 u=neareth n=ansible | TASK [luneareth_app-croncat : Create Directory App] *************************************************************************************************************************************
+2021-10-20 13:42:25,146 p=425558 u=neareth n=ansible | failed: [157.245.144.76] (item=croncat) => {"ansible_loop_var": "item", "changed": false, "gid": 1001, "group": "app", "item": "croncat", "mode": "0700", "msg": "chown failed: failed to look up user croncat", "owner": "app", "path": "/app/croncat", "secontext": "unconfined_u:object_r:etc_runtime_t:s0", "size": 6, "state": "directory", "uid": 1001}
+2021-10-20 13:42:25,149 p=425558 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:42:25,150 p=425558 u=neareth n=ansible | 157.245.144.76             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:42:38,869 p=425880 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:42:41,350 p=425906 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:42:45,413 p=426004 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:42:51,439 p=426027 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:42:51,477 p=426027 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:43:00,638 p=426027 u=neareth n=ansible | ok: [157.245.144.76]
+2021-10-20 13:43:00,657 p=426027 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Tools] ********************************************************************************************************************************************
+2021-10-20 13:43:07,866 p=426027 u=neareth n=ansible | failed: [157.245.144.76] (item=curl) => {"ansible_loop_var": "item", "changed": false, "item": "curl", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:43:13,491 p=426027 u=neareth n=ansible | failed: [157.245.144.76] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:43:20,158 p=426027 u=neareth n=ansible | failed: [157.245.144.76] (item=screen) => {"ansible_loop_var": "item", "changed": false, "item": "screen", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:43:20,161 p=426027 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:43:20,161 p=426027 u=neareth n=ansible | 157.245.144.76             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:43:44,054 p=426570 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:43:44,092 p=426570 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:43:51,213 p=426570 u=neareth n=ansible | ok: [157.245.144.76]
+2021-10-20 13:43:51,246 p=426570 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Tools] ********************************************************************************************************************************************
+2021-10-20 13:43:58,450 p=426570 u=neareth n=ansible | failed: [157.245.144.76] (item=curl) => {"ansible_loop_var": "item", "changed": false, "item": "curl", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:44:02,906 p=426570 u=neareth n=ansible | failed: [157.245.144.76] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:44:12,915 p=426570 u=neareth n=ansible | failed: [157.245.144.76] (item=screen) => {"ansible_loop_var": "item", "changed": false, "item": "screen", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:44:12,922 p=426570 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:44:12,922 p=426570 u=neareth n=ansible | 157.245.144.76             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:44:43,258 p=427192 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:44:43,332 p=427192 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:44:43,571 p=427193 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:44:43,634 p=427193 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:44:43,978 p=427249 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:44:43,982 p=427249 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:44:44,110 p=427249 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:44:44,111 p=427249 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:44:44,188 p=427192 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (0.84s)
+2021-10-20 13:44:44,214 p=427258 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:44:44,219 p=427258 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:44:44,349 p=427258 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:44:44,350 p=427258 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:44:44,421 p=427193 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (0.78s)
+2021-10-20 13:44:47,736 p=427217 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:44:47,783 p=427217 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:44:56,124 p=427217 u=neareth n=ansible | ok: [157.245.144.76]
+2021-10-20 13:44:56,137 p=427217 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Tools] ********************************************************************************************************************************************
+2021-10-20 13:45:01,316 p=427217 u=neareth n=ansible | failed: [157.245.144.76] (item=curl) => {"ansible_loop_var": "item", "changed": false, "item": "curl", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:45:01,799 p=427459 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:45:04,325 p=427501 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:45:06,513 p=427217 u=neareth n=ansible | failed: [157.245.144.76] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:45:06,820 p=427572 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:45:08,162 p=427581 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:45:11,172 p=427217 u=neareth n=ansible | failed: [157.245.144.76] (item=screen) => {"ansible_loop_var": "item", "changed": false, "item": "screen", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:45:11,176 p=427217 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:45:11,176 p=427217 u=neareth n=ansible | 157.245.144.76             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:45:22,491 p=427755 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:45:22,612 p=427756 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:45:23,154 p=427758 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:46:07,252 p=428104 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:46:07,302 p=428104 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:46:14,824 p=428104 u=neareth n=ansible | ok: [157.245.144.76]
+2021-10-20 13:46:14,843 p=428104 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Tools] ********************************************************************************************************************************************
+2021-10-20 13:46:20,422 p=428104 u=neareth n=ansible | failed: [157.245.144.76] (item=curl) => {"ansible_loop_var": "item", "changed": false, "item": "curl", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:46:31,789 p=428104 u=neareth n=ansible | failed: [157.245.144.76] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:46:38,581 p=428104 u=neareth n=ansible | failed: [157.245.144.76] (item=screen) => {"ansible_loop_var": "item", "changed": false, "item": "screen", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:46:38,585 p=428104 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:46:38,585 p=428104 u=neareth n=ansible | 157.245.144.76             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:46:52,370 p=428621 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:46:52,477 p=428621 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:46:53,145 p=428661 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:46:53,149 p=428661 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:46:53,297 p=428661 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:46:53,299 p=428661 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:46:53,393 p=428621 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (0.90s)
+2021-10-20 13:46:58,612 p=428644 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:46:58,661 p=428644 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:47:06,755 p=428644 u=neareth n=ansible | fatal: [157.245.144.76]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/libexec/platform-python"}, "failed": true, "module_stderr": "Shared connection to 157.245.144.76 closed.\r\n", "module_stdout": "\r\nWe trust you have received the usual lecture from the local System\r\nAdministrator. It usually boils down to these three things:\r\n\r\n    #1) Respect the privacy of others.\r\n    #2) Think before you type.\r\n    #3) With great power comes great responsibility.\r\n\r\n\r\napp is not in the sudoers file.  This incident will be reported.\r\n", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: ansible.legacy.setup\n"}
+2021-10-20 13:47:06,756 p=428644 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:47:06,756 p=428644 u=neareth n=ansible | 157.245.144.76             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:47:19,813 p=428909 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:47:19,910 p=428909 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:47:20,897 p=428950 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:47:20,904 p=428950 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:47:21,113 p=428950 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:47:21,115 p=428950 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:47:21,299 p=428909 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (1.37s)
+2021-10-20 13:47:37,071 p=429060 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:47:37,134 p=429060 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:47:37,867 p=429109 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:47:37,875 p=429109 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:47:37,967 p=429109 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml': line 8, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - luneareth_app-croncat
+      become: yes
+            ^ here
+
+2021-10-20 13:47:38,056 p=429060 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (0.91s)
+2021-10-20 13:47:41,246 p=429073 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml': line 8, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - luneareth_app-croncat
+      become: yes
+            ^ here
+
+2021-10-20 13:47:54,494 p=429233 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:47:54,560 p=429233 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:47:55,287 p=429266 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:47:55,290 p=429266 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:47:55,478 p=429266 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:47:55,481 p=429266 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:47:55,595 p=429233 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (1.02s)
+2021-10-20 13:48:50,254 p=429617 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:48:50,354 p=429617 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:48:51,639 p=429664 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:48:51,655 p=429664 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:48:52,020 p=429664 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:48:52,025 p=429664 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:48:52,220 p=429617 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (1.84s)
+2021-10-20 13:48:56,771 p=429690 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 13:48:56,824 p=429690 u=neareth n=ansiblelint.utils | Overriding detected file kind 'yaml' with 'playbook' for given positional argument: /home/neareth/GITHUB/GITHUB-NEW/ansible-hardening-os-linux/server-croncat.yml
+2021-10-20 13:48:57,629 p=429738 u=neareth n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-10-20 13:48:57,636 p=429738 u=neareth n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-10-20 13:48:57,826 p=429738 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2021-10-20 13:48:57,827 p=429738 u=neareth n=ansible | playbook: server-croncat.yml
+2021-10-20 13:48:57,939 p=429690 u=neareth n=ansiblelint.logger | Executing syntax check on server-croncat.yml (1.10s)
+2021-10-20 13:49:01,494 p=429712 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:49:01,558 p=429712 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:49:26,831 p=429712 u=neareth n=ansible | ok: [157.245.144.76]
+2021-10-20 13:49:26,871 p=429712 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Tools] ********************************************************************************************************************************************
+2021-10-20 13:50:12,632 p=429712 u=neareth n=ansible | failed: [157.245.144.76] (item=curl) => {"ansible_loop_var": "item", "changed": false, "item": "curl", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:50:46,244 p=429712 u=neareth n=ansible | failed: [157.245.144.76] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:51:24,606 p=429712 u=neareth n=ansible | failed: [157.245.144.76] (item=screen) => {"ansible_loop_var": "item", "changed": false, "item": "screen", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:51:24,611 p=429712 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:51:24,612 p=429712 u=neareth n=ansible | 157.245.144.76             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:52:50,405 p=431542 u=neareth n=ansible | PLAY [app] ******************************************************************************************************************************************************************************
+2021-10-20 13:52:50,463 p=431542 u=neareth n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************
+2021-10-20 13:53:14,729 p=431542 u=neareth n=ansible | ok: [157.245.144.76]
+2021-10-20 13:53:14,744 p=431542 u=neareth n=ansible | TASK [luneareth_app-croncat : Install Tools] ********************************************************************************************************************************************
+2021-10-20 13:53:20,561 p=431542 u=neareth n=ansible | failed: [157.245.144.76] (item=curl) => {"ansible_loop_var": "item", "changed": false, "item": "curl", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:53:26,538 p=431542 u=neareth n=ansible | failed: [157.245.144.76] (item=wget) => {"ansible_loop_var": "item", "changed": false, "item": "wget", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:53:35,729 p=431542 u=neareth n=ansible | failed: [157.245.144.76] (item=screen) => {"ansible_loop_var": "item", "changed": false, "item": "screen", "msg": "This command has to be run under the root user.", "results": []}
+2021-10-20 13:53:35,732 p=431542 u=neareth n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************
+2021-10-20 13:53:35,733 p=431542 u=neareth n=ansible | 157.245.144.76             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-10-20 13:54:41,884 p=432395 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 14:02:50,138 p=435049 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 15:42:04,210 p=467884 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles
+2021-10-20 15:42:04,581 p=467886 u=neareth n=ansiblelint.prerun | Added ANSIBLE_ROLES_PATH=~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:roles:roles

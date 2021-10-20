@@ -1,3 +1,13 @@
+# mkdir ~/.npm-global
+
+# npm config set prefix '~/.npm-global'
+
+# export PATH=~/.npm-global/bin:$PATH
+
+# source ~/.profile
+# and finally test with this command
+
+# npm install -g jshint
 - name: Install Packages Application Croncat
   shell: npm i -g croncat near-cli
   register: is_install_croncat

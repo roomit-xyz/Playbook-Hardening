@@ -1,15 +1,3 @@
-- name: Create Directory App
-  file:
-    path: /app/{{item}}
-    state: directory
-    owner: "{{item}}"
-    group: app
-    mode: 0775
-  with_items:
-    - "{{name_of_app}}"
-  tags: croncat_user
-
-
 - name: Install Tools 
   yum:
     name: "{{item}}"
@@ -22,7 +10,8 @@
   tags:
     - croncat_packages
     - croncat_packages_install_tools
-
+## curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+## sudo yum install yarn
 - name: Install Repo NodeJS
   shell: curl -fsSL https://rpm.nodesource.com/setup_16.x | bash -
   when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'

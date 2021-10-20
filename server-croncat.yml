@@ -2,8 +2,9 @@
 - hosts: app 
   become: yes
   become_user: app
+  become_method: enable
   roles: 
     - luneareth_app-croncat
   vars:
-    - account_near: "luneareth.tesnet"
+    - account_near: "luneareth.near"
   
