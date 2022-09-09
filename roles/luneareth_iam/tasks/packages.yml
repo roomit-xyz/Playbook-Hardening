@@ -1,4 +1,5 @@
-- name: Install epel-release
+### CENTOS or REDHAT
+- name: Install epel-release Repo
   package:
     name: epel-release
     state: present
@@ -7,9 +8,11 @@
   ignore_errors: yes
   tags:
     - iam-packages
+    - packages-rpm
+    - rpm-epel_release
 
     
-- name: Upgrade all packages
+- name: Upgrade all packages RPM to Latest
   package:
     name: '*'
     state: latest
@@ -17,9 +20,11 @@
   ignore_errors: yes
   tags:
     - iam-packages
+    - packages-rpm
+    - rpm-upgrade
 
 
-- name: RPM Package Installation
+- name: RPM Package Installation Needs
   become: 'yes'
   package:
     name: "{{ packages_rpm }}"
@@ -28,11 +33,41 @@
   ignore_errors: yes
   tags:
     - iam-packages
+    - packages-rpm
+    - rpm-install_packages_needs
 
 
-
-
-# For Packages DEB Based
-
+##### DEBIAN or UBUNTU
+- name: "Update Repository List"
+  apt:
+    update_cache: yes
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  ignore_errors: yes
+  tags:
+    - iam-packages
+    - packages-deb
+    - deb-update
 
     
+- name: Update all packages DEB to the latest version
+  apt:
+    upgrade: dist
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  ignore_errors: yes
+  tags:
+    - iam-packages
+    - packages-deb
+    - deb-upgrade
+
+
+- name: DEB Package Installation Needs
+  become: 'yes'
+  apt:
+    name: "{{ packages_deb }}"
+    state: present
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  ignore_errors: yes
+  tags:
+    - iam-packages
+    - packages-deb
+    - deb-install_packages_needs
