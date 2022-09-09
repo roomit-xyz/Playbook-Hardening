@@ -12,7 +12,7 @@
 - include: ntp.yml
 - include: ram_flush.yml
 - include: file_integrity.yml
-- include: logging.yml
+- include: audit.yml
 - include: banner.yml
 - include: postfix.yml
 - include: cronjob.yml

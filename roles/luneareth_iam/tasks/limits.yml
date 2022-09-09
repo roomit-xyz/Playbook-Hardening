@@ -1,4 +1,4 @@
-- name: limits.conf
+- name: "Setting Limits Configuration File limits.conf"
   become: 'yes'
   template:
     src: limits.conf.j2
@@ -10,7 +10,7 @@
   tags:
     - limits
 
-- name: coredump.conf
+- name: "[DEB Based] Setting Coredump"
   become: 'yes'
   template:
     src: coredump.conf.j2
@@ -19,7 +19,6 @@
     mode: 0644
     owner: root
     group: root
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
   tags:
     - iam-limits
- 
-...

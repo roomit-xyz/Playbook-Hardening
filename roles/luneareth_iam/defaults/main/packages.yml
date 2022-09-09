@@ -16,3 +16,5 @@ packages_deb:
   - sysstat
   - curl
   - wget
+  - auditd
+  - systemd-coredump

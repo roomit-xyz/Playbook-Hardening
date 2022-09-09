@@ -1,4 +1,4 @@
-- name: "Create User Administrator (sudo user) RPM Based"
+- name: "[RPM Based] Create User Administrator (sudo access)"
   user:
     name: "{{ item.user }}"
     groups: wheel
@@ -13,7 +13,7 @@
   - iam-user_and_group
   - user_and_group-Create_User_Admin
 
-- name: "Create User Other User RPM Based"
+- name: "[RPM Based] Create User Other User RPM Based"
   user:
     name: "{{ item.user }}"
     shell: /bin/bash
@@ -27,7 +27,7 @@
   - iam-user_and_group
   - user_and_group-Create_User_Other
 
-- name: "Create User Administrator (sudo user) DEB Based"
+- name: "[DEB Based] Create User Administrator (sudo access)"
   user:
     name: "{{ item.user }}"
     groups: sudo
@@ -43,7 +43,7 @@
   - user_and_group-Create_User_Admin
 
 
-- name: "Create User Other User DEB Based"
+- name: "[DEB Based] Create User Other User DEB Based"
   user:
     name: "{{ item.user }}"
     shell: /bin/bash

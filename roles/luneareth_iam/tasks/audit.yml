@@ -4,7 +4,8 @@
       state: present 
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: 
-    - iam-logging 
+    - iam-audit
+    - audit-install_auditd_rpm
 
 
 - name: Install Auditd on DEB Packages
@@ -13,9 +14,10 @@
       state: present 
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags: 
-    - iam-logging 
+    - iam-audit
+    - audit-install_auditd_deb
 
-- name: Copy File Configuration Auditd Luneareth Rules
+- name: Copy File Configuration Auditd 
   copy:
     src: general-auditd.rules
     dest: /etc/audit/rules.d/general-auditd.rules
@@ -24,7 +26,8 @@
     mode: 0644
   notify: "start auditd" 
   tags: 
-    - iam-logging
+    - iam-audit
+    - audit-copy_conf
 
 
   

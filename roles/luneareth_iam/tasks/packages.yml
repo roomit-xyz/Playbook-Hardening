@@ -1,5 +1,5 @@
 ### CENTOS or REDHAT
-- name: Install epel-release Repo
+- name: "[RPM Based] Install epel-release Repo"
   package:
     name: epel-release
     state: present
@@ -12,7 +12,7 @@
     - rpm-epel_release
 
     
-- name: Upgrade all packages RPM to Latest
+- name: "[RPM Based] Upgrade all packages to Latest"
   package:
     name: '*'
     state: latest
@@ -24,7 +24,7 @@
     - rpm-upgrade
 
 
-- name: RPM Package Installation Needs
+- name: "[RPM Based] Packages Installation Needs"
   become: 'yes'
   package:
     name: "{{ packages_rpm }}"
@@ -38,7 +38,7 @@
 
 
 ##### DEBIAN or UBUNTU
-- name: "Update Repository List"
+- name: "[DEB Based] Update Repository List"
   apt:
     update_cache: yes
   when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
@@ -49,7 +49,7 @@
     - deb-update
 
     
-- name: Update all packages DEB to the latest version
+- name: "[DEB Based] Update all packages to the latest version"
   apt:
     upgrade: dist
   when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
@@ -60,7 +60,7 @@
     - deb-upgrade
 
 
-- name: DEB Package Installation Needs
+- name: "[DEB Based] Package Installation Needs"
   become: 'yes'
   apt:
     name: "{{ packages_deb }}"

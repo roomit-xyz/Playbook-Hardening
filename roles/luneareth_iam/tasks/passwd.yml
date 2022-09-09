@@ -6,7 +6,7 @@
 - include: user_and_group.yml
 
 
-- name: Change Password 
+- name: Change Password Users
   user:
     name: "{{item.name}}"
     password: "{{ item.password }}"
@@ -16,4 +16,4 @@
    - {name: "{{user_admin}}", password: "{{ password_admin }}" }
    - {name: "{{user_other}}", password: "{{ password_other }}" }
   tags: 
-    - iam-passwd
+   - iam-passwd
