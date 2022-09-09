@@ -9,9 +9,11 @@
   with_items:
       - {user: "{{ user_admin }}", home: "/home/{{ user_admin }}" }
   when: ansible_os_family == 'RedHat' or ansible_os_family == 'CentOS' 
-  tags: iam-user_and_group
+  tags: 
+  - iam-user_and_group
+  - user_and_group-Create_User_Admin
 
-- name: "Create User Other User (sudo user) RPM Based"
+- name: "Create User Other User RPM Based"
   user:
     name: "{{ item.user }}"
     shell: /bin/bash
@@ -21,12 +23,14 @@
   with_items:
       - {user: "{{ user_other }}", home: "/{{ user_other }}" }
   when: ansible_os_family == 'RedHat' or ansible_os_family == 'CentOS' 
-  tags: iam-user_and_group
+  tags: 
+  - iam-user_and_group
+  - user_and_group-Create_User_Other
 
 - name: "Create User Administrator (sudo user) DEB Based"
   user:
     name: "{{ item.user }}"
-    groups: wheel
+    groups: sudo
     shell: /bin/bash
     create_home: yes
     home: "{{ item.home }}"
@@ -34,10 +38,12 @@
   with_items:
       - {user: "{{ user_admin }}", home: "/home/{{ user_admin }}" }
   when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
-  tags: iam-user_and_group
+  tags: 
+  - iam-user_and_group
+  - user_and_group-Create_User_Admin
 
 
-- name: "Create User Other User (sudo user) DEB Based"
+- name: "Create User Other User DEB Based"
   user:
     name: "{{ item.user }}"
     shell: /bin/bash
@@ -47,4 +53,6 @@
   with_items:
       - {user: "{{ user_other }}", home: "/{{ user_other }}" }
   when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
-  tags: iam-user_and_group
+  tags: 
+  - iam-user_and_group
+  - user_and_group-Create_User_Other
