@@ -14,6 +14,6 @@
   with_items:
    - {name: "{{user_root}}", password: "{{ password_root }}" }
    - {name: "{{user_admin}}", password: "{{ password_admin }}" }
-   - {name: "{{user_app}}", password: "{{ password_app }}" }
+   - {name: "{{user_other}}", password: "{{ password_other }}" }
   tags: 
     - iam-passwd

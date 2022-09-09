@@ -5,6 +5,7 @@
     regexp: '^SELINUX=.*'
     line: 'SELINUX={{ SELINUX }}'
     state: present
+  when: ansible_os_family == 'RedHat' or ansible_os_family == 'CentOS' 
   tags: iam-selinux
 
 - name: set SELinux type
@@ -13,4 +14,5 @@
     regexp: '^SELINUXTYPE.*'
     line: 'SELINUXTYPE={{ SELINUXTYPE }}'
     state: present
+  when: ansible_os_family == 'RedHat' or ansible_os_family == 'CentOS' 
   tags: iam-selinux

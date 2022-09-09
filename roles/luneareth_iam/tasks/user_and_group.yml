@@ -1,4 +1,4 @@
-- name: Create User admin and app Wheel Group RPM Base
+- name: "Create User Administrator (sudo user) RPM Based"
   user:
     name: "{{ item.user }}"
     groups: wheel
@@ -8,32 +8,43 @@
     append: yes
   with_items:
       - {user: "{{ user_admin }}", home: "/home/{{ user_admin }}" }
-      - {user: "{{ user_app }}", home: "/{{ user_app }}" }
-  when: ansible_os_family == 'RedHat'
+  when: ansible_os_family == 'RedHat' or ansible_os_family == 'CentOS' 
   tags: iam-user_and_group
 
-# - name: Create Group Monit 
-#   group:
-#     name: "{{ item }}"
-#     state: present
-#   with_items:
-#     - monit
-#   tags: iam-user_and_group
-# - name: Adduser App and assign to Monit Group RPM Base
-#   user:
-#     name: "{{ item }}"
-#     shell: /bin/bash
-#     create_home: yes
-#     home: /app
-#   with_items:
-#     - "{{ user_app }}"
-#   when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
-#   tags: iam-user_and_group
-# - name: Create User App
-#   shell: useradd -b /{{user_app}} -d /{{user_app}}  -m {{user_app}}
-#   when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
-#   ignore_errors: yes
-#   tags: iam-user_and_group
+- name: "Create User Other User (sudo user) RPM Based"
+  user:
+    name: "{{ item.user }}"
+    shell: /bin/bash
+    create_home: yes
+    home: "{{ item.home }}"
+    append: yes
+  with_items:
+      - {user: "{{ user_other }}", home: "/{{ user_other }}" }
+  when: ansible_os_family == 'RedHat' or ansible_os_family == 'CentOS' 
+  tags: iam-user_and_group
+
+- name: "Create User Administrator (sudo user) DEB Based"
+  user:
+    name: "{{ item.user }}"
+    groups: wheel
+    shell: /bin/bash
+    create_home: yes
+    home: "{{ item.home }}"
+    append: yes
+  with_items:
+      - {user: "{{ user_admin }}", home: "/home/{{ user_admin }}" }
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  tags: iam-user_and_group
 
 
-
+- name: "Create User Other User (sudo user) DEB Based"
+  user:
+    name: "{{ item.user }}"
+    shell: /bin/bash
+    create_home: yes
+    home: "{{ item.home }}"
+    append: yes
+  with_items:
+      - {user: "{{ user_other }}", home: "/{{ user_other }}" }
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  tags: iam-user_and_group
