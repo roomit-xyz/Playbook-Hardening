@@ -11,11 +11,6 @@ DEB Based
 Ubuntu 20^
 Take your own risk!!!
 
-## Roles :
-
-1. luneareth_iam for hardening OS
-2. app_croncat_near_blockchain for auto deplyoment app croncat near blockchain
-
 
 ### Varaible Global Roles luneareth_iam:
 
