@@ -1,9 +1,323 @@
-2022-09-09 23:14:51,079 p=33365 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+2022-09-14 18:32:25,915 p=244463 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
 
-2022-09-09 23:14:51,080 p=33365 u=neareth n=ansible | playbook: server-iam.yml
-2022-09-09 23:15:33,726 p=33434 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+Syntax Error while loading YAML.
+  did not find expected key
 
-2022-09-09 23:15:33,726 p=33434 u=neareth n=ansible | playbook: server-iam.yml
-2022-09-09 23:15:55,708 p=33483 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
 
-2022-09-09 23:15:55,708 p=33483 u=neareth n=ansible | playbook: server-iam.yml
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:32:44,174 p=244529 u=neareth n=ansible | ERROR! Vars in a Play must be specified as a dictionary, or a list of dictionaries
+
+The error appears to be in '/home/neareth/ansible-my-setup/server-iam.yml': line 10, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  vars:
+     - user_root: root
+     ^ here
+
+2022-09-14 18:35:07,654 p=244854 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:12,920 p=244906 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:13,799 p=244985 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:13,832 p=244915 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:14,520 p=244927 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:16,145 p=244950 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:16,873 p=244978 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:17,350 p=245001 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:17,523 p=244973 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:17,758 p=245030 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 18:35:18,480 p=245041 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+

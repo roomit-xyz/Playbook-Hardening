@@ -1,0 +1,30 @@
+---
+- name: stop aide
+  service:
+     name: aide
+     state: stopped
+  listen: "stop aide"
+
+- name: restart aide
+  service:
+     name: aide
+     state: restarted
+  listen: "restart aide"
+
+- name: start aide
+  service:
+     name: aide
+     state: started
+  listen: "start aide"
+  
+- name: restart aide
+  service:
+     name: aide
+     state: restarted
+  listen: "restart aide"
+
+- name: start aide
+  service:
+     name: aide
+     state: started
+  listen: "start aide"

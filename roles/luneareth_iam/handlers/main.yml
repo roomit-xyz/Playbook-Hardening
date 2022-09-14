@@ -1,3 +1,6 @@
 ---
 - include: service_auditd.yml
-- include: daemon_reload.yml
+- include: service_daemon_reload.yml
+- include: service_iptables.yml
+- include: service_sshd.yml
+- include: service_aide.yml

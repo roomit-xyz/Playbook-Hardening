@@ -238,115 +238,87 @@
       when:
         - deny_groups != "None"
   tags:
-    - section5
-    - level_1_server
-    - level_1_workstation
-    - 5.2.18
-    - scored
-# 5.2.19 Ensure SSH warning banner is configured
-# Banners are used to warn connecting users of the particular site's policy regarding
-# connection. Presenting a warning message prior to the normal user login may assist the
-# prosecution of trespassers on the computer system.
-- name: 5.2.19 Ensure SSH warning banner is configured
+    - iam-ssh
+    - ssh-Authorization
+    - ssh-AllowUsers
+    - ssh-AllowGroups
+    - ssh-DenyGroups
+    - ssh-DenyUsers
+    
+
+- name: Ensure SSH warning banner is configured
   block:
-    - name: 5.2.19 Ensure SSH warning banner is configured - copy banner
+    - name: Ensure SSH warning banner is configured - copy banner
       copy:
         src: banner
         dest: /etc/ssh/banner
         owner: root
         group: root
         mode: '0644'
-    - name: 5.2.19 Ensure SSH warning banner is configured - config banner
+    - name: Ensure SSH warning banner is configured - config banner
       lineinfile:
         state: present
         dest: /etc/ssh/sshd_config
         regexp: "^Banner"
         line: "Banner /etc/ssh/banner"
   tags:
-    - section5
-    - level_1_server
-    - level_1_workstation
-    - 5.2.19
-    - scored
-# 5.2.20 Ensure SSH PAM is enabled
-# When usePAM is set to yes, PAM runs through account and session types properly. This is
-# important if you want to restrict access to services based off of IP, time or other factors of
-# the account. Additionally, you can make sure users inherit certain environment variables
-# on login or disallow access to the server
-- name: 5.2.20 Ensure SSH PAM is enabled
+    - iam-ssh
+    - ssh-Banner
+
+
+- name: Ensure SSH PAM is enabled
   lineinfile:
     state: present
     dest: /etc/ssh/sshd_config
     regexp: "^UsePAM"
     line: "UsePAM yes"
   tags:
-    - section5
-    - level_1_server
-    - level_1_workstation
-    - 5.2.20
-    - scored
-# 5.2.21 Ensure SSH AllowTcpForwarding is disabled
-# Leaving port forwarding enabled can expose the organization to security risks and back-
-# doors.
-- name: 5.2.21 Ensure SSH AllowTcpForwarding is disabled
+    - iam-ssh
+    - ssh-UsePAM
+
+
+- name: Ensure SSH AllowTcpForwarding is disabled
   lineinfile:
     state: present
     dest: /etc/ssh/sshd_config
     regexp: "^(#)?AllowTcpForwarding"
     line: "AllowTcpForwarding no"
   tags:
-    - section5
-    - level_1_server
-    - level_1_workstation
-    - 5.2.21
-    - scored
-# 5.2.22 Ensure SSH MaxStartups is configured
-# To protect a system from denial of service due to a large number of pending authentication
-# connection attempts, use the rate limiting function of MaxStartups to protect availability of
-# sshd logins and prevent overwhelming the daemon.
-- name: 5.2.22 Ensure SSH MaxStartups is configured
+    - iam-ssh
+    - ssh-AllowTcpForwarding
+
+
+- name: Ensure SSH MaxStartups is configured
   lineinfile:
     state: present
     dest: /etc/ssh/sshd_config
     regexp: "^(#)?MaxStartups"
     line: "MaxStartups 10:30:100"
   tags:
-    - section5
-    - level_1_server
-    - level_1_workstation
-    - 5.2.22
-    - scored
-# 5.2.23 Ensure SSH MaxSessions is limited
-# To protect a system from denial of service due to a large number of concurrent sessions,
-# use the rate limiting function of MaxSessions to protect availability of sshd logins and
-# prevent overwhelming the daemon.
-- name: 5.2.23 Ensure SSH MaxSessions is limited
+    - iam-ssh
+    - ssh-MaxStartups
+
+
+- name: Ensure SSH MaxSessions is limited
   lineinfile:
     state: present
     dest: /etc/ssh/sshd_config
     regexp: "^(#)?MaxSessions"
     line: "MaxSessions 10"
   tags:
-    - section5
-    - level_1_server
-    - level_1_workstation
-    - 5.2.23
-    - scored
-# 5.2.24 Disable Permit Login Root
-# Leaving port forwarding enabled can expose the organization to security risks and back-
-# doors.
-- name: 5.2.21 Ensure SSH AllowTcpForwarding is disabled
+    - iam-ssh
+    - ssh-MaxSessions
+
+
+- name: Ensure SSH AllowTcpForwarding is disabled
   lineinfile:
     state: present
     dest: /etc/ssh/sshd_config
     regexp: "^(#)?AllowTcpForwarding"
     line: "AllowTcpForwarding no"
   tags:
-    - section5
-    - level_1_server
-    - level_1_workstation
-    - 5.2.21
-    - scored
+    - iam-ssh
+    - ssh-AllowTcpForwarding
 
 - name: Setup alternate SSH port
   lineinfile:
@@ -355,13 +327,7 @@
     line: "Port 12920"
   retries: 2
   delay: 2
-  notify: 
-    - "Restart iptables"
-    - "Restart sshd"
   tags:
-    - section7
-    - level_1_server
-    - level_1_workstation
-    - 7.0.0
-    - not-scored
+    - iam-ssh
+    - ssh-Port
 

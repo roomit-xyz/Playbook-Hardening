@@ -18,6 +18,7 @@
 - include: cronjob.yml
 - include: ssh.yml
 - include: iptables.yml
+- include: service.yml
 - include: reboot.yml
 
 

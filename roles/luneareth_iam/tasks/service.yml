@@ -1,0 +1,5 @@
+- name: Restart Service SSH
+  notify: restart ssh
+
+- name: Restart Service Iptables
+  notify: restart iptables

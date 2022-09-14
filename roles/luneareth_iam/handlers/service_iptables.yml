@@ -1,0 +1,29 @@
+---
+- name: stop iptables
+  service:
+     name: iptables
+     state: stopped
+  listen: "stop iptables"
+  
+- name: restart iptables
+  service:
+     name: iptables
+     state: restarted
+  listen: "restart iptables"
+
+- name: start iptables
+  service:
+     name: iptables
+     state: started
+  listen: "start iptables"
+- name: restart iptables
+  service:
+     name: iptables
+     state: restarted
+  listen: "restart iptables"
+
+- name: start iptables
+  service:
+     name: iptables
+     state: started
+  listen: "start iptables"

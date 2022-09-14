@@ -2,6 +2,7 @@
 :INPUT DROP [6:3456]
 :FORWARD DROP [0:0]
 :OUTPUT DROP [0:0]
+:chain-incoming-ssh-admin - [0:0]
 :chain-incoming-ssh - [0:0]
 :chain-outgoing-services - [0:0]
 :chain-states - [0:0]
@@ -14,7 +15,8 @@
 
 #### ALLOW ACCESS INPUT
 -A INPUT -j chain-states
--A INPUT -p tcp -m tcp --dport 22 -j chain-incoming-ssh
+-A INPUT -p tcp -m tcp --dport 22 -j chain-incoming-ssh-admin
+-A INPUT -p tcp -m tcp --dport 12920 -j chain-incoming-ssh
 
 #### ALLOW ACCESS OUTGOING
 -A OUTPUT -o lo -j ACCEPT
@@ -23,7 +25,11 @@
 
 
 ### CHAIN INCOMING WHITELIST
--A chain-incoming-ssh -s {{iptables_ssh_access_ip_allow}} -j ACCEPT
+-A chain-incoming-ssh-admin -s {{iptables_ssh_access_ip_allow}} -j ACCEPT
+-A chain-incoming-ssh-admin -j DROP
+
+### CHAIN INCOMING WHITELIST
+-A chain-incoming-ssh -j ACCEPT
 -A chain-incoming-ssh -j DROP
 
 ### CHAIN OUTGOING WHITELIST

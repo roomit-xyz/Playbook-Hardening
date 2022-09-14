@@ -53,6 +53,7 @@
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags:
      - iam-file_integrity
+     - file_integrity-generate_config_aide
     
 
 - name: Copy Configuration Init Debian
@@ -63,4 +64,5 @@
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags:
     - iam-file_integrity
+    - file_integrity-copy_config_aide
 
