@@ -3,3 +3,9 @@
 
 - name: Restart Service Iptables
   notify: restart iptables
+
+- name: Restart Service Aide
+  notify: restart aide
+
+- name: Restart Service auditd
+  notify: restart auditd
