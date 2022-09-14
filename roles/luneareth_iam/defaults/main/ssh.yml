@@ -1,0 +1,4 @@
+allowed_users: {{ user_other }} {{ user_admin }}
+allowed_groups: admin
+deny_users: None
+deny_groups: None

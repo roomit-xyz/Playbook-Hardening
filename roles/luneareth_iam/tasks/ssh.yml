@@ -1,0 +1,367 @@
+- name: Ensure permissions on /etc/ssh/sshd_config are configured
+  file:
+    dest: /etc/ssh/sshd_config
+    state: file
+    owner: root
+    group: root
+    mode: 0600
+  tags:
+    - iam-ssh
+    - ssh-permissions_root
+
+
+- name: Ensure permissions on SSH private host key files are configured
+  block:
+    - name: 5.2.2 Ensure permissions on SSH private host key files are configured - find keys
+      shell: |
+        find /etc/ssh -xdev -type f -name 'ssh_host_*_key'  && true || true
+      register: output_5_2_2
+      changed_when: output_5_2_2.rc != 0
+    - name: 5.2.2 Ensure permissions on SSH private host key files are configured - fix permissions
+      file:
+        dest: "{{ item }}"
+        state: file
+        owner: root
+        group: root
+        mode: 0600
+      with_items: "{{ output_5_2_2.stdout_lines }}"
+      when: output_5_2_2.stdout_lines | length > 0
+  tags:
+    - iam-ssh
+    - ssh-permissions_private_host
+
+
+- name: Ensure permissions on SSH public host key files are configured
+  block:
+    - name: 5.2.3 Ensure permissions on SSH public host key files are configured - find keys
+      shell: |
+        find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' && true || true
+      register: output_5_2_3
+      changed_when: output_5_2_3.rc != 0
+    - name: 5.2.3 Ensure permissions on SSH public host key files are configured - fix permissions
+      file:
+        dest: "{{ item }}"
+        state: file
+        owner: root
+        group: root
+        mode: "go-wx"
+      with_items: "{{ output_5_2_3.stdout_lines }}"
+      when: output_5_2_3.stdout_lines | length > 0
+  tags:
+    - iam-ssh
+    - ssh-permissions_public_host
+
+
+- name: Ensure SSH LogLevel is appropriate
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?LogLevel"
+    line: "LogLevel INFO"
+  tags:
+    - iam-ssh
+    - ssh-LogLevel
+
+
+- name: Ensure SSH X11 forwarding is disabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^X11Forwarding"
+    line: "X11Forwarding no"
+  tags:
+    - iam-ssh
+    - ssh-X11Forwarding
+
+
+- name: Ensure SSH MaxAuthTries is set to 4 or less
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: '^(#)?MaxAuthTries \d'
+    line: "MaxAuthTries 4"
+  tags:
+    - iam-ssh
+    - ssh-MaxAuthTries
+
+
+- name: Ensure SSH IgnoreRhosts is enabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?IgnoreRhosts"
+    line: "IgnoreRhosts yes"
+  tags:
+    - iam-ssh
+    - ssh-ignoreRhost
+
+
+- name: Ensure SSH HostbasedAuthentication is disabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?HostbasedAuthentication"
+    line: "HostbasedAuthentication no"
+  tags:
+    - iam-ssh
+    - ssh-HostBasedAuthentications
+
+
+- name: Ensure SSH root login is disabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?PermitRootLogin"
+    line: "PermitRootLogin no"
+  tags:
+    - iam-ssh
+    - ssh-PermitRootLogin
+
+- name: Ensure SSH PermitEmptyPasswords is disabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?PermitEmptyPasswords"
+    line: "PermitEmptyPasswords no"
+  tags:
+    - iam-ssh
+    - ssh-PermitEmptyPasswords
+
+
+- name: Ensure SSH PermitUserEnvironment is disabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?PermitUserEnvironment"
+    line: "PermitUserEnvironment no"
+  tags:
+    - iam-ssh
+    - ssh-PermitUserEnvironment
+
+
+- name: Ensure only strong Ciphers are used
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^Ciphers"
+    line: "Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr"
+  tags:
+    - iam-ssh
+    - ssh-Ciphers
+
+- name: Ensure only strong MAC algorithms are used
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^MACs"
+    line: "MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256"
+  tags:
+    - iam-ssh
+    - ssh-MACs
+
+
+- name: Ensure only strong Key Exchange algorithms are used
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^KexAlgorithms"
+    line: "KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256"
+  tags:
+    - iam-ssh
+    - ssh-KexAlgorithms
+
+
+- name: Ensure SSH Idle Timeout Interval is configured
+  block:
+    - name: Ensure SSH Idle Timeout Interval is configured - clientalive
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^(#)?ClientAliveInterval"
+        line: "ClientAliveInterval 300"
+    - name: Ensure SSH Idle Timeout Interval is configured - MaxAlive
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^(#)?ClientAliveCountMax"
+        line: "ClientAliveCountMax 3"
+  tags:
+    - iam-ssh
+    - ssh-TimeOut
+    - ssh-ClientAliveInterval
+    - ssh-ClientAliveCountMax
+
+
+- name: Ensure SSH LoginGraceTime is set to one minute or less
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?LoginGraceTime"
+    line: "LoginGraceTime 60"
+  tags:
+    - iam-ssh
+    - ssh-LoginGraceTime
+
+
+- name: Ensure SSH access is limited
+  block:
+    - name: Ensure SSH access is limited - allow users
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^AllowUsers"
+        line: "AllowUsers {{ allowed_users }}"
+      when:
+        - allowed_users != "None"
+    - name: Ensure SSH access is limited - allow groups
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^AllowGroups"
+        line: "AllowGroups {{ allowed_groups }}"
+      when:
+        - allowed_groups != "None"
+    - name: Ensure SSH access is limited - denyusers
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^DenyUsers"
+        line: "DenyUsers {{ deny_users }}"
+      when:
+        - deny_users != "None"
+    - name: Ensure SSH access is limited - denygroups
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^DenyGroups"
+        line: "DenyGroups {{ deny_groups }}"
+      when:
+        - deny_groups != "None"
+  tags:
+    - section5
+    - level_1_server
+    - level_1_workstation
+    - 5.2.18
+    - scored
+# 5.2.19 Ensure SSH warning banner is configured
+# Banners are used to warn connecting users of the particular site's policy regarding
+# connection. Presenting a warning message prior to the normal user login may assist the
+# prosecution of trespassers on the computer system.
+- name: 5.2.19 Ensure SSH warning banner is configured
+  block:
+    - name: 5.2.19 Ensure SSH warning banner is configured - copy banner
+      copy:
+        src: banner
+        dest: /etc/ssh/banner
+        owner: root
+        group: root
+        mode: '0644'
+    - name: 5.2.19 Ensure SSH warning banner is configured - config banner
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^Banner"
+        line: "Banner /etc/ssh/banner"
+  tags:
+    - section5
+    - level_1_server
+    - level_1_workstation
+    - 5.2.19
+    - scored
+# 5.2.20 Ensure SSH PAM is enabled
+# When usePAM is set to yes, PAM runs through account and session types properly. This is
+# important if you want to restrict access to services based off of IP, time or other factors of
+# the account. Additionally, you can make sure users inherit certain environment variables
+# on login or disallow access to the server
+- name: 5.2.20 Ensure SSH PAM is enabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^UsePAM"
+    line: "UsePAM yes"
+  tags:
+    - section5
+    - level_1_server
+    - level_1_workstation
+    - 5.2.20
+    - scored
+# 5.2.21 Ensure SSH AllowTcpForwarding is disabled
+# Leaving port forwarding enabled can expose the organization to security risks and back-
+# doors.
+- name: 5.2.21 Ensure SSH AllowTcpForwarding is disabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?AllowTcpForwarding"
+    line: "AllowTcpForwarding no"
+  tags:
+    - section5
+    - level_1_server
+    - level_1_workstation
+    - 5.2.21
+    - scored
+# 5.2.22 Ensure SSH MaxStartups is configured
+# To protect a system from denial of service due to a large number of pending authentication
+# connection attempts, use the rate limiting function of MaxStartups to protect availability of
+# sshd logins and prevent overwhelming the daemon.
+- name: 5.2.22 Ensure SSH MaxStartups is configured
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?MaxStartups"
+    line: "MaxStartups 10:30:100"
+  tags:
+    - section5
+    - level_1_server
+    - level_1_workstation
+    - 5.2.22
+    - scored
+# 5.2.23 Ensure SSH MaxSessions is limited
+# To protect a system from denial of service due to a large number of concurrent sessions,
+# use the rate limiting function of MaxSessions to protect availability of sshd logins and
+# prevent overwhelming the daemon.
+- name: 5.2.23 Ensure SSH MaxSessions is limited
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?MaxSessions"
+    line: "MaxSessions 10"
+  tags:
+    - section5
+    - level_1_server
+    - level_1_workstation
+    - 5.2.23
+    - scored
+# 5.2.24 Disable Permit Login Root
+# Leaving port forwarding enabled can expose the organization to security risks and back-
+# doors.
+- name: 5.2.21 Ensure SSH AllowTcpForwarding is disabled
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: "^(#)?AllowTcpForwarding"
+    line: "AllowTcpForwarding no"
+  tags:
+    - section5
+    - level_1_server
+    - level_1_workstation
+    - 5.2.21
+    - scored
+
+- name: Setup alternate SSH port
+  lineinfile:
+    dest: "/etc/ssh/sshd_config"
+    regexp: "^Port"
+    line: "Port 12920"
+  retries: 2
+  delay: 2
+  notify: 
+    - "Restart iptables"
+    - "Restart sshd"
+  tags:
+    - section7
+    - level_1_server
+    - level_1_workstation
+    - 7.0.0
+    - not-scored
+

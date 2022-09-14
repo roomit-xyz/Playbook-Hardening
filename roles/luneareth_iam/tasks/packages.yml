@@ -1,3 +1,53 @@
+##### REMOVE UNUSED PACKAGE ####
+- name: "Check Firewalld"
+  service:
+    name: firewalld
+    state: stopped
+    enabled: no
+  when:  ansible_os_family == "RedHat" or  ansible_os_family == 'CentOS'
+  ignore_errors: true
+  tags: 
+    - iam-packages
+    - package-remove
+    - remove-firewalld
+  
+- name: Ensure firewalld is not installed
+  yum:
+    name: firewalld
+    state: absent
+  when:  ansible_os_family == "RedHat" or  ansible_os_family == 'CentOS'
+  tags: 
+    - iam-packages
+    - package-remove
+    - remove-firewalld
+  ignore_errors: true
+
+
+##### REMOVE UNUSED PACKAGE ####
+- name: "Check UFW"
+  service:
+    name: ufw
+    state: stopped
+    enabled: no
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  ignore_errors: true
+  tags: 
+    - iam-packages
+    - package-remove
+    - remove-firewalld
+  
+- name: Ensure ufw is not installed
+  yum:
+    name: ufw
+    state: absent
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  tags: 
+    - iam-packages
+    - package-remove
+    - remove-firewalld
+  ignore_errors: true
+
+
 ### CENTOS or REDHAT
 - name: "[RPM Based] Install epel-release Repo"
   package:

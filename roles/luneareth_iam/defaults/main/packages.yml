@@ -11,6 +11,7 @@ packages_rpm:
   - jq
   - screen
   - tmux
+  - iptables-service
 
 packages_deb:
   - sysstat
@@ -18,3 +19,4 @@ packages_deb:
   - wget
   - auditd
   - systemd-coredump
+  - iptables-persistent

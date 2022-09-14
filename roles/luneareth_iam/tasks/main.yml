@@ -16,6 +16,8 @@
 - include: banner.yml
 - include: postfix.yml
 - include: cronjob.yml
+- include: ssh.yml
+- include: iptables.yml
 - include: reboot.yml
 
 

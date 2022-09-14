@@ -1,0 +1,28 @@
+- name: add Firewall Iptables Debian
+  become: 'yes'
+  template:
+    src: iptables.j2
+    dest: /etc/iptables/rules.v4
+    backup: 'yes'
+    mode: 0644
+    owner: root
+    group: root
+  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  tags:
+    - iam-iptables
+    - iptables-deploy
+
+
+- name: add Firewall Iptables Centos
+  become: 'yes'
+  template:
+    src: iptables.j2
+    dest: /etc/sysconfig/iptables
+    backup: 'yes'
+    mode: 0644
+    owner: root
+    group: root
+  when: ansible_os_family == "RedHat" or  ansible_os_family == 'CentOS'
+  tags:
+    - iam-iptables
+    - iptables-deploy
