@@ -29,7 +29,7 @@
     name: ufw
     state: stopped
     enabled: no
-  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
   ignore_errors: true
   tags: 
     - iam-packages
@@ -91,7 +91,7 @@
 - name: "[DEB Based] Update Repository List"
   apt:
     update_cache: yes
-  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
   ignore_errors: yes
   tags:
     - iam-packages
@@ -102,7 +102,7 @@
 - name: "[DEB Based] Update all packages to the latest version"
   apt:
     upgrade: dist
-  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
   ignore_errors: yes
   tags:
     - iam-packages
@@ -115,7 +115,7 @@
   apt:
     name: "{{ packages_deb }}"
     state: present
-  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
   ignore_errors: yes
   tags:
     - iam-packages

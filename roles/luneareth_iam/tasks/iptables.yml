@@ -7,7 +7,7 @@
     mode: 0644
     owner: root
     group: root
-  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
   tags:
     - iam-iptables
     - iptables-deploy

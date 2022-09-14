@@ -37,7 +37,7 @@
     append: yes
   with_items:
       - {user: "{{ user_admin }}", home: "/home/{{ user_admin }}" }
-  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
   tags: 
   - iam-user_and_group
   - user_and_group-Create_User_Admin
@@ -52,7 +52,7 @@
     append: yes
   with_items:
       - {user: "{{ user_other }}", home: "/{{ user_other }}" }
-  when: ansible_os_family == 'Ubuntu' Or ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
   tags: 
   - iam-user_and_group
   - user_and_group-Create_User_Other
