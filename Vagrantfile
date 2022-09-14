@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
          vb.name = "node2"
          vb.memory = "512"
       end
-      node1.vm.provision :shell, path: "ansible-playbook -i inventories/staging/hosts -l hardening  server-iam.yml --ask-vault-pass -K"
+      node2.vm.provision :shell, path: "ansible-playbook -i inventories/staging/hosts -l hardening  server-iam.yml --ask-vault-pass -K"
     end
    
 
