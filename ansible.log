@@ -451,3 +451,233 @@ Should be written as:
     with_items:
       - "{{ foo }}"
 
+2022-09-14 19:18:24,890 p=256650 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 33, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: {{ user_other }} {{ user_admin }}
+                                ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 19:19:41,154 p=256835 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/defaults/main/ssh.yml': line 1, column 35, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+allowed_users: "{{ user_other }}" "{{ user_admin }}"
+                                  ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2022-09-14 19:20:22,916 p=256941 u=neareth n=ansible | ERROR! no module/action detected in task.
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Restart Service SSH
+  ^ here
+
+2022-09-14 19:20:59,792 p=257084 u=neareth n=ansible | ERROR! no module/action detected in task.
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Restart Service SSH
+  ^ here
+
+2022-09-14 19:21:25,071 p=257177 u=neareth n=ansible | ERROR! no module/action detected in task.
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Restart Service Iptables
+  ^ here
+
+2022-09-14 19:22:19,575 p=257322 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml': line 6, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Restart Service Iptables
+ debug: Running
+ ^ here
+
+2022-09-14 19:22:34,046 p=257383 u=neareth n=ansible | ERROR! this task 'debug' has extra params, which is only allowed in the following modules: ansible.legacy.include_vars, set_fact, ansible.builtin.include, ansible.builtin.shell, ansible.legacy.add_host, group_by, ansible.builtin.add_host, ansible.legacy.script, import_tasks, ansible.builtin.import_role, ansible.builtin.raw, ansible.builtin.set_fact, ansible.builtin.win_shell, ansible.builtin.import_tasks, ansible.legacy.shell, ansible.legacy.raw, include, include_tasks, meta, ansible.legacy.win_command, ansible.builtin.group_by, ansible.builtin.command, ansible.legacy.include_role, include_role, import_role, ansible.legacy.win_shell, raw, ansible.legacy.group_by, ansible.legacy.meta, ansible.legacy.import_tasks, ansible.builtin.include_tasks, ansible.windows.win_command, include_vars, ansible.builtin.include_role, ansible.windows.win_shell, script, ansible.builtin.meta, shell, ansible.legacy.set_fact, ansible.builtin.script, ansible.legacy.include, win_shell, add_host, win_command, ansible.builtin.include_vars, ansible.builtin.win_command, command, ansible.legacy.include_tasks, ansible.legacy.import_role, ansible.legacy.command
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Restart Service SSH
+  ^ here
+
+2022-09-14 19:22:51,581 p=257434 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:22:51,658 p=257434 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:22:51,724 p=257434 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:23:01,762 p=257434 u=neareth n=ansible | fatal: [192.168.33.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.33.11 port 22: Connection timed out", "unreachable": true}
+2022-09-14 19:23:01,779 p=257434 u=neareth n=ansible | fatal: [192.168.33.12]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.33.12 port 22: Connection timed out", "unreachable": true}
+2022-09-14 19:23:01,781 p=257434 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-14 19:23:01,781 p=257434 u=neareth n=ansible | 192.168.33.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:23:01,781 p=257434 u=neareth n=ansible | 192.168.33.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:24:23,733 p=257679 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/neareth/ansible-my-setup/inventories/staging/group_vars/web
+2022-09-14 19:24:32,464 p=257697 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/neareth/ansible-my-setup/inventories/staging/group_vars/web
+2022-09-14 19:24:37,706 p=257732 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/neareth/ansible-my-setup/inventories/staging/group_vars/web
+2022-09-14 19:24:43,618 p=257756 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/neareth/ansible-my-setup/inventories/staging/group_vars/web
+2022-09-14 19:24:51,499 p=257786 u=neareth n=ansible | ERROR! Decryption failed (no vault secrets were found that could decrypt) for /home/neareth/ansible-my-setup/inventories/staging/group_vars/web
+2022-09-14 19:25:01,737 p=257815 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:25:07,185 p=257844 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:25:11,170 p=257867 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:25:17,664 p=257886 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:25:22,994 p=257912 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:30:42,010 p=258617 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:30:47,028 p=258642 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:30:54,524 p=258666 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:30:59,387 p=258692 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:31:05,801 p=258716 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:31:09,204 p=258743 u=neareth n=ansible | ERROR! input is not vault encrypted data.  for /home/neareth/ansible-my-setup/inventories/production/group_vars/all
+2022-09-14 19:32:27,339 p=259093 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:32:27,384 p=259093 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:32:27,451 p=259093 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:32:27,590 p=259093 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.168.56.11' (ED25519) to the list of known hosts.\r\nroot@192.168.56.11: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2022-09-14 19:32:29,075 p=259093 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-14 19:33:34,021 p=259426 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:33:34,065 p=259426 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:33:34,126 p=259426 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:33:34,265 p=259426 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.56.11: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2022-09-14 19:33:35,715 p=259426 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-14 19:34:07,940 p=259494 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:34:07,986 p=259494 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:08,045 p=259494 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:08,087 p=259494 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.11 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:34:08,100 p=259494 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.12 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:34:08,101 p=259494 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:08,102 p=259494 u=neareth n=ansible | 192.168.56.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:34:08,102 p=259494 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:34:27,869 p=259557 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:34:27,915 p=259557 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:27,974 p=259557 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:28,007 p=259557 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.11 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:34:28,024 p=259557 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.12 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:34:28,025 p=259557 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:28,025 p=259557 u=neareth n=ansible | 192.168.56.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:34:28,025 p=259557 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:34:41,795 p=259600 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:34:41,842 p=259600 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:41,902 p=259600 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:41,936 p=259600 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.11 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:34:41,954 p=259600 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.12 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:34:41,957 p=259600 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-14 19:34:41,957 p=259600 u=neareth n=ansible | 192.168.56.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:34:41,957 p=259600 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:36:19,705 p=260097 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:36:19,750 p=260097 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:36:19,810 p=260097 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:36:19,847 p=260097 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.11 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:36:19,859 p=260097 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.12 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:36:19,860 p=260097 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-14 19:36:19,860 p=260097 u=neareth n=ansible | 192.168.56.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:36:19,861 p=260097 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:37:28,459 p=260552 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-14 19:37:39,689 p=260583 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:37:39,734 p=260583 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:37:39,794 p=260583 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:37:39,836 p=260583 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.11 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:37:39,850 p=260583 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.12 port 2222: Connection refused", "unreachable": true}
+2022-09-14 19:37:39,852 p=260583 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-14 19:37:39,852 p=260583 u=neareth n=ansible | 192.168.56.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:37:39,852 p=260583 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:37:58,573 p=260667 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:37:58,618 p=260667 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:37:58,678 p=260667 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:37:58,819 p=260667 u=neareth n=ansible | fatal: [192.168.56.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: root@192.168.56.11: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2022-09-14 19:38:01,870 p=260667 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2022-09-14 19:38:01,871 p=260667 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-14 19:38:01,872 p=260667 u=neareth n=ansible | 192.168.56.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:38:01,872 p=260667 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-14 19:38:54,878 p=260886 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:38:54,925 p=260886 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:38:54,985 p=260886 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:38:56,940 p=260886 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 19:38:57,696 p=260886 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 19:38:57,719 p=260886 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-14 19:38:57,756 p=260886 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 19:38:58,598 p=260886 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 19:38:58,612 p=260886 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-14 19:38:58,655 p=260886 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 19:39:09,408 p=260886 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-14 19:39:29,948 p=261223 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 19:39:29,994 p=261223 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 19:39:30,055 p=261223 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 19:39:31,577 p=261223 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 19:39:31,801 p=261223 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 19:39:31,823 p=261223 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-14 19:39:31,860 p=261223 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 19:39:32,692 p=261223 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 19:39:32,704 p=261223 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-14 19:39:32,739 p=261223 u=neareth n=ansible | skipping: [192.168.56.12]

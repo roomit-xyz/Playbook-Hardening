@@ -1,11 +1,15 @@
-- name: Restart Service SSH
-  notify: restart ssh
+# - name: Restart Service SSH
+#   debug: Running
+#   notify: "restart ssh"
 
-- name: Restart Service Iptables
-  notify: restart iptables
+# - name: Restart Service Iptables
+#   debug: Running
+#   notify: "restart iptables"
 
-- name: Restart Service Aide
-  notify: restart aide
+# - name: Restart Service Aide
+#   debug: Running
+#   notify: "restart aide"
 
-- name: Restart Service auditd
-  notify: restart auditd
+# - name: Restart Service auditd
+#   debug: Running
+#   notify: "restart auditd"
