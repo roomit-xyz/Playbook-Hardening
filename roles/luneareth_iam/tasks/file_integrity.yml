@@ -21,7 +21,7 @@
     - install_aide-deb
 
 
-- name: [RPM] Iniziate Database Aide RPM Based
+- name: "[RPM] Iniziate Database Aide RPM Based"
   shell: aide --init
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'
   tags: 
@@ -29,7 +29,7 @@
     - file_integrity-init_rpm
    
 
-- name: [DEB] Iniziate Database Aide DEB Based
+- name: "[DEB] Iniziate Database Aide DEB Based"
   shell: aideinit
   when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
   tags: 

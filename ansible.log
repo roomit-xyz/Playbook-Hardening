@@ -2296,3 +2296,233 @@ an error in Ansible 2.14.
 2022-09-15 22:33:47,750 p=367494 u=neareth n=ansible | TASK [luneareth_iam : Iniziate Database Aide RPM Based] **************************************************************
 2022-09-15 22:33:47,768 p=367494 u=neareth n=ansible | skipping: [192.168.56.12]
 2022-09-15 22:33:47,782 p=367494 u=neareth n=ansible | TASK [luneareth_iam : Iniziate Database Aide DEB Based] **************************************************************
+2022-09-16 00:57:16,441 p=367494 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-16 00:57:21,503 p=380303 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/file_integrity.yml': line 24, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: [RPM] Iniziate Database Aide RPM Based
+              ^ here
+
+2022-09-16 00:57:44,194 p=380390 u=neareth n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/file_integrity.yml': line 32, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: [DEB] Iniziate Database Aide DEB Based
+              ^ here
+
+2022-09-16 00:58:17,732 p=380483 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************
+2022-09-16 00:58:17,794 p=380483 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2022-09-16 00:58:19,585 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:20,404 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:20,430 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************
+2022-09-16 00:58:20,461 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:21,097 p=380483 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-16 00:58:21,097 p=380483 u=neareth n=ansible | ...ignoring
+2022-09-16 00:58:21,112 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************
+2022-09-16 00:58:21,154 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:21,788 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:21,798 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************
+2022-09-16 00:58:21,819 p=380483 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-16 00:58:22,310 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:22,321 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************
+2022-09-16 00:58:22,341 p=380483 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-16 00:58:23,317 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:23,332 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************
+2022-09-16 00:58:23,373 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:23,866 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:23,877 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************
+2022-09-16 00:58:23,909 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:27,053 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:27,064 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************
+2022-09-16 00:58:27,097 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:27,616 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:27,628 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************
+2022-09-16 00:58:27,649 p=380483 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-16 00:58:34,465 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:34,479 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************
+2022-09-16 00:58:34,499 p=380483 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-16 00:58:36,354 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:36,365 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Package Installation Needs] ********************************************************
+2022-09-16 00:58:36,386 p=380483 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-16 00:58:37,494 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:37,505 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************
+2022-09-16 00:58:37,543 p=380483 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-16 00:58:38,047 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-16 00:58:38,058 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************
+2022-09-16 00:58:38,096 p=380483 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-16 00:58:38,522 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-16 00:58:38,523 p=380483 u=neareth n=ansible | [WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for appending new groups.This will change to
+an error in Ansible 2.14.
+
+2022-09-16 00:58:38,535 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************
+2022-09-16 00:58:38,554 p=380483 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-16 00:58:38,975 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-16 00:58:38,985 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************
+2022-09-16 00:58:39,008 p=380483 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-16 00:58:39,391 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-16 00:58:39,403 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************
+2022-09-16 00:58:39,894 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:39,912 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:39,923 p=380483 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************
+2022-09-16 00:58:40,340 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item=app)
+2022-09-16 00:58:40,379 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item=app)
+2022-09-16 00:58:40,736 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item=admin)
+2022-09-16 00:58:40,757 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item=admin)
+2022-09-16 00:58:40,770 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************
+2022-09-16 00:58:40,815 p=380483 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-16 00:58:41,181 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-16 00:58:41,194 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************
+2022-09-16 00:58:41,233 p=380483 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-16 00:58:41,600 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-16 00:58:41,618 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************
+2022-09-16 00:58:41,645 p=380483 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-16 00:58:42,055 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-16 00:58:42,067 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************
+2022-09-16 00:58:42,102 p=380483 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-16 00:58:42,598 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-16 00:58:42,612 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************
+2022-09-16 00:58:43,199 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:43,201 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:43,216 p=380483 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************
+2022-09-16 00:58:43,737 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item=app)
+2022-09-16 00:58:43,801 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item=app)
+2022-09-16 00:58:44,333 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item=admin)
+2022-09-16 00:58:44,395 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item=admin)
+2022-09-16 00:58:44,417 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Change Password Users] *************************************************************************
+2022-09-16 00:58:44,973 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'name': 'root', 'password': '$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0'})
+2022-09-16 00:58:45,043 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'name': 'root', 'password': '$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0'})
+2022-09-16 00:58:45,424 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'name': 'admin', 'password': '$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0'})
+2022-09-16 00:58:45,549 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'name': 'admin', 'password': '$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0'})
+2022-09-16 00:58:45,948 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'name': 'app', 'password': '$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0'})
+2022-09-16 00:58:46,233 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'name': 'app', 'password': '$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0'})
+2022-09-16 00:58:46,251 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Copy Public Key] *******************************************************************************
+2022-09-16 00:58:47,067 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'name': 'root', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2022-09-16 00:58:47,367 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'name': 'root', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2022-09-16 00:58:47,734 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'name': 'admin', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2022-09-16 00:58:48,050 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'name': 'admin', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2022-09-16 00:58:48,319 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'name': 'app', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2022-09-16 00:58:48,683 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'name': 'app', 'pubkey': 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block'})
+2022-09-16 00:58:48,697 p=380483 u=neareth n=ansible | TASK [luneareth_iam : SELinux security policy] ***********************************************************************
+2022-09-16 00:58:48,731 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:49,170 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:49,182 p=380483 u=neareth n=ansible | TASK [luneareth_iam : set SELinux type] ******************************************************************************
+2022-09-16 00:58:49,216 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:49,517 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:49,531 p=380483 u=neareth n=ansible | TASK [luneareth_iam : register compilers] ****************************************************************************
+2022-09-16 00:58:50,142 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:50,150 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:50,163 p=380483 u=neareth n=ansible | TASK [luneareth_iam : restrict compiler access] **********************************************************************
+2022-09-16 00:58:50,873 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'uid': 0, 'woth': False, 'mtime': 1565311609.0, 'inode': 100701600, 'isgid': False, 'size': 182752, 'roth': False, 'isuid': False, 'isreg': True, 'pw_name': 'root', 'gid': 0, 'ischr': False, 'wusr': True, 'xoth': False, 'rusr': True, 'nlink': 1, 'issock': False, 'rgrp': True, 'gr_name': 'root', 'path': '/usr/bin/make', 'xusr': True, 'atime': 1565311609.0, 'isdir': False, 'ctime': 1663254439.609826, 'isblk': False, 'xgrp': True, 'dev': 2049, 'wgrp': False, 'isfifo': False, 'mode': '0750', 'islnk': False})
+2022-09-16 00:58:50,910 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'path': '/usr/bin/as', 'mode': '0777', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': False, 'isfifo': False, 'islnk': True, 'issock': False, 'uid': 0, 'gid': 0, 'size': 19, 'inode': 524309, 'dev': 64768, 'nlink': 1, 'atime': 1663254251.325643, 'mtime': 1647064517.0, 'ctime': 1655130021.2788222, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': True, 'wgrp': True, 'rgrp': True, 'xgrp': True, 'woth': True, 'roth': True, 'xoth': True, 'isuid': False, 'isgid': False})
+2022-09-16 00:58:51,405 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'uid': 0, 'woth': False, 'mtime': 1635781155.0, 'inode': 101010188, 'isgid': False, 'size': 386416, 'roth': False, 'isuid': False, 'isreg': True, 'pw_name': 'root', 'gid': 0, 'ischr': False, 'wusr': True, 'xoth': False, 'rusr': True, 'nlink': 1, 'issock': False, 'rgrp': True, 'gr_name': 'root', 'path': '/usr/bin/as', 'xusr': True, 'atime': 1635781155.0, 'isdir': False, 'ctime': 1663254439.994828, 'isblk': False, 'xgrp': True, 'dev': 2049, 'wgrp': False, 'isfifo': False, 'mode': '0750', 'islnk': False})
+2022-09-16 00:58:51,447 p=380483 u=neareth n=ansible | ok: [192.168.56.12] => (item={'path': '/bin/as', 'mode': '0777', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': False, 'isfifo': False, 'islnk': True, 'issock': False, 'uid': 0, 'gid': 0, 'size': 19, 'inode': 524309, 'dev': 64768, 'nlink': 1, 'atime': 1663254251.325643, 'mtime': 1647064517.0, 'ctime': 1655130021.2788222, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': True, 'wgrp': True, 'rgrp': True, 'xgrp': True, 'woth': True, 'roth': True, 'xoth': True, 'isuid': False, 'isgid': False})
+2022-09-16 00:58:51,812 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'uid': 0, 'woth': False, 'mtime': 1565311609.0, 'inode': 100701600, 'isgid': False, 'size': 182752, 'roth': False, 'isuid': False, 'isreg': True, 'pw_name': 'root', 'gid': 0, 'ischr': False, 'wusr': True, 'xoth': False, 'rusr': True, 'nlink': 1, 'issock': False, 'rgrp': True, 'gr_name': 'root', 'path': '/bin/make', 'xusr': True, 'atime': 1565311609.0, 'isdir': False, 'ctime': 1663254439.609826, 'isblk': False, 'xgrp': True, 'dev': 2049, 'wgrp': False, 'isfifo': False, 'mode': '0750', 'islnk': False})
+2022-09-16 00:58:52,135 p=380483 u=neareth n=ansible | ok: [192.168.56.11] => (item={'uid': 0, 'woth': False, 'mtime': 1635781155.0, 'inode': 101010188, 'isgid': False, 'size': 386416, 'roth': False, 'isuid': False, 'isreg': True, 'pw_name': 'root', 'gid': 0, 'ischr': False, 'wusr': True, 'xoth': False, 'rusr': True, 'nlink': 1, 'issock': False, 'rgrp': True, 'gr_name': 'root', 'path': '/bin/as', 'xusr': True, 'atime': 1635781155.0, 'isdir': False, 'ctime': 1663254439.994828, 'isblk': False, 'xgrp': True, 'dev': 2049, 'wgrp': False, 'isfifo': False, 'mode': '0750', 'islnk': False})
+2022-09-16 00:58:52,148 p=380483 u=neareth n=ansible | TASK [luneareth_iam : stat bashrc] ***********************************************************************************
+2022-09-16 00:58:52,887 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:52,890 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:52,904 p=380483 u=neareth n=ansible | TASK [luneareth_iam : set default bashrc umask] **********************************************************************
+2022-09-16 00:58:52,940 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:53,432 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:53,446 p=380483 u=neareth n=ansible | TASK [luneareth_iam : stat csh.cshrc] ********************************************************************************
+2022-09-16 00:58:53,937 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:53,965 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:53,977 p=380483 u=neareth n=ansible | TASK [luneareth_iam : set default csh.cshrc umask] *******************************************************************
+2022-09-16 00:58:54,023 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:58:54,358 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:54,372 p=380483 u=neareth n=ansible | TASK [luneareth_iam : set default profile umask] *********************************************************************
+2022-09-16 00:58:54,858 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:54,866 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:54,879 p=380483 u=neareth n=ansible | TASK [luneareth_iam : readonly TMOUT] ********************************************************************************
+2022-09-16 00:58:55,401 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:55,458 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:55,474 p=380483 u=neareth n=ansible | TASK [luneareth_iam : set TMOUT] *************************************************************************************
+2022-09-16 00:58:55,958 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:56,021 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:56,035 p=380483 u=neareth n=ansible | TASK [luneareth_iam : export TMOUT] **********************************************************************************
+2022-09-16 00:58:56,545 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:56,633 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:56,647 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:58:57,278 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:57,315 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:57,326 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:58:57,879 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:57,932 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:57,956 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:58:58,499 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:58,516 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:58,529 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:58:59,074 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:59,086 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:59,100 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:58:59,578 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:58:59,608 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:58:59,621 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:00,138 p=380483 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-16 00:59:00,216 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:00,231 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:00,761 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:00,767 p=380483 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to reload sysctl: vm.swappiness = 5\nkernel.dmesg_restrict = 1\nkernel.kptr_restrict = 2\nkernel.sysrq = 0\nkernel.yama.ptrace_scope = 1\nnet.ipv4.conf.all.accept_redirects = 0\nsysctl: cannot stat /proc/sys/fs/protected_fifos: No such file or directory\n"}
+2022-09-16 00:59:00,784 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:01,154 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:01,169 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:01,568 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:01,585 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:01,993 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:02,007 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:02,399 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:02,418 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:02,824 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:02,839 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:03,197 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:03,211 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:03,598 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:03,614 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:03,984 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:03,999 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:04,395 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:04,413 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:04,944 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:04,960 p=380483 u=neareth n=ansible | TASK [luneareth_iam : sysctl] ****************************************************************************************
+2022-09-16 00:59:05,335 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:05,352 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Setting Limits Configuration File limits.conf] *************************************************
+2022-09-16 00:59:06,076 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:06,091 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Setting Coredump] ******************************************************************
+2022-09-16 00:59:06,790 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:06,804 p=380483 u=neareth n=ansible | TASK [luneareth_iam : timesyncd.conf] ********************************************************************************
+2022-09-16 00:59:07,485 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:07,501 p=380483 u=neareth n=ansible | TASK [luneareth_iam : register timesyncd status] *********************************************************************
+2022-09-16 00:59:08,061 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:08,076 p=380483 u=neareth n=ansible | TASK [luneareth_iam : register timedatectl show] *********************************************************************
+2022-09-16 00:59:08,602 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:08,616 p=380483 u=neareth n=ansible | TASK [luneareth_iam : timedatectl set-ntp] ***************************************************************************
+2022-09-16 00:59:08,636 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:59:08,651 p=380483 u=neareth n=ansible | TASK [luneareth_iam : make directory crontab] ************************************************************************
+2022-09-16 00:59:09,034 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:09,047 p=380483 u=neareth n=ansible | TASK [luneareth_iam : copy script ram flush] *************************************************************************
+2022-09-16 00:59:09,730 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:09,746 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Install AIDE on RPM Packages] ******************************************************************
+2022-09-16 00:59:09,760 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:59:09,775 p=380483 u=neareth n=ansible | TASK [luneareth_iam : Install AIDE on DEB Packages] ******************************************************************
+2022-09-16 00:59:11,001 p=380483 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-16 00:59:11,017 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM] Iniziate Database Aide RPM Based] ********************************************************
+2022-09-16 00:59:11,033 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-16 00:59:11,048 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB] Iniziate Database Aide DEB Based] ********************************************************
