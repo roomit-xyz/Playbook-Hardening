@@ -37,7 +37,7 @@
     - remove-firewalld
   
 - name: Ensure ufw is not installed
-  yum:
+  apt:
     name: ufw
     state: absent
   when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'

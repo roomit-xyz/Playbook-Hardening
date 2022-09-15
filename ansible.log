@@ -830,3 +830,141 @@ include
 2022-09-14 20:34:03,047 p=269260 u=neareth n=ansible | ok: [192.168.56.11]
 2022-09-14 20:34:03,060 p=269260 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
 2022-09-14 20:34:03,102 p=269260 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:35:15,462 p=269260 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-14 20:35:21,577 p=269862 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 20:35:21,621 p=269862 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 20:35:21,682 p=269862 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 20:35:23,407 p=269862 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 20:35:24,660 p=269862 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 20:35:24,683 p=269862 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-14 20:35:24,721 p=269862 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:35:25,612 p=269862 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 20:35:25,624 p=269862 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-14 20:35:25,669 p=269862 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:35:27,483 p=269862 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:35:27,483 p=269862 u=neareth n=ansible | ...ignoring
+2022-09-14 20:35:27,495 p=269862 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-14 20:35:27,516 p=269862 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:35:28,073 p=269862 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 20:35:28,084 p=269862 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-14 20:35:28,110 p=269862 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:35:28,735 p=269862 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of yum is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the yum (yum3) or dnf (yum4) backend})"]}
+2022-09-14 20:35:28,736 p=269862 u=neareth n=ansible | ...ignoring
+2022-09-14 20:35:28,749 p=269862 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-14 20:35:28,786 p=269862 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:35:30,526 p=269862 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:35:30,527 p=269862 u=neareth n=ansible | ...ignoring
+2022-09-14 20:35:30,541 p=269862 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-14 20:35:30,584 p=269862 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:35:31,754 p=269862 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:35:31,754 p=269862 u=neareth n=ansible | ...ignoring
+2022-09-14 20:35:31,765 p=269862 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-14 20:35:31,802 p=269862 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:35:33,355 p=269862 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:35:33,355 p=269862 u=neareth n=ansible | ...ignoring
+2022-09-14 20:35:33,366 p=269862 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-14 20:35:33,394 p=269862 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:35:49,270 p=269862 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 20:35:49,282 p=269862 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-14 20:35:49,311 p=269862 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:38:09,862 p=269862 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-14 20:38:20,604 p=270542 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-14 20:38:20,650 p=270542 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-14 20:38:20,711 p=270542 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-14 20:38:22,236 p=270542 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 20:38:22,602 p=270542 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 20:38:22,625 p=270542 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-14 20:38:22,661 p=270542 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:38:23,518 p=270542 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-14 20:38:23,530 p=270542 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-14 20:38:23,567 p=270542 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:38:25,309 p=270542 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:38:25,309 p=270542 u=neareth n=ansible | ...ignoring
+2022-09-14 20:38:25,321 p=270542 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-14 20:38:25,347 p=270542 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:38:25,892 p=270542 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 20:38:25,904 p=270542 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-14 20:38:25,931 p=270542 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:38:26,551 p=270542 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of yum is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the yum (yum3) or dnf (yum4) backend})"]}
+2022-09-14 20:38:26,551 p=270542 u=neareth n=ansible | ...ignoring
+2022-09-14 20:38:26,562 p=270542 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-14 20:38:26,601 p=270542 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:38:28,411 p=270542 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:38:28,411 p=270542 u=neareth n=ansible | ...ignoring
+2022-09-14 20:38:28,423 p=270542 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-14 20:38:28,457 p=270542 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:38:29,802 p=270542 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:38:29,802 p=270542 u=neareth n=ansible | ...ignoring
+2022-09-14 20:38:29,814 p=270542 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-14 20:38:29,851 p=270542 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-14 20:38:31,119 p=270542 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist", "rc": 1, "results": []}
+2022-09-14 20:38:31,119 p=270542 u=neareth n=ansible | ...ignoring
+2022-09-14 20:38:31,131 p=270542 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-14 20:38:31,160 p=270542 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:38:35,134 p=270542 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-14 20:38:35,149 p=270542 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-14 20:38:35,175 p=270542 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-14 20:41:08,929 p=270542 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-15 21:13:55,233 p=351180 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-15 21:13:55,283 p=351180 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 21:13:55,346 p=351180 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 21:13:57,105 p=351180 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:13:57,715 p=351180 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:13:57,736 p=351180 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 21:13:57,773 p=351180 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:13:58,444 p=351180 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:13:58,457 p=351180 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 21:13:58,489 p=351180 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:14:00,653 p=351180 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-15 21:14:00,664 p=351180 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 21:14:00,684 p=351180 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:14:02,247 p=351180 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:14:02,258 p=351180 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 21:14:02,284 p=351180 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:14:02,848 p=351180 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of yum is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the yum (yum3) or dnf (yum4) backend})"]}
+2022-09-15 21:14:02,848 p=351180 u=neareth n=ansible | ...ignoring
+2022-09-15 21:14:02,860 p=351180 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 21:14:02,894 p=351180 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:14:21,400 p=351180 u=neareth n=ansible | [WARNING]: Repository epel not found.
+
+2022-09-15 21:14:21,400 p=351180 u=neareth n=ansible | [WARNING]: Repository powertools not found.
+
+2022-09-15 21:14:21,401 p=351180 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-15 21:14:21,411 p=351180 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 21:14:21,464 p=351180 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:15:01,177 p=351180 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-15 21:15:05,383 p=351541 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-15 21:16:22,622 p=351684 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to include
+
+2022-09-15 21:16:22,665 p=351684 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 21:16:22,720 p=351684 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 21:16:24,382 p=351684 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:16:24,942 p=351684 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:16:24,963 p=351684 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 21:16:24,998 p=351684 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:16:25,662 p=351684 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 21:16:25,662 p=351684 u=neareth n=ansible | ...ignoring
+2022-09-15 21:16:25,674 p=351684 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 21:16:25,706 p=351684 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:16:26,290 p=351684 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:16:26,301 p=351684 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 21:16:26,322 p=351684 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:16:26,808 p=351684 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:16:26,819 p=351684 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 21:16:26,840 p=351684 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:16:33,798 p=351684 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:16:33,809 p=351684 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 21:16:33,844 p=351684 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:16:34,330 p=351684 u=neareth n=ansible | [WARNING]: Repository powertools not found.
+
+2022-09-15 21:16:34,330 p=351684 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:16:34,340 p=351684 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 21:16:34,380 p=351684 u=neareth n=ansible | skipping: [192.168.56.12]
