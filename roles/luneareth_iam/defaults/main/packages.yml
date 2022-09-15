@@ -11,7 +11,7 @@ packages_rpm:
   - jq
   - screen
   - tmux
-  - iptables-service
+  - iptables-services
 
 packages_deb:
   - sysstat
