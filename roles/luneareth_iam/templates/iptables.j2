@@ -16,7 +16,7 @@
 #### ALLOW ACCESS INPUT
 -A INPUT -j chain-states
 -A INPUT -p tcp -m tcp --dport 22 -j chain-incoming-ssh-admin
--A INPUT -p tcp -m tcp --dport 12920 -j chain-incoming-ssh
+-A INPUT -p tcp -m tcp --dport {{port_ssh}} -j chain-incoming-ssh
 
 #### ALLOW ACCESS OUTGOING
 -A OUTPUT -o lo -j ACCEPT

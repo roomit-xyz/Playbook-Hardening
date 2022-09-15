@@ -1016,3 +1016,9 @@ include
 2022-09-15 21:22:17,670 p=352579 u=neareth n=ansible | ok: [192.168.56.12]
 2022-09-15 21:22:17,682 p=352579 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************
 2022-09-15 21:22:17,704 p=352579 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:45:10,823 p=356071 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
+2022-09-15 21:45:11,304 p=356082 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
+2022-09-15 21:45:11,721 p=356092 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
+2022-09-15 21:45:11,847 p=356100 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
+2022-09-15 21:46:39,895 p=356184 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
+2022-09-15 21:46:40,258 p=356192 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
