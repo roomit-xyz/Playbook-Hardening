@@ -53,7 +53,7 @@
   package:
     name: epel-release
     state: present
-    enablerepo: "epel,powertools"
+    enablerepo: "epel"
   when:  ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat' 
   ignore_errors: yes
   tags:
