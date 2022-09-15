@@ -4,7 +4,7 @@
      name: ssh
      state: stopped
   listen: "stop ssh"
-  
+
 - name: restart ssh
   service:
      name: ssh
@@ -16,14 +16,9 @@
      name: ssh
      state: started
   listen: "start ssh"
+
 - name: restart ssh
   service:
      name: ssh
      state: restarted
   listen: "restart ssh"
-
-- name: start ssh
-  service:
-     name: ssh
-     state: started
-  listen: "start ssh"

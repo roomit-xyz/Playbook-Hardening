@@ -968,3 +968,51 @@ include
 2022-09-15 21:16:34,330 p=351684 u=neareth n=ansible | ok: [192.168.56.11]
 2022-09-15 21:16:34,340 p=351684 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
 2022-09-15 21:16:34,380 p=351684 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:20:15,222 p=351684 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-15 21:20:15,231 p=351684 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-15 21:20:15,273 p=351684 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:20:18,950 p=351684 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "No package matching 'iptables-service' found available, installed or updated", "rc": 126, "results": ["curl-7.29.0-59.el7_9.1.x86_64 providing curl is already installed", "No package matching 'iptables-service' found available, installed or updated"]}
+2022-09-15 21:20:18,950 p=351684 u=neareth n=ansible | ...ignoring
+2022-09-15 21:20:18,959 p=351684 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-15 21:20:18,985 p=351684 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:20:37,015 p=351684 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:20:37,030 p=351684 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-15 21:20:37,059 p=351684 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:21:41,326 p=351684 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-15 21:21:47,083 p=352579 u=neareth n=ansible | [WARNING]: file /home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/service.yml is empty and had no tasks to
+include
+
+2022-09-15 21:21:47,127 p=352579 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************
+2022-09-15 21:21:47,181 p=352579 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2022-09-15 21:21:48,628 p=352579 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:21:49,328 p=352579 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:21:49,348 p=352579 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************
+2022-09-15 21:21:49,382 p=352579 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:21:50,045 p=352579 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 21:21:50,045 p=352579 u=neareth n=ansible | ...ignoring
+2022-09-15 21:21:50,058 p=352579 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************
+2022-09-15 21:21:50,092 p=352579 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:21:50,708 p=352579 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:21:50,719 p=352579 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************
+2022-09-15 21:21:50,741 p=352579 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:21:51,258 p=352579 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:21:51,269 p=352579 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************
+2022-09-15 21:21:51,296 p=352579 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:21:52,278 p=352579 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:21:52,289 p=352579 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************
+2022-09-15 21:21:52,331 p=352579 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:21:52,834 p=352579 u=neareth n=ansible | [WARNING]: Repository powertools not found.
+
+2022-09-15 21:21:52,835 p=352579 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:21:52,845 p=352579 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************
+2022-09-15 21:21:52,886 p=352579 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:21:56,118 p=352579 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:21:56,128 p=352579 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************
+2022-09-15 21:21:56,160 p=352579 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:22:13,540 p=352579 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-15 21:22:13,554 p=352579 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************
+2022-09-15 21:22:13,579 p=352579 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:22:17,670 p=352579 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:22:17,682 p=352579 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************
+2022-09-15 21:22:17,704 p=352579 u=neareth n=ansible | skipping: [192.168.56.11]
