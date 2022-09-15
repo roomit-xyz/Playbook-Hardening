@@ -5,7 +5,7 @@
 
 Test  : 
 RPM Based
-Centos 7 and Rocky Linux 8.4
+Centos 7 
 
 DEB Based
 Ubuntu 20^
@@ -15,13 +15,14 @@ Take your own risk!!!
 ### Varaible Global Roles luneareth_iam:
 
 ```
-    - user_root: root
-    - user_admin: luneareth
-    - user_otherp: app
-    - password_admin: "$6$4YJgt5xxxXtIl2WTN/3$GJPEKYAosq2bElROiiXByGAI8wEddgE7.RN1LpyAGLs4KD8KwU7S70wg2zbtENxak2T6CRdh9iySM..mzNX5a0"
-    - password_other: "$6$ERarx7DYOxx9k1wP3k$Kr8Wp6L8NcfKmG2C8S9jtEGCpYH2RNYBHhDShKv7HNDzgEpff8voNoy6a.NQFJl7orfOIh11fFyk89HLbQHBu/"
-    - password_root: "$6$f5hXa3ExxxbOaonKXYh$m38.zKqfxoyCSc/k9iDWeqNyxUES1GIFmJzs.GxMFb/uTxuCzNNewlaXeV4SHPx1PneMo3sr.z1x.qQTYmngn."
-    - public_key: "ssh-rsa xxxxxxxxxxx"
+     - user_root: root
+     - user_admin: admin
+     - user_other: app
+     - password_admin: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - password_app: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - password_root: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block"
+     - iptables_ssh_access_ip_allow: 10.69.69.0/24,10.69.66.7
 ``` 
 
 ### How To Generate Password
@@ -29,7 +30,7 @@ Take your own risk!!!
 Using Python:
 
 ```
-python3 -c 'import crypt; print(crypt.crypt("password"))'
+python3 -c 'import crypt; print(crypt.crypt("password-123"))'
 ```
 
 or 
@@ -37,7 +38,7 @@ or
 Using Ruby:
 
 ```
-ruby -e 'puts "password".crypt("$6$saltsalt$")'
+ruby -e 'puts "password-123".crypt("$6$saltsalt$")'
 ```
 
 ### How To Execute Global Ansible
@@ -45,7 +46,7 @@ ruby -e 'puts "password".crypt("$6$saltsalt$")'
 Execute :
 
 ```
-ansible-playbook -i inventories/production/hosts -l app  server-iam.yml --ask-vault-pass   -K 
+ansible-playbook -i inventories/staging/hosts -l hardening  server-iam.yml  -Kk  --become
 ```
 
 # DONATE
