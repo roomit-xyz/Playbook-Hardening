@@ -57,7 +57,7 @@
   - iam-user_and_group
   - user_and_group-Create_User_Other
 
-### GROUP FOR SSH ACCESS
+
 - name: Ensure group admin
   group:
     name: admin
@@ -66,13 +66,16 @@
   - iam-user_and_group
   - user_and_group-Create_Group_Admin
 
-### ASSIGN USER TO GROUP ADMIN
+
 - name: adding existing user to group admin
   user:
-    name: "{{ item.user }}"
+    name: "{{ item }}"
     groups: admin
     append: yes
   become: yes
   with_items:
-  - "{{ user_other }}"
-  - "{{ user_admin }}"
+    - "{{ user_other }}"
+    - "{{ user_admin }}"
+  tags:
+  - iam-user_and_group
+  - user_and_group-Add_User_to_Group_Admin

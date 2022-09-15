@@ -1022,3 +1022,447 @@ include
 2022-09-15 21:45:11,847 p=356100 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
 2022-09-15 21:46:39,895 p=356184 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
 2022-09-15 21:46:40,258 p=356192 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
+2022-09-15 21:49:27,161 p=352579 u=neareth n=ansible |  [ERROR]: User interrupted execution
+
+2022-09-15 21:49:36,461 p=356532 u=neareth n=ansible | ERROR! the 'meta/main.yml' for role luneareth_iam is not a dictionary
+2022-09-15 21:50:14,937 p=356643 u=neareth n=ansible | ERROR! 'meta' is not a valid attribute for a RoleMetadata
+
+The error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/meta/main.yml': line 2, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+meta: flush_handlers
+^ here
+
+2022-09-15 21:50:27,239 p=356680 u=neareth n=ansible | ERROR! Unable to retrieve file contents
+Could not find or access '/home/neareth/ansible-my-setup/service.yml' on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2022-09-15 21:50:42,534 p=356742 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 21:50:42,643 p=356742 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 21:50:44,485 p=356742 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:50:45,196 p=356742 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:50:45,217 p=356742 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 21:50:45,250 p=356742 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:50:45,888 p=356742 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 21:50:45,888 p=356742 u=neareth n=ansible | ...ignoring
+2022-09-15 21:50:45,900 p=356742 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 21:50:45,932 p=356742 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:50:46,523 p=356742 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:50:46,533 p=356742 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 21:50:46,556 p=356742 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:50:47,055 p=356742 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:50:47,065 p=356742 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 21:50:47,088 p=356742 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:50:48,275 p=356742 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:50:48,287 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 21:50:48,322 p=356742 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:50:48,813 p=356742 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:50:48,825 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 21:50:48,861 p=356742 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:50:51,968 p=356742 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:50:51,978 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-15 21:50:52,019 p=356742 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:50:52,512 p=356742 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:50:52,523 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-15 21:50:52,543 p=356742 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:50:53,676 p=356742 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:50:53,686 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-15 21:50:53,712 p=356742 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:50:55,250 p=356742 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:50:55,260 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Package Installation Needs] ********************************************************************************************************************************************************************************
+2022-09-15 21:50:55,282 p=356742 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:50:58,283 p=356742 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:50:58,294 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:50:58,332 p=356742 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:50:58,825 p=356742 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:50:58,838 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************************************************************************************************************************************
+2022-09-15 21:50:58,878 p=356742 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:50:59,243 p=356742 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:50:59,245 p=356742 u=neareth n=ansible | [WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for appending new groups.This will change to an error in Ansible 2.14.
+
+2022-09-15 21:50:59,254 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:50:59,275 p=356742 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:50:59,710 p=356742 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:50:59,721 p=356742 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************************************************************************************************************************************
+2022-09-15 21:50:59,741 p=356742 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:51:00,097 p=356742 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:51:00,108 p=356742 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************************************************************************************************************************************
+2022-09-15 21:51:00,604 p=356742 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-15 21:51:00,625 p=356742 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:51:00,635 p=356742 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************************************************************************************************************************************
+2022-09-15 21:51:00,658 p=356742 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n### ASSIGN USER TO GROUP ADMIN\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:51:00,672 p=356742 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n### ASSIGN USER TO GROUP ADMIN\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:51:00,673 p=356742 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-15 21:51:00,673 p=356742 u=neareth n=ansible | 192.168.56.11              : ok=9    changed=3    unreachable=0    failed=1    skipped=7    rescued=0    ignored=1   
+2022-09-15 21:51:00,674 p=356742 u=neareth n=ansible | 192.168.56.12              : ok=9    changed=5    unreachable=0    failed=1    skipped=7    rescued=0    ignored=0   
+2022-09-15 21:52:53,429 p=357265 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 21:52:53,485 p=357265 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 21:52:55,235 p=357265 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:52:55,811 p=357265 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:52:55,838 p=357265 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 21:52:55,878 p=357265 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:52:56,524 p=357265 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 21:52:56,525 p=357265 u=neareth n=ansible | ...ignoring
+2022-09-15 21:52:56,536 p=357265 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 21:52:56,577 p=357265 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:52:57,171 p=357265 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:52:57,181 p=357265 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 21:52:57,204 p=357265 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:52:57,700 p=357265 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:52:57,710 p=357265 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 21:52:57,733 p=357265 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:52:58,686 p=357265 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:52:58,697 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 21:52:58,738 p=357265 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:52:59,232 p=357265 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:52:59,242 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 21:52:59,282 p=357265 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:53:03,567 p=357265 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:53:03,578 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-15 21:53:03,612 p=357265 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:53:04,102 p=357265 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:53:04,112 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-15 21:53:04,137 p=357265 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:05,238 p=357265 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:53:05,249 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-15 21:53:05,272 p=357265 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:06,838 p=357265 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:53:06,849 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Package Installation Needs] ********************************************************************************************************************************************************************************
+2022-09-15 21:53:06,874 p=357265 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:08,886 p=357265 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:53:08,898 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:53:08,937 p=357265 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:53:09,436 p=357265 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:53:09,448 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************************************************************************************************************************************
+2022-09-15 21:53:09,487 p=357265 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:53:09,817 p=357265 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:53:09,819 p=357265 u=neareth n=ansible | [WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for appending new groups.This will change to an error in Ansible 2.14.
+
+2022-09-15 21:53:09,830 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:53:09,849 p=357265 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:53:10,241 p=357265 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:53:10,253 p=357265 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************************************************************************************************************************************
+2022-09-15 21:53:10,272 p=357265 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:53:10,673 p=357265 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:53:10,684 p=357265 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************************************************************************************************************************************
+2022-09-15 21:53:11,164 p=357265 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-15 21:53:11,184 p=357265 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:53:11,196 p=357265 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************************************************************************************************************************************
+2022-09-15 21:53:11,225 p=357265 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n### ASSIGN USER TO GROUP ADMIN ####\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:53:11,238 p=357265 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n### ASSIGN USER TO GROUP ADMIN ####\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:53:11,239 p=357265 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-15 21:53:11,240 p=357265 u=neareth n=ansible | 192.168.56.11              : ok=9    changed=3    unreachable=0    failed=1    skipped=7    rescued=0    ignored=1   
+2022-09-15 21:53:11,240 p=357265 u=neareth n=ansible | 192.168.56.12              : ok=9    changed=5    unreachable=0    failed=1    skipped=7    rescued=0    ignored=0   
+2022-09-15 21:53:37,885 p=357740 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 21:53:37,941 p=357740 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 21:53:39,112 p=357740 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:53:39,516 p=357740 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:53:39,536 p=357740 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 21:53:39,570 p=357740 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:53:40,199 p=357740 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 21:53:40,199 p=357740 u=neareth n=ansible | ...ignoring
+2022-09-15 21:53:40,210 p=357740 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 21:53:40,251 p=357740 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:53:40,843 p=357740 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:53:40,854 p=357740 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 21:53:40,880 p=357740 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:41,365 p=357740 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:53:41,375 p=357740 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 21:53:41,402 p=357740 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:42,355 p=357740 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:53:42,366 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 21:53:42,402 p=357740 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:53:42,891 p=357740 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:53:42,902 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 21:53:42,941 p=357740 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:53:46,658 p=357740 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:53:46,668 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-15 21:53:46,700 p=357740 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:53:47,190 p=357740 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:53:47,201 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-15 21:53:47,228 p=357740 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:48,306 p=357740 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:53:48,316 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-15 21:53:48,344 p=357740 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:49,879 p=357740 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:53:49,890 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Package Installation Needs] ********************************************************************************************************************************************************************************
+2022-09-15 21:53:49,915 p=357740 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:53:51,880 p=357740 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:53:51,892 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:53:51,931 p=357740 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:53:52,411 p=357740 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:53:52,423 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************************************************************************************************************************************
+2022-09-15 21:53:52,465 p=357740 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:53:52,813 p=357740 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:53:52,814 p=357740 u=neareth n=ansible | [WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for appending new groups.This will change to an error in Ansible 2.14.
+
+2022-09-15 21:53:52,824 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:53:52,843 p=357740 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:53:53,195 p=357740 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:53:53,208 p=357740 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************************************************************************************************************************************
+2022-09-15 21:53:53,228 p=357740 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:53:53,584 p=357740 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:53:53,595 p=357740 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************************************************************************************************************************************
+2022-09-15 21:53:54,087 p=357740 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-15 21:53:54,094 p=357740 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:53:54,106 p=357740 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************************************************************************************************************************************
+2022-09-15 21:53:54,135 p=357740 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:53:54,146 p=357740 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:53:54,147 p=357740 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-15 21:53:54,148 p=357740 u=neareth n=ansible | 192.168.56.11              : ok=9    changed=3    unreachable=0    failed=1    skipped=7    rescued=0    ignored=1   
+2022-09-15 21:53:54,148 p=357740 u=neareth n=ansible | 192.168.56.12              : ok=9    changed=5    unreachable=0    failed=1    skipped=7    rescued=0    ignored=0   
+2022-09-15 21:56:15,554 p=358294 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 21:56:15,616 p=358294 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 21:56:17,339 p=358294 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:56:17,678 p=358294 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:56:17,698 p=358294 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 21:56:17,730 p=358294 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:56:18,362 p=358294 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 21:56:18,362 p=358294 u=neareth n=ansible | ...ignoring
+2022-09-15 21:56:18,372 p=358294 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 21:56:18,417 p=358294 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:56:19,005 p=358294 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:56:19,015 p=358294 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 21:56:19,037 p=358294 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:56:19,526 p=358294 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:56:19,537 p=358294 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 21:56:19,559 p=358294 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:56:20,495 p=358294 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:56:20,505 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 21:56:20,547 p=358294 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:56:21,034 p=358294 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:56:21,043 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 21:56:21,083 p=358294 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:56:24,366 p=358294 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:56:24,376 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-15 21:56:24,410 p=358294 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:56:24,953 p=358294 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:56:24,964 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-15 21:56:24,985 p=358294 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:56:28,778 p=358294 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:56:28,788 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-15 21:56:28,813 p=358294 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:56:30,339 p=358294 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:56:30,350 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Package Installation Needs] ********************************************************************************************************************************************************************************
+2022-09-15 21:56:30,371 p=358294 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:56:49,826 p=358294 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:56:49,837 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:56:49,885 p=358294 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:56:50,424 p=358294 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:56:50,436 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************************************************************************************************************************************
+2022-09-15 21:56:50,475 p=358294 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:56:50,839 p=358294 u=neareth n=ansible | changed: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:56:50,841 p=358294 u=neareth n=ansible | [WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for appending new groups.This will change to an error in Ansible 2.14.
+
+2022-09-15 21:56:50,850 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:56:50,869 p=358294 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:56:51,319 p=358294 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:56:51,331 p=358294 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************************************************************************************************************************************
+2022-09-15 21:56:51,349 p=358294 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:56:51,752 p=358294 u=neareth n=ansible | changed: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:56:51,763 p=358294 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************************************************************************************************************************************
+2022-09-15 21:56:52,284 p=358294 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:56:52,302 p=358294 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:56:52,314 p=358294 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************************************************************************************************************************************
+2022-09-15 21:56:52,337 p=358294 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:56:52,350 p=358294 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:56:52,352 p=358294 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-15 21:56:52,352 p=358294 u=neareth n=ansible | 192.168.56.11              : ok=9    changed=2    unreachable=0    failed=1    skipped=7    rescued=0    ignored=1   
+2022-09-15 21:56:52,353 p=358294 u=neareth n=ansible | 192.168.56.12              : ok=9    changed=3    unreachable=0    failed=1    skipped=7    rescued=0    ignored=0   
+2022-09-15 21:58:37,521 p=358821 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 21:58:37,576 p=358821 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 21:58:39,333 p=358821 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:58:39,828 p=358821 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:58:39,847 p=358821 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 21:58:39,880 p=358821 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:58:40,520 p=358821 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 21:58:40,520 p=358821 u=neareth n=ansible | ...ignoring
+2022-09-15 21:58:40,531 p=358821 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 21:58:40,565 p=358821 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:58:41,153 p=358821 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:58:41,163 p=358821 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 21:58:41,186 p=358821 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:58:41,678 p=358821 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:58:41,689 p=358821 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 21:58:41,717 p=358821 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:58:42,726 p=358821 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:58:42,738 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 21:58:42,773 p=358821 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:58:43,262 p=358821 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:58:43,272 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 21:58:43,313 p=358821 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:58:47,584 p=358821 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:58:47,594 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-15 21:58:47,636 p=358821 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 21:58:48,120 p=358821 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:58:48,130 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-15 21:58:48,154 p=358821 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:58:49,281 p=358821 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 21:58:49,293 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-15 21:58:49,315 p=358821 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:58:50,997 p=358821 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:58:51,008 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Package Installation Needs] ********************************************************************************************************************************************************************************
+2022-09-15 21:58:51,028 p=358821 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 21:58:51,851 p=358821 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:58:51,863 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:58:51,902 p=358821 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:58:52,389 p=358821 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:58:52,401 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************************************************************************************************************************************
+2022-09-15 21:58:52,445 p=358821 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:58:52,775 p=358821 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:58:52,777 p=358821 u=neareth n=ansible | [WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for appending new groups.This will change to an error in Ansible 2.14.
+
+2022-09-15 21:58:52,787 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 21:58:52,814 p=358821 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 21:58:53,233 p=358821 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 21:58:53,244 p=358821 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************************************************************************************************************************************
+2022-09-15 21:58:53,263 p=358821 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 21:58:53,631 p=358821 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 21:58:53,645 p=358821 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************************************************************************************************************************************
+2022-09-15 21:58:54,114 p=358821 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 21:58:54,123 p=358821 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 21:58:54,134 p=358821 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************************************************************************************************************************************
+2022-09-15 21:58:54,159 p=358821 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:58:54,170 p=358821 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ansible.utils.unsafe_proxy.AnsibleUnsafeText object' has no attribute 'user'\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/user_and_group.yml': line 70, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: adding existing user to group admin\n  ^ here\n"}
+2022-09-15 21:58:54,172 p=358821 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-15 21:58:54,172 p=358821 u=neareth n=ansible | 192.168.56.11              : ok=9    changed=0    unreachable=0    failed=1    skipped=7    rescued=0    ignored=1   
+2022-09-15 21:58:54,172 p=358821 u=neareth n=ansible | 192.168.56.12              : ok=9    changed=1    unreachable=0    failed=1    skipped=7    rescued=0    ignored=0   
+2022-09-15 22:01:48,469 p=359538 u=neareth n=ansible | PLAY [hardening] *****************************************************************************************************************************************************************************************************************************
+2022-09-15 22:01:48,526 p=359538 u=neareth n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************
+2022-09-15 22:01:50,257 p=359538 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 22:01:50,928 p=359538 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 22:01:50,949 p=359538 u=neareth n=ansible | TASK [luneareth_iam : Check Firewalld] *******************************************************************************************************************************************************************************************************
+2022-09-15 22:01:50,984 p=359538 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 22:01:51,620 p=359538 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Could not find the requested service firewalld: host"}
+2022-09-15 22:01:51,620 p=359538 u=neareth n=ansible | ...ignoring
+2022-09-15 22:01:51,631 p=359538 u=neareth n=ansible | TASK [luneareth_iam : Ensure firewalld is not installed] *************************************************************************************************************************************************************************************
+2022-09-15 22:01:51,673 p=359538 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 22:01:52,268 p=359538 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 22:01:52,278 p=359538 u=neareth n=ansible | TASK [luneareth_iam : Check UFW] *************************************************************************************************************************************************************************************************************
+2022-09-15 22:01:52,299 p=359538 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 22:01:52,797 p=359538 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 22:01:52,808 p=359538 u=neareth n=ansible | TASK [luneareth_iam : Ensure ufw is not installed] *******************************************************************************************************************************************************************************************
+2022-09-15 22:01:52,831 p=359538 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 22:01:53,792 p=359538 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 22:01:53,803 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Install epel-release Repo] *********************************************************************************************************************************************************************************
+2022-09-15 22:01:53,840 p=359538 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 22:01:54,325 p=359538 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 22:01:54,335 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Upgrade all packages to Latest] ****************************************************************************************************************************************************************************
+2022-09-15 22:01:54,371 p=359538 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 22:02:00,100 p=359538 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 22:02:00,110 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Packages Installation Needs] *******************************************************************************************************************************************************************************
+2022-09-15 22:02:00,143 p=359538 u=neareth n=ansible | skipping: [192.168.56.12]
+2022-09-15 22:02:00,647 p=359538 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 22:02:00,658 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update Repository List] ************************************************************************************************************************************************************************************
+2022-09-15 22:02:00,685 p=359538 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 22:02:01,791 p=359538 u=neareth n=ansible | changed: [192.168.56.12]
+2022-09-15 22:02:01,802 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Update all packages to the latest version] *****************************************************************************************************************************************************************
+2022-09-15 22:02:01,825 p=359538 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 22:02:03,450 p=359538 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 22:02:03,461 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Package Installation Needs] ********************************************************************************************************************************************************************************
+2022-09-15 22:02:03,482 p=359538 u=neareth n=ansible | skipping: [192.168.56.11]
+2022-09-15 22:02:04,370 p=359538 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 22:02:04,381 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 22:02:04,425 p=359538 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 22:02:04,934 p=359538 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 22:02:04,947 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************************************************************************************************************************************
+2022-09-15 22:02:04,986 p=359538 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 22:02:05,349 p=359538 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 22:02:05,350 p=359538 u=neareth n=ansible | [WARNING]: 'append' is set, but no 'groups' are specified. Use 'groups' for appending new groups.This will change to an error in Ansible 2.14.
+
+2022-09-15 22:02:05,360 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 22:02:05,380 p=359538 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 22:02:05,790 p=359538 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 22:02:05,802 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************************************************************************************************************************************
+2022-09-15 22:02:05,822 p=359538 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 22:02:06,257 p=359538 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 22:02:06,269 p=359538 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************************************************************************************************************************************
+2022-09-15 22:02:06,743 p=359538 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 22:02:06,767 p=359538 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 22:02:06,779 p=359538 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************************************************************************************************************************************
+2022-09-15 22:02:07,223 p=359538 u=neareth n=ansible | changed: [192.168.56.11] => (item=app)
+2022-09-15 22:02:07,243 p=359538 u=neareth n=ansible | changed: [192.168.56.12] => (item=app)
+2022-09-15 22:02:07,641 p=359538 u=neareth n=ansible | changed: [192.168.56.11] => (item=admin)
+2022-09-15 22:02:07,655 p=359538 u=neareth n=ansible | changed: [192.168.56.12] => (item=admin)
+2022-09-15 22:02:07,667 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 22:02:07,717 p=359538 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 22:02:08,057 p=359538 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 22:02:08,067 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [RPM Based] Create User Other User RPM Based] **************************************************************************************************************************************************************************
+2022-09-15 22:02:08,105 p=359538 u=neareth n=ansible | skipping: [192.168.56.12] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 22:02:08,443 p=359538 u=neareth n=ansible | ok: [192.168.56.11] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 22:02:08,454 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Administrator (sudo access)] *******************************************************************************************************************************************************************
+2022-09-15 22:02:08,474 p=359538 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'admin', 'home': '/home/admin'}) 
+2022-09-15 22:02:08,844 p=359538 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'admin', 'home': '/home/admin'})
+2022-09-15 22:02:08,856 p=359538 u=neareth n=ansible | TASK [luneareth_iam : [DEB Based] Create User Other User DEB Based] **************************************************************************************************************************************************************************
+2022-09-15 22:02:08,876 p=359538 u=neareth n=ansible | skipping: [192.168.56.11] => (item={'user': 'app', 'home': '/app'}) 
+2022-09-15 22:02:09,243 p=359538 u=neareth n=ansible | ok: [192.168.56.12] => (item={'user': 'app', 'home': '/app'})
+2022-09-15 22:02:09,254 p=359538 u=neareth n=ansible | TASK [luneareth_iam : Ensure group admin] ****************************************************************************************************************************************************************************************************
+2022-09-15 22:02:09,660 p=359538 u=neareth n=ansible | ok: [192.168.56.12]
+2022-09-15 22:02:09,662 p=359538 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-15 22:02:09,674 p=359538 u=neareth n=ansible | TASK [luneareth_iam : adding existing user to group admin] ***********************************************************************************************************************************************************************************
+2022-09-15 22:02:10,107 p=359538 u=neareth n=ansible | changed: [192.168.56.11] => (item=app)
+2022-09-15 22:02:10,141 p=359538 u=neareth n=ansible | changed: [192.168.56.12] => (item=app)
+2022-09-15 22:02:10,542 p=359538 u=neareth n=ansible | changed: [192.168.56.11] => (item=admin)
+2022-09-15 22:02:10,593 p=359538 u=neareth n=ansible | changed: [192.168.56.12] => (item=admin)
+2022-09-15 22:02:10,607 p=359538 u=neareth n=ansible | TASK [luneareth_iam : Change Password Users] *************************************************************************************************************************************************************************************************
+2022-09-15 22:02:10,637 p=359538 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"msg": "'password_other' is undefined"}
+2022-09-15 22:02:10,648 p=359538 u=neareth n=ansible | fatal: [192.168.56.12]: FAILED! => {"msg": "'password_other' is undefined"}
+2022-09-15 22:02:10,651 p=359538 u=neareth n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************
+2022-09-15 22:02:10,651 p=359538 u=neareth n=ansible | 192.168.56.11              : ok=14   changed=2    unreachable=0    failed=1    skipped=9    rescued=0    ignored=1   
+2022-09-15 22:02:10,651 p=359538 u=neareth n=ansible | 192.168.56.12              : ok=14   changed=3    unreachable=0    failed=1    skipped=9    rescued=0    ignored=0   
+2022-09-15 22:02:42,933 p=360252 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:42,942 p=360252 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:45,182 p=360311 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:45,183 p=360311 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:47,374 p=360277 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:47,387 p=360277 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:49,559 p=360362 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:49,567 p=360362 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:49,609 p=360319 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:49,610 p=360319 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:50,627 p=360299 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:50,637 p=360299 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:51,992 p=360343 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:51,993 p=360343 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:52,041 p=360329 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:52,053 p=360329 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:54,220 p=360401 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:54,222 p=360401 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:54,672 p=360392 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:54,694 p=360392 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:55,240 p=360383 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:55,241 p=360383 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:55,430 p=360375 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:55,458 p=360375 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:56,950 p=360429 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:56,951 p=360429 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:57,808 p=360418 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:57,809 p=360418 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:57,931 p=360439 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:57,937 p=360439 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:58,460 p=360474 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:58,461 p=360474 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:02:59,637 p=360458 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:02:59,644 p=360458 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-15 22:03:00,039 p=360449 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-15 22:03:00,045 p=360449 u=neareth n=ansible | playbook: server-iam.yml

@@ -16,8 +16,8 @@ Take your own risk!!!
 
 ```
 ---
-#python3 -c 'import crypt; print(crypt.crypt("password-123"))'
-#ruby -e 'puts "password-123".crypt("$6$saltsalt$")'
+#python3 -c 'import crypt; print(crypt.crypt("password"))'
+#ruby -e 'puts "password".crypt("$6$saltsalt$")'
 
 - hosts: hardening 
   become: yes
@@ -25,11 +25,11 @@ Take your own risk!!!
   ### Variable
   vars:
      - user_root: root
-     - user_admin: admin
-     - user_other: app
-     - password_admin: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
-     - password_app: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
      - password_root: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - user_admin: admin
+     - password_admin: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - user_other: app     
+     - password_other: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
      - public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block"
      - iptables_ssh_access_ip_allow: 10.69.69.0/24,10.69.66.7
      - port_ssh: 12920
@@ -42,6 +42,7 @@ Take your own risk!!!
   ### Currently Variable For Hardening put in Variable Global Inventory - all
   roles: 
     - luneareth_iam
+
 
 
 ``` 
