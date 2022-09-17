@@ -1,0 +1,19 @@
+---
+- name: stop ntpd
+  service:
+     name: ntpd
+     state: stopped
+  listen: "stop ntpd"
+
+- name: restart ntpd
+  service:
+     name: ntpd
+     state: restarted
+  listen: "restart ntpd"
+
+- name: start ntpd
+  service:
+     name: ntpd
+     state: started
+  listen: "start ntpd"
+

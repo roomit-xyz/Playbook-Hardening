@@ -17,8 +17,4 @@
      state: started
   listen: "start ssh"
 
-- name: restart ssh
-  service:
-     name: ssh
-     state: restarted
-  listen: "restart ssh"
+

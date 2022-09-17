@@ -4,3 +4,4 @@
 - include: service_iptables.yml
 - include: service_sshd.yml
 - include: service_aide.yml
+- include: service_ntp.yml
