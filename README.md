@@ -1,3 +1,9 @@
+# DONATE
+
+1. Ethereum : 0xB0e6e6c379389bBB30fACD427e02d74d27ec0C78
+2. Near Blockchain : xoreth.near 
+3. Mina Protocol : B62qiiBBXKN5CdgXv7wPkXxC1prdzQxwfaTMAi3isAeb9F7gCbzi5dU
+
 >> Dwi
 ## How To Use
 
@@ -77,10 +83,4 @@ Execute :
 ansible-playbook -i inventories/staging/hosts -l hardening  server-iam.yml  -Kk  --become
 ```
 
-# DONATE
 
-1. Ethereum : 0xB0e6e6c379389bBB30fACD427e02d74d27ec0C78
-
-2. Near Blockchain : xoreth.near 
-
-3. Mina Protocol : B62qiiBBXKN5CdgXv7wPkXxC1prdzQxwfaTMAi3isAeb9F7gCbzi5dU
