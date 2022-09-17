@@ -2526,3 +2526,36 @@ an error in Ansible 2.14.
 2022-09-16 00:59:11,017 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [RPM] Iniziate Database Aide RPM Based] ********************************************************
 2022-09-16 00:59:11,033 p=380483 u=neareth n=ansible | skipping: [192.168.56.12]
 2022-09-16 00:59:11,048 p=380483 u=neareth n=ansible | TASK [luneareth_iam : [DEB] Iniziate Database Aide DEB Based] ********************************************************
+2022-09-17 21:41:00,765 p=4017 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:41:00,767 p=4017 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:05,978 p=4429 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:05,979 p=4429 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:06,049 p=4440 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:06,050 p=4440 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:06,855 p=4449 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:06,856 p=4449 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:07,354 p=4472 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:07,355 p=4472 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:08,095 p=4476 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:08,097 p=4476 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:08,274 p=4460 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:08,275 p=4460 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:09,174 p=4508 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:09,175 p=4508 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:45:09,422 p=4487 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:45:09,431 p=4487 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:50:33,159 p=4875 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:50:33,159 p=4875 u=neareth n=ansible | playbook: server-iam.yml
+2022-09-17 21:50:37,505 p=4899 u=neareth n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: hardening
+
+2022-09-17 21:50:37,505 p=4899 u=neareth n=ansible | playbook: server-iam.yml
