@@ -12,8 +12,9 @@ DEB Based
 - Ubuntu 20 ^
 - Debian 18 ^
 
-
-Take your own risk!!!
+Based on
+- CIS
+- Lynis
 
 
 ### Varaible Global Roles luneareth_iam:
