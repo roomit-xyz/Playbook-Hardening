@@ -7447,3 +7447,52 @@ The offending line appears to be:
 2022-09-18 00:08:23,684 p=40158 u=neareth n=ansible | PLAY RECAP *********************************************************************************************************************************************************************
 2022-09-18 00:08:23,685 p=40158 u=neareth n=ansible | 192.168.56.11              : ok=108  changed=8    unreachable=0    failed=0    skipped=29   rescued=0    ignored=1   
 2022-09-18 00:08:23,685 p=40158 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2022-09-18 00:32:38,465 p=45030 u=neareth n=ansible | PLAY [hardening] ***************************************************************************************************************************************************************
+2022-09-18 00:32:38,555 p=45030 u=neareth n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************
+2022-09-18 00:32:40,081 p=45030 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:32:40,992 p=45030 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2022-09-18 00:32:41,019 p=45030 u=neareth n=ansible | TASK [luneareth_iam : Ensure rsyslog is installed] *****************************************************************************************************************************
+2022-09-18 00:32:41,745 p=45030 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.yum) module: install_recommends. Supported parameters include: lock_timeout, disable_excludes, exclude, allow_downgrade, sslverify, disable_gpg_check, conf_file, use_backend, validate_certs, state, disablerepo, releasever, skip_broken, cacheonly, autoremove, download_dir, name (pkg), installroot, install_weak_deps, update_cache (expire-cache), download_only, bugfix, list, install_repoquery, update_only, disable_plugin, enablerepo, security, enable_plugin."}
+2022-09-18 00:32:41,746 p=45030 u=neareth n=ansible | ...ignoring
+2022-09-18 00:32:41,759 p=45030 u=neareth n=ansible | TASK [luneareth_iam : Ensure rsyslog Service is enabled] ***********************************************************************************************************************
+2022-09-18 00:32:42,496 p=45030 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:32:42,515 p=45030 u=neareth n=ansible | TASK [luneareth_iam : Ensure logging is configured] ****************************************************************************************************************************
+2022-09-18 00:32:42,641 p=45030 u=neareth n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'remoteSyslog' is undefined
+2022-09-18 00:32:42,642 p=45030 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'remoteSyslog' is undefined"}
+2022-09-18 00:32:42,642 p=45030 u=neareth n=ansible | ...ignoring
+2022-09-18 00:32:42,656 p=45030 u=neareth n=ansible | TASK [luneareth_iam : Ensure rsyslog default file permissions configured] ******************************************************************************************************
+2022-09-18 00:32:43,151 p=45030 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-18 00:32:43,165 p=45030 u=neareth n=ansible | TASK [luneareth_iam : Ensure journald is configured to send logs to rsyslog] ***************************************************************************************************
+2022-09-18 00:32:43,592 p=45030 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-18 00:32:43,610 p=45030 u=neareth n=ansible | TASK [luneareth_iam : Ensure journald is configured to compress large log files] ***********************************************************************************************
+2022-09-18 00:32:43,958 p=45030 u=neareth n=ansible | changed: [192.168.56.11]
+2022-09-18 00:32:43,971 p=45030 u=neareth n=ansible | TASK [luneareth_iam : Ensure journald is configured to write logfiles to persistent disk] **************************************************************************************
+2022-09-18 00:32:44,317 p=45030 u=neareth n=ansible | ERROR! The requested handler 'journald restart' was not found in either the main handlers list nor in the listening handlers list
+2022-09-18 00:33:37,417 p=45386 u=neareth n=ansible | PLAY [hardening] ***************************************************************************************************************************************************************
+2022-09-18 00:33:37,485 p=45386 u=neareth n=ansible | TASK [Gathering Facts] *********************************************************************************************************************************************************
+2022-09-18 00:33:38,699 p=45386 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:33:39,928 p=45386 u=neareth n=ansible | fatal: [192.168.56.12]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2022-09-18 00:33:39,956 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure rsyslog is installed] *****************************************************************************************************************************
+2022-09-18 00:33:40,684 p=45386 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.yum) module: install_recommends. Supported parameters include: lock_timeout, disable_excludes, exclude, allow_downgrade, sslverify, disable_gpg_check, conf_file, use_backend, validate_certs, state, disablerepo, releasever, skip_broken, cacheonly, autoremove, download_dir, name (pkg), installroot, install_weak_deps, update_cache (expire-cache), download_only, bugfix, list, install_repoquery, update_only, disable_plugin, enablerepo, security, enable_plugin."}
+2022-09-18 00:33:40,685 p=45386 u=neareth n=ansible | ...ignoring
+2022-09-18 00:33:40,698 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure rsyslog Service is enabled] ***********************************************************************************************************************
+2022-09-18 00:33:41,431 p=45386 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:33:41,445 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure logging is configured] ****************************************************************************************************************************
+2022-09-18 00:33:41,573 p=45386 u=neareth n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'remoteSyslog' is undefined
+2022-09-18 00:33:41,574 p=45386 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'remoteSyslog' is undefined"}
+2022-09-18 00:33:41,574 p=45386 u=neareth n=ansible | ...ignoring
+2022-09-18 00:33:41,587 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure rsyslog default file permissions configured] ******************************************************************************************************
+2022-09-18 00:33:42,054 p=45386 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:33:42,067 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure journald is configured to send logs to rsyslog] ***************************************************************************************************
+2022-09-18 00:33:42,427 p=45386 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:33:42,442 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure journald is configured to compress large log files] ***********************************************************************************************
+2022-09-18 00:33:42,856 p=45386 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:33:42,869 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure journald is configured to write logfiles to persistent disk] **************************************************************************************
+2022-09-18 00:33:43,226 p=45386 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:33:43,239 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure permissions on all logfiles are configured] *******************************************************************************************************
+2022-09-18 00:33:43,748 p=45386 u=neareth n=ansible | ok: [192.168.56.11]
+2022-09-18 00:33:43,766 p=45386 u=neareth n=ansible | TASK [luneareth_iam : Ensure logrotate is configured] **************************************************************************************************************************
+2022-09-18 00:33:43,786 p=45386 u=neareth n=ansible | fatal: [192.168.56.11]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'logrotate_policy' is undefined\n\nThe error appears to be in '/home/neareth/ansible-my-setup/roles/luneareth_iam/tasks/logs.yml': line 88, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Ensure logrotate is configured\n  ^ here\n"}
+2022-09-18 00:33:43,788 p=45386 u=neareth n=ansible | PLAY RECAP *********************************************************************************************************************************************************************
+2022-09-18 00:33:43,789 p=45386 u=neareth n=ansible | 192.168.56.11              : ok=9    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=2   
+2022-09-18 00:33:43,789 p=45386 u=neareth n=ansible | 192.168.56.12              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   

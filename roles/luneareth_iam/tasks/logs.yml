@@ -101,7 +101,7 @@
     regexp: "^create"
     line: "create 0640 root utmp"
   notify:
-    - restart systemd-journald
+    - 'restart systemd-journald'
   tags:
     - iam-logs
     - logs-journald_Permissions
