@@ -1,39 +1,24 @@
-# 4.2 Configure Logging
-# 4.2.1 Configure rsyslog
-# 4.2.1.1 Ensure rsyslog is installed
-# The security enhancements of rsyslog such as connection-oriented (i.e. TCP) transmission
-# of logs, the option to log to database formats, and the encryption of log data en route to a
-# central logging server) justify installing and configuring the package.
-- name: 4.2.1.1 Ensure rsyslog is installed
-  apt:
+
+- name: Ensure rsyslog is installed
+  package:
     name: rsyslog
     state: present
     install_recommends: false
+  ignore_errors: yes
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.1.1
-    - scored
-# 4.2.1.2 Ensure rsyslog Service is enabled
-# If the rsyslog service is not activated the system may default to the syslogd service or lack
-# logging instead.
-- name: 4.2.1.2 Ensure rsyslog Service is enabled
+    - iam-logs
+
+- name: Ensure rsyslog Service is enabled
   service:
     name: rsyslog
     enabled: yes
+  ignore_errors: yes
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.1.2
-    - scored
-# 4.2.1.3 Ensure logging is configured
-# The /etc/rsyslog.conf and /etc/rsyslog.d/*.conf files specifies rules for logging and
-# which files are to be used to log certain classes of messages.
-# A great deal of important security-related information is sent via rsyslog (e.g., successful
-# and failed su attempts, failed login attempts, root login attempts, etc.).
-- name: 4.2.1.3 Ensure logging is configured
+    - iam-logs
+    - logs-enable_service_rsyslog
+
+
+- name: Ensure logging is configured
   template:
     src: rsyslog.conf.j2
     dest: /etc/rsyslog.conf
@@ -41,60 +26,44 @@
     owner: root
     group: root
     mode: 0644
+  ignore_errors: yes
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.1.3
-    - not-scored
-# 4.2.1.4 Ensure rsyslog default file permissions configured
-# It is important to ensure that log files have the correct permissions to ensure that sensitive
-# data is archived and protected.
-- name: 4.2.1.4 Ensure rsyslog default file permissions configured
+    - iam-logs
+    - logs-copy_config_rsyslog
+
+
+- name: Ensure rsyslog default file permissions configured
   lineinfile:
     dest: /etc/rsyslog.conf
     regexp: '^\$FileCreateMode (0640)?'
     line: "$FileCreateMode 0640"
+  ignore_errors: yes
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.1.4
-    - scored
-# 4.2.2 Configure journald
-# 4.2.2.1 Ensure journald is configured to send logs to rsyslog
-# Storing log data on a remote host protects log integrity from local attacks. If an attacker
-# gains root access on the local system, they could tamper with or remove log data that is
-# stored on the local system.
-- name: 4.2.2.1 Ensure journald is configured to send logs to rsyslog
+    - iam-logs
+    - logs-rsyslog_permissions
+
+
+- name: Ensure journald is configured to send logs to rsyslog
   lineinfile:
     dest: /etc/systemd/journald.conf
     regexp: "(#)?ForwardToSyslog=(yes|no)"
     line: ForwardToSyslog=yes
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.2.1
-    - scored
-# 4.2.2.2 Ensure journald is configured to compress large log files
-# The journald system includes the capability of compressing overly large files to avoid filling
-# up the system with logs or making the logs unmanageably large.
-- name: 4.2.2.2 Ensure journald is configured to compress large log files
+    - iam-logs
+    - logs-journald_send_to_rsyslog
+
+
+- name: Ensure journald is configured to compress large log files
   lineinfile:
     dest: /etc/systemd/journald.conf
     regexp: "(#)?Compress=(yes|no)"
     line: Compress=yes
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.2.2
-    - scored
-# 4.2.2.3 Ensure journald is configured to write logfiles to persistent disk
-# Writing log data to disk will provide the ability to forensically reconstruct events which
-# may have impacted the operations or security of a system even after a system crash or reboot.
-- name: 4.2.2.3 Ensure journald is configured to write logfiles to persistent disk
+    - iam-logs
+    - logs-rsyslog_compress_large_logs
+
+
+- name: Ensure journald is configured to write logfiles to persistent disk
   lineinfile:
     dest: /etc/systemd/journald.conf
     regexp: "(#)?Storage=(auto|persistent)"
@@ -102,56 +71,37 @@
   notify:
     - journald restart
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.2.3
-    - scored
-# 4.2.3 Ensure permissions on all logfiles are configured
-# It is important to ensure that log files have the correct permissions to ensure that sensitive data is archived and protected.
-- name: 4.2.3 Ensure permissions on all logfiles are configured
+    - iam-logs
+    - logs-rsyslog_write_persistent_disk
+
+
+- name: Ensure permissions on all logfiles are configured
   shell: |
     find /var/log -type f -exec chmod g-wx,o-rwx "{}" + -o -type d -exec chmod g-w,o-rwx "{}" +
   register: output_4_2_3
   changed_when: output_4_2_3.stdout_lines | length > 0
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - 4.2.3
-    - scored
-# 4.3 Ensure logrotate is configured
-# The system includes the capability of rotating log files regularly to avoid filling up the
-# system with logs or making the logs unmanageably large. The file
-# /etc/logrotate.d/rsyslog is the configuration file used to rotate log files created
-# by rsyslog.
-# By keeping the log files smaller and more manageable, a system administrator can easily
-# archive these files to another system and spend less time looking through inordinately
-# large log files.
-- name: 4.3 Ensure logrotate is configured
+    - iam-logs
+    - logs-fix_all_permission_logs
+
+
+- name: Ensure logrotate is configured
   replace:
     path: /etc/logrotate.d/rsyslog
     regexp: '^(\s*)(daily|weekly|monthly|yearly)$'
     replace: "\\1{{ logrotate_policy }}"
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - "4.3"
-    - not-scored
-# 4.4 Ensure logrotate assigns appropriate permissions
-# It is important to ensure that log files have the correct permissions to ensure that sensitive
-# data is archived and protected.
-- name: 4.4 Ensure logrotate assigns appropriate permissions
+    - iam-logs
+    - logs-configured_logrotate
+
+
+- name: Ensure logrotate assigns appropriate permissions
   lineinfile:
     dest: /etc/logrotate.conf
     regexp: "^create"
     line: "create 0640 root utmp"
   notify:
-    - journald restart
+    - restart systemd-journald
   tags:
-    - section4
-    - level_1_server
-    - level_1_workstation
-    - "4.4"
-    - scored
+    - iam-logs
+    - logs-journald_Permissions

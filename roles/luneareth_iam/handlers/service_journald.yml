@@ -1,0 +1,20 @@
+---
+- name: stop systemd-journald
+  service:
+     name: systemd-journald
+     state: stopped
+  listen: "stop systemd-journald"
+
+- name: restart systemd-journald
+  service:
+     name: systemd-journald
+     state: restarted
+  listen: "restart systemd-journald"
+
+- name: start systemd-journald
+  service:
+     name: systemd-journald
+     state: started
+  listen: "start systemd-journald"
+
+

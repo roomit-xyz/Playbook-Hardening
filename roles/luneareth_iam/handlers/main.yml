@@ -5,3 +5,4 @@
 - include: service_sshd.yml
 - include: service_aide.yml
 - include: service_ntp.yml
+- include: service_journald.yml
