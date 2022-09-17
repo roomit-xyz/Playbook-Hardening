@@ -3,7 +3,6 @@
   package:
     name: rsyslog
     state: present
-    install_recommends: false
   ignore_errors: yes
   tags:
     - iam-logs
@@ -90,6 +89,7 @@
     path: /etc/logrotate.d/rsyslog
     regexp: '^(\s*)(daily|weekly|monthly|yearly)$'
     replace: "\\1{{ logrotate_policy }}"
+  ignore_errors: true
   tags:
     - iam-logs
     - logs-configured_logrotate
@@ -102,6 +102,7 @@
     line: "create 0640 root utmp"
   notify:
     - 'restart systemd-journald'
+  ignore_errors: true
   tags:
     - iam-logs
     - logs-journald_Permissions

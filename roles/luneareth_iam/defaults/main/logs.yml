@@ -1,1 +1,6 @@
 logrotate_policy: "daily"
+remoteSyslog:
+  enable: False
+  host: syslogserver
+  port: 514
+  protocol: tcp
