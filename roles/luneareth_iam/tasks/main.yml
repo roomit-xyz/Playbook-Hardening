@@ -20,6 +20,7 @@
 - include: postfix.yml
 - include: cronjob.yml
 - include: ssh.yml
+- include: logs.yml
 - include: iptables.yml
 - include: reboot.yml
 
