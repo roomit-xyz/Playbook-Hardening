@@ -5,10 +5,14 @@
 
 Test  : 
 RPM Based
-Centos 7 
+- Centos 7 ^
+- Fedora 34 ^
 
 DEB Based
-Ubuntu 20^
+- Ubuntu 20 ^
+- Debian 18 ^
+
+
 Take your own risk!!!
 
 
