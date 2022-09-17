@@ -1,7 +1,8 @@
 ---
 - name: Create Swap File
   include_tasks: swap.yml
-  when: swap == true
+  when: swap_support == true
+
 - include: packages.yml
 - include: user_and_group.yml
 - include: passwd.yml

@@ -1,7 +1,7 @@
 ---
 - sysctl:
     name: vm.swappiness
-    value: '5'
+    value: '1'
     reload: yes
     state: present
   tags: 

@@ -12,7 +12,7 @@
     - remove-firewalld
   
 - name: Ensure firewalld is not installed
-  yum:
+  package:
     name: firewalld
     state: absent
   when:  ansible_os_family == "RedHat" or  ansible_os_family == 'CentOS'

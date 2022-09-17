@@ -1,5 +1,5 @@
 - name: Install Auditd on RPM Packages
-  yum:
+  package:
       name: audit
       state: present 
   when: ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat'

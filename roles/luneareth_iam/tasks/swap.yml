@@ -8,38 +8,33 @@
   register: swap_file_check
 
 - name: create swap file
-  sudo: yes
-  command: fallocate -l {{ swap_file_name }} {{ swap_file }}
+  become: yes
+  command: fallocate -l 2GB {{ swap_file }}
   when: not swap_file_check.stat.exists
 
 - name: Create swap space
-  command: dd if=/dev/zero of=/{{swap_file_name}}.swap bs=1M count=512
+  command: dd if=/dev/zero of=/{{swap_file_name}}.swap bs=1k count=2M
   when: not swap_file_check.stat.exists
 
 - name: set permissions on swap file
-  sudo: yes
+  become: yes
   file:
     path: "{{ swap_file }}"
     mode: 0600
 
 - name: format swap file
-  sudo: yes
+  become: yes
   command: mkswap {{ swap_file }}
   when: not swap_file_check.stat.exists
 
 - name: add to fstab
-  sudo: yes
+  become: yes
   lineinfile:
     dest: /etc/fstab
     regexp: "{{ swap_file }}"
     line: "{{ swap_file }} none swap sw 0 0"
 
 - name: turn on swap
-  sudo: yes
+  become: yes
   command: swapon -a
 
-- name: set swapiness
-  sudo: yes
-  sysctl:
-    name: vm.swappiness
-    value: "1"
