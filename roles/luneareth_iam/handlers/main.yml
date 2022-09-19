@@ -6,3 +6,4 @@
 - include: service_aide.yml
 - include: service_ntp.yml
 - include: service_journald.yml
+- include: update_grub.yml
