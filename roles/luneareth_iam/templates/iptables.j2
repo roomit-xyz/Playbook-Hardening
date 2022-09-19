@@ -57,6 +57,7 @@ COMMIT
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [46:3552]
 :POSTROUTING ACCEPT [46:3552]
+
 ### 1: Drop invalid packets ### 
 -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 
