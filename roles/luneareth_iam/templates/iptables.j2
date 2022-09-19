@@ -13,7 +13,8 @@
 -A INPUT -p icmp -j DROP
 -A INPUT -m conntrack --ctstate INVALID -j DROP
 
-#### ALLOW ACCESS INPUT
+
+#### ALLOW ACCESS INPUT SSH
 -A INPUT -j chain-states
 -A INPUT -p tcp -m tcp --dport 22 -j chain-incoming-ssh-admin
 -A INPUT -p tcp -m tcp --dport {{port_ssh}} -j chain-incoming-ssh
@@ -24,15 +25,15 @@
 -A OUTPUT -j chain-outgoing-services
 
 
-### CHAIN INCOMING WHITELIST
+### CHAIN INCOMING WHITELIST ACTION
 -A chain-incoming-ssh-admin -s {{iptables_ssh_access_ip_allow}} -j ACCEPT
 -A chain-incoming-ssh-admin -j DROP
 
-### CHAIN INCOMING WHITELIST
+### CHAIN INCOMING WHITELIST ACTION
 -A chain-incoming-ssh -j ACCEPT
 -A chain-incoming-ssh -j DROP
 
-### CHAIN OUTGOING WHITELIST
+### CHAIN OUTGOING WHITELIST ACTION
 -A chain-outgoing-services -p tcp -m tcp --dport 53 -j ACCEPT
 -A chain-outgoing-services -p udp -m udp --dport 53 -j ACCEPT
 -A chain-outgoing-services -p tcp -m tcp --dport 123 -j ACCEPT
@@ -46,4 +47,54 @@
 -A chain-states -p udp -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 -A chain-states -p icmp -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 -A chain-states -j RETURN
+COMMIT
+
+
+### ANTI DDOS ###
+*mangle
+:PREROUTING ACCEPT [55:3545]
+:INPUT ACCEPT [55:3545]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [46:3552]
+:POSTROUTING ACCEPT [46:3552]
+### 1: Drop invalid packets ### 
+-A PREROUTING -m conntrack --ctstate INVALID -j DROP
+
+### 2: Drop TCP packets that are new and are not SYN ### 
+-A PREROUTING -p tcp -m tcp ! --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j DROP
+
+### 3: Drop SYN packets with suspicious MSS value ### 
+-A PREROUTING -p tcp -m conntrack --ctstate NEW -m tcpmss ! --mss 536:65535 -j DROP  
+
+### 4: Block packets with bogus TCP flags ### 
+-A PREROUTING -p tcp -m tcp --tcp-flags FIN,SYN FIN,SYN -j DROP
+-A PREROUTING -p tcp -m tcp --tcp-flags SYN,RST SYN,RST -j DROP
+-A PREROUTING -p tcp -m tcp --tcp-flags FIN,RST FIN,RST -j DROP
+-A PREROUTING -p tcp -m tcp --tcp-flags FIN,ACK FIN -j DROP
+-A PREROUTING -p tcp -m tcp --tcp-flags ACK,URG URG -j DROP
+-A PREROUTING -p tcp -m tcp --tcp-flags PSH,ACK PSH -j DROP
+-A PREROUTING -p tcp -m tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DROP
+
+
+### 5: Block spoofed packets ### 
+-A PREROUTING -s 224.0.0.0/3 -j DROP
+-A PREROUTING -s 169.254.0.0/16 -j DROP
+-A PREROUTING -s 172.16.0.0/12 -j DROP
+-A PREROUTING -s 192.0.2.0/24 -j DROP
+-A PREROUTING -s 192.168.0.0/16 -j DROP
+-A PREROUTING -s 10.0.0.0/8 -j DROP
+-A PREROUTING -s 0.0.0.0/8 -j DROP
+-A PREROUTING -s 240.0.0.0/5 -j DROP
+-A PREROUTING -s 127.0.0.0/8 ! -i lo -j DROP
+
+
+### 6: Drop ICMP (you usually don't need this protocol) ### 
+-A PREROUTING -p icmp -j DROP
+
+
+### 7: Drop fragments in all chains ### 
+-A PREROUTING -f -j DROP
+
+### 8: Limit connections per source IP ### 
+-A PREROUTING -m conntrack --ctstate INVALID -j DROP
 COMMIT
