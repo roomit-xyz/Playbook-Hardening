@@ -8,6 +8,7 @@
 - include: passwd.yml
 - include: authorized_keys.yml
 - include: selinux.yml
+- include: apparmor.yml
 - include: compilers.yml
 - include: umask.yml
 - include: kernel.yml
