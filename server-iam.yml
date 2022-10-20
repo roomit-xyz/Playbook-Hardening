@@ -9,13 +9,13 @@
   vars:
      # Define Credential User root
      - user_root: root
-     - password_root: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - password_root: "$6$jVLEyaF6j.ps2f18$PcjXwVBqhvoUXXuIRLEsDlRiMhCEN7h1PYvItAMAUMbUCBux2ZfibFRobaLSzjWgwugAvTJj72qDafiXlCFeT1"
      # Define Credential User Admin
-     - user_admin: admin
-     - password_admin: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - user_admin: gneareth
+     - password_admin: "$6$J2LleKKPwG27ogkc$b.fJ/0a9ruSRDEaNaWgJDNEjakn4Elnk0VuCZN8Vk1ZWga1yF4vGGQI/xGTPQDO4DKxB/OVcIpF9edj2X9j6x0"
      # Define Credential User For Applications
-     - user_other: app     
-     - password_other: "$6$saltsalt$PHc7yZm/40FFox.otHiMMVmuHWWpFOtiWYIv2gjOM5M0A39FxZfn2.zg.DMgkpgERGJm0xX2UTNGAv854fMbn0"
+     - user_other: luneareth   
+     - password_other: "$6$J2LleKKPwG27ogkc$b.fJ/0a9ruSRDEaNaWgJDNEjakn4Elnk0VuCZN8Vk1ZWga1yF4vGGQI/xGTPQDO4DKxB/OVcIpF9edj2X9j6x0"
      # Attached Public Key, Hardener
      - public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block"
      # Define Allow List IP Private Internal for access ssh via Port 22

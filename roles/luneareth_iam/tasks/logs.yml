@@ -68,7 +68,7 @@
     regexp: "(#)?Storage=(auto|persistent)"
     line: Storage=persistent
   notify:
-    - journald restart
+    - restart systemd-journald
   tags:
     - iam-logs
     - logs-rsyslog_write_persistent_disk
