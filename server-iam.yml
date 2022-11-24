@@ -4,26 +4,26 @@
 
 - hosts: hardening 
   become: yes
-  become_user: root
+  become_user: operation
   ### Variable
   vars:
      # Define Credential User root
      - user_root: root
      - password_root: "$6$jVLEyaF6j.ps2f18$PcjXwVBqhvoUXXuIRLEsDlRiMhCEN7h1PYvItAMAUMbUCBux2ZfibFRobaLSzjWgwugAvTJj72qDafiXlCFeT1"
      # Define Credential User Admin
-     - user_admin: gneareth
-     - password_admin: "$6$J2LleKKPwG27ogkc$b.fJ/0a9ruSRDEaNaWgJDNEjakn4Elnk0VuCZN8Vk1ZWga1yF4vGGQI/xGTPQDO4DKxB/OVcIpF9edj2X9j6x0"
+     - user_admin: admin
+     - password_admin: "$6$MnL9IZTgizW6MAnI$5jZwBOAQVdmN1BF1VgnfJNovf0lV49clJ8rXKw4FcHBLLXDjXHu9S2DQhPubsUrmnGijylTTdU17EqbQxaUww0"
      # Define Credential User For Applications
-     - user_other: luneareth   
-     - password_other: "$6$J2LleKKPwG27ogkc$b.fJ/0a9ruSRDEaNaWgJDNEjakn4Elnk0VuCZN8Vk1ZWga1yF4vGGQI/xGTPQDO4DKxB/OVcIpF9edj2X9j6x0"
+     - user_other: operation   
+     - password_other: "$6$c3WakKIr9WdbUH56$Lgn.ub3Cenry7qswZ04MhZuUxvlH/qt7soOTIQCalX5zTFhw104/vE7XJ/2/RU.59F2MVYj9OaXdld24SF6Jp0"
      # Attached Public Key, Hardener
      - public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdA4sdMITuL88nV4XP44MF/uvUwoSl08ExgRE3xNdUsIZaSa+VeNiLVwZGoGdvQf6F5CYSXl4kpUyQZspYQvu+H6VEU/bhYvHFHok+BLZPLg9IJERCK8l/8tnRRv3DllSFGx9zSTEaAy6mA3JiObNwf0WmnWkmFMKroqkvV+ss/PUCQvYbLkmUXuaAgDISisj0YYYk8eFg8RdDxk0Z5T8UrO4Gm7NTH6T/BtXP5UATHmDIG/jWMS+tn6PKh/pXpq6oS/epx3Uyz38h8p6Hjs/Xlo1c6989uDqh+035bX7vGYpWcBlq3UsYOMHP7vmqm6yUOV8fUyvK0D7MmtQuLVNI72fjbqkFM+REQ7RniXi9WqgzTEgL0WYtbGa0bTvBxwu6QkhDXucr8fCFKQ3+9I4LzXEz6aobRw7N0Myi/rltqcVbNJb9hc3uHggXvhINu/wQfoIcxK2lWUXPapR07Lzs8pIT6miv/r5A9rgztFViPwe1MkFlqGoEWYgbtCZuT9E= neareth@127block"
      # Define Allow List IP Private Internal for access ssh via Port 22
-     - iptables_ssh_access_ip_allow: 10.69.69.0/24,10.69.66.7
+     - iptables_ssh_access_ip_allow: 10.32.5.0/24,10.32.16.179,10.32.16.180
      # Define Allow Any Access for access ssh via Port $port_ssh 
      - port_ssh: 12920
      # Define for Create SWAP File Or Not (True or False)
-     - swap_support: True 
+     - swap_support: False 
 
   ### Or Define using file external
   #vars_files:

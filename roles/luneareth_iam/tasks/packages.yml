@@ -36,16 +36,16 @@
     - package-remove
     - remove-firewalld
   
-- name: Ensure ufw is not installed
-  apt:
-    name: ufw
-    state: absent
-  when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
-  tags: 
-    - iam-packages
-    - package-remove
-    - remove-firewalld
-  ignore_errors: true
+# - name: Ensure ufw is not installed
+#   apt:
+#     name: ufw
+#     state: absent
+#   when: ansible_os_family == 'Ubuntu' or ansible_os_family == 'Debian'
+#   tags: 
+#     - iam-packages
+#     - package-remove
+#     - remove-firewalld
+#   ignore_errors: true
 
 
 ### CENTOS or REDHAT
@@ -75,7 +75,6 @@
 
 
 - name: "[RPM Based] Packages Installation Needs"
-  become: 'yes'
   package:
     name: "{{ packages_rpm }}"
     state: present
@@ -111,7 +110,6 @@
 
 
 - name: "[DEB Based] Package Installation Needs"
-  become: 'yes'
   apt:
     name: "{{ packages_deb }}"
     state: present

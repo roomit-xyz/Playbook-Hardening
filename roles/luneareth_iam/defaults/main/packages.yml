@@ -20,3 +20,4 @@ packages_deb:
   - auditd
   - systemd-coredump
   - iptables-persistent
+  - rkhunter

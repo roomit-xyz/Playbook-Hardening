@@ -79,6 +79,7 @@
     find /var/log -type f -exec chmod g-wx,o-rwx "{}" + -o -type d -exec chmod g-w,o-rwx "{}" +
   register: output_4_2_3
   changed_when: output_4_2_3.stdout_lines | length > 0
+  ignore_errors: true
   tags:
     - iam-logs
     - logs-fix_all_permission_logs

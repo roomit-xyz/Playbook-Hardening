@@ -39,7 +39,7 @@
 
 - name: Init Configuration Debian
   shell: /usr/sbin/update-aide.conf
-  when: ansible_os_family == 'Debian' 
+  when: ansible_distribution == 'Debian' 
   tags:
      - iam-file_integrity
      - file_integrity-generate_config_aide

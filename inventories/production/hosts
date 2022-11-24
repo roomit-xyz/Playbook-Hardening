@@ -1,16 +1,2 @@
-[db]
-
-[app]
-157.245.144.76
-
-[web]
-
-
-[system:children]
-db
-app
-web
-
-
 [hardening]
-135.181.109.118
+124.158.145.146
