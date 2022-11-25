@@ -5,8 +5,8 @@
 
 - include: packages.yml
 - include: user_and_group.yml
-- include: passwd.yml
 - include: authorized_keys.yml
+- include: passwd.yml
 - include: selinux.yml
 - include: apparmor.yml
 - include: compilers.yml

@@ -1,3 +1,12 @@
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 5349
+COMMIT
+
+
 *filter
 :INPUT DROP [6:3456]
 :FORWARD DROP [0:0]
@@ -41,6 +50,11 @@
 -A chain-outgoing-services -p tcp -m tcp --dport 80 -j ACCEPT
 -A chain-outgoing-services -p tcp -m tcp --dport 443 -j ACCEPT
 -A chain-outgoing-services -p tcp -m tcp --dport 22 -j ACCEPT
+-A chain-outgoing-services -p tcp -m tcp --dport 10000 -j ACCEPT
+-A chain-outgoing-services -p tcp -m tcp --dport 3478 -j ACCEPT
+-A chain-outgoing-services -p udp -m udp --dport 3478 -j ACCEPT
+-A chain-outgoing-services -p tcp -m tcp --dport 5349 -j ACCEPT
+-A chain-outgoing-services -p tcp -m tcp --dport 12920 -j ACCEPT
 -A chain-outgoing-services -p icmp -j ACCEPT
 -A chain-outgoing-services -j DROP
 -A chain-states -p tcp -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
